@@ -398,6 +398,8 @@ def main() -> int:
         or DEFAULT_REPO
     )
     raw_base = f"https://gh-proxy.org/https://raw.githubusercontent.com/{repo}/main/output"
+    if not IS_GITHUB_ACTIONS:
+        raw_base = os.environ.get("TVBOX_LOCAL_BASE_URL", raw_base).rstrip("/")
 
     status = {"updated_at": now_str, "repo": repo, "sources": []}
     subscriptions = []
