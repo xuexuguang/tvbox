@@ -13,7 +13,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-26 16:32:27（北京时间） · 成功 **11/11** 个源
+> 🔄 最近更新：2026-11-26 17:13:35（北京时间） · 成功 **29/30** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
@@ -28,6 +28,25 @@
 | 小盒子单仓 | ✅ 成功 | `http://xhztv.top/xhz` |
 | 拾光多仓 | ✅ 成功 | `http://xmbjm.fh4u.org/dc.txt` |
 | 挺好分享多仓 | ✅ 成功 | `http://ztha.top/TVBox/GYCK.json` |
+| 嗷呜线路 | ✅ 成功 | `https://9763.kstore.vip/aowu.json` |
+| 🚀盒子迷 | ✅ 成功 | `https://盒子迷.top/禁止贩卖` |
+| 🚀dxawi线路 | ✅ 成功 | `http://dxawi.github.io/0/0.json` |
+| 🙀小何线路 | ✅ 成功 | `https://jihulab.com/z-blog/xh2/-/raw/main/t.json` |
+| QIST自用 | ✅ 成功 | `https://raw.githubusercontent.com/qist/tvbox/master/jsm.json` |
+| QIST潇洒 | ✅ 成功 | `https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json` |
+| 东篱线路 | ✅ 成功 | `https://raw.githubusercontent.com/chitue/dongliTV/main/api.json` |
+| 无名 | ✅ 成功 | `https://6800.kstore.vip/fish.json` |
+| 香雅情 | ✅ 成功 | `https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json` |
+| 趣影 | ✅ 成功 | `https://quying-vod.vercel.app/api/vod/tvbox` |
+| 高天流云·聚合JS | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json` |
+| 高天流云·多线 | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0821.json` |
+| noimank | ✅ 成功 | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
+| 高天流云·FTY | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0826.json` |
+| 高天流云·XYQ | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json` |
+| FongMi专版 | ✅ 成功 | `https://www.252035.xyz/z/FongMi.json` |
+| tushen6 | ❌ 失败 | Expecting value: line 1 column 1 (char 0) |
+| 高天流云·FM | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0827.json` |
+| 备用·tvyuan全量 | ✅ 成功 | `https://tv.cc0cd.cc.cd/` |
 <!-- STATUS_END -->
 
 ## 二、仓库结构

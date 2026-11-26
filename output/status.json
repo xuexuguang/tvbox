@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-26 16:32:27",
-  "repo": "58285474/tvbox",
+  "updated_at": "2026-11-26 17:13:35",
+  "repo": "xuexuguang/tvbox",
   "sources": [
     {
       "id": "fantaiying",
@@ -78,6 +78,139 @@
       "name": "挺好分享多仓",
       "ok": true,
       "used_url": "http://ztha.top/TVBox/GYCK.json",
+      "error": null
+    },
+    {
+      "id": "aowu",
+      "name": "嗷呜线路",
+      "ok": true,
+      "used_url": "https://9763.kstore.vip/aowu.json",
+      "error": null
+    },
+    {
+      "id": "hezimi",
+      "name": "🚀盒子迷",
+      "ok": true,
+      "used_url": "https://盒子迷.top/禁止贩卖",
+      "error": null
+    },
+    {
+      "id": "dxawi",
+      "name": "🚀dxawi线路",
+      "ok": true,
+      "used_url": "http://dxawi.github.io/0/0.json",
+      "error": null
+    },
+    {
+      "id": "xiaohe",
+      "name": "🙀小何线路",
+      "ok": true,
+      "used_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t.json",
+      "error": null
+    },
+    {
+      "id": "qist",
+      "name": "QIST自用",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/jsm.json",
+      "error": null
+    },
+    {
+      "id": "qist-xiaosa",
+      "name": "QIST潇洒",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json",
+      "error": null
+    },
+    {
+      "id": "dongli",
+      "name": "东篱线路",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
+      "error": null
+    },
+    {
+      "id": "fish",
+      "name": "无名",
+      "ok": true,
+      "used_url": "https://6800.kstore.vip/fish.json",
+      "error": null
+    },
+    {
+      "id": "xiangyaqing",
+      "name": "香雅情",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
+      "error": null
+    },
+    {
+      "id": "quying",
+      "name": "趣影",
+      "ok": true,
+      "used_url": "https://quying-vod.vercel.app/api/vod/tvbox",
+      "error": null
+    },
+    {
+      "id": "gao-js",
+      "name": "高天流云·聚合JS",
+      "ok": true,
+      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
+      "error": null
+    },
+    {
+      "id": "gao-0821",
+      "name": "高天流云·多线",
+      "ok": true,
+      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0821.json",
+      "error": null
+    },
+    {
+      "id": "noimank",
+      "name": "noimank",
+      "ok": true,
+      "used_url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
+      "error": null
+    },
+    {
+      "id": "gao-fty",
+      "name": "高天流云·FTY",
+      "ok": true,
+      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0826.json",
+      "error": null
+    },
+    {
+      "id": "gao-xyq",
+      "name": "高天流云·XYQ",
+      "ok": true,
+      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
+      "error": null
+    },
+    {
+      "id": "fongmi",
+      "name": "FongMi专版",
+      "ok": true,
+      "used_url": "https://www.252035.xyz/z/FongMi.json",
+      "error": null
+    },
+    {
+      "id": "tushen6",
+      "name": "tushen6",
+      "ok": false,
+      "used_url": null,
+      "error": "Expecting value: line 1 column 1 (char 0)"
+    },
+    {
+      "id": "gao-fm",
+      "name": "高天流云·FM",
+      "ok": true,
+      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0827.json",
+      "error": null
+    },
+    {
+      "id": "tvyuan",
+      "name": "备用·tvyuan全量",
+      "ok": true,
+      "used_url": "https://tv.cc0cd.cc.cd/",
       "error": null
     }
   ]
