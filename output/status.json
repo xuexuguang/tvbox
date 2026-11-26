@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 19:40:03",
+  "updated_at": "2026-11-27 06:41:07",
   "repo": "xuexuguang/tvbox",
   "sources": [
     {
@@ -70,9 +70,8 @@
       "id": "xiaohe",
       "name": "🙀小何线路",
       "ok": true,
-      "used_url": "(缓存)",
-      "error": "429 Client Error: Too Many Requests for url: https://jihulab.com/z-blog/xh2/-/raw/main/t.json",
-      "cached": true
+      "used_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t.json",
+      "error": null
     },
     {
       "id": "qist",
