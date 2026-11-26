@@ -1,5 +1,5 @@
 {
-  "description": "影视仓 / TVBox 配置源列表（2026-10 更新）：替换失效域名，保留肥猫、饭太硬、王二小、老刘备、小马、讴歌、4K小盒子、小盒子单仓、拾光多仓、挺好分享多仓等公开接口",
+  "description": "影视仓 / TVBox 配置源列表（2026-11 更新）：替换失效域名，保留肥猫、饭太硬、王二小、老刘备、小马、讴歌、4K小盒子、小盒子单仓、拾光多仓、挺好分享多仓等公开接口",
   "update_interval_hours": 12,
   "sources": [
     {
@@ -26,7 +26,8 @@
       "urls": [
         "https://d.kstore.dev/download/9280/wex.json",
         "https://9280.kstore.vip/newwex.json",
-        "http://new.王二小放牛娃.top"
+        "http://new.王二小放牛娃.top",
+        "https://9280.kstore.space/wex.json"
       ]
     },
     {
@@ -62,8 +63,7 @@
       "id": "4k",
       "name": "4K小盒子",
       "urls": [
-        "http://xhztv.top/4k.json",
-        "http://xhztv.top/xhz"
+        "http://xhztv.top/4k.json"
       ]
     },
     {
@@ -86,6 +86,101 @@
       "urls": [
         "http://ztha.top/TVBox/GYCK.json"
       ]
+    },
+    {
+      "id": "aowu",
+      "name": "嗷呜线路",
+      "urls": ["https://9763.kstore.vip/aowu.json"]
+    },
+    {
+      "id": "hezimi",
+      "name": "🚀盒子迷",
+      "urls": ["https://盒子迷.top/禁止贩卖"]
+    },
+    {
+      "id": "dxawi",
+      "name": "🚀dxawi线路",
+      "urls": ["http://dxawi.github.io/0/0.json"]
+    },
+    {
+      "id": "xiaohe",
+      "name": "🙀小何线路",
+      "urls": ["https://jihulab.com/z-blog/xh2/-/raw/main/t.json"]
+    },
+    {
+      "id": "qist",
+      "name": "QIST自用",
+      "urls": ["https://raw.githubusercontent.com/qist/tvbox/master/jsm.json"]
+    },
+    {
+      "id": "qist-xiaosa",
+      "name": "QIST潇洒",
+      "urls": ["https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json"]
+    },
+    {
+      "id": "dongli",
+      "name": "东篱线路",
+      "urls": ["https://raw.githubusercontent.com/chitue/dongliTV/main/api.json"]
+    },
+    {
+      "id": "fish",
+      "name": "无名",
+      "urls": ["https://6800.kstore.vip/fish.json"]
+    },
+    {
+      "id": "xiangyaqing",
+      "name": "香雅情",
+      "urls": ["https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json"]
+    },
+    {
+      "id": "quying",
+      "name": "趣影",
+      "urls": ["https://quying-vod.vercel.app/api/vod/tvbox"]
+    },
+    {
+      "id": "gao-js",
+      "name": "高天流云·聚合JS",
+      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"]
+    },
+    {
+      "id": "gao-0821",
+      "name": "高天流云·多线",
+      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0821.json"]
+    },
+    {
+      "id": "noimank",
+      "name": "noimank",
+      "urls": ["https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json"]
+    },
+    {
+      "id": "gao-fty",
+      "name": "高天流云·FTY",
+      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0826.json"]
+    },
+    {
+      "id": "gao-xyq",
+      "name": "高天流云·XYQ",
+      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json"]
+    },
+    {
+      "id": "fongmi",
+      "name": "FongMi专版",
+      "urls": ["https://www.252035.xyz/z/FongMi.json"]
+    },
+    {
+      "id": "tushen6",
+      "name": "tushen6",
+      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/tushen6/Tomorrow/master/tvbox.json"]
+    },
+    {
+      "id": "gao-fm",
+      "name": "高天流云·FM",
+      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0827.json"]
+    },
+    {
+      "id": "tvyuan",
+      "name": "备用·tvyuan全量",
+      "urls": ["https://tv.cc0cd.cc.cd/"]
     }
   ]
 }
