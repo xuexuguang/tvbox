@@ -13,7 +13,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-26 17:13:35（北京时间） · 成功 **29/30** 个源
+> 🔄 最近更新：2026-11-26 18:51:34（北京时间） · 成功 **24/24** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
@@ -38,14 +38,8 @@
 | 无名 | ✅ 成功 | `https://6800.kstore.vip/fish.json` |
 | 香雅情 | ✅ 成功 | `https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json` |
 | 趣影 | ✅ 成功 | `https://quying-vod.vercel.app/api/vod/tvbox` |
-| 高天流云·聚合JS | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json` |
-| 高天流云·多线 | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0821.json` |
 | noimank | ✅ 成功 | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
-| 高天流云·FTY | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0826.json` |
-| 高天流云·XYQ | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json` |
 | FongMi专版 | ✅ 成功 | `https://www.252035.xyz/z/FongMi.json` |
-| tushen6 | ❌ 失败 | Expecting value: line 1 column 1 (char 0) |
-| 高天流云·FM | ✅ 成功 | `https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0827.json` |
 | 备用·tvyuan全量 | ✅ 成功 | `https://tv.cc0cd.cc.cd/` |
 <!-- STATUS_END -->
 
