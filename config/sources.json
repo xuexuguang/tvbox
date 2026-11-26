@@ -3,15 +3,6 @@
   "update_interval_hours": 12,
   "sources": [
     {
-      "id": "feimao",
-      "name": "肥猫",
-      "urls": [
-        "http://肥猫.net/tv",
-        "http://肥猫.com/",
-        "https://6296.kstore.vip/facat.json"
-      ]
-    },
-    {
       "id": "fantaiying",
       "name": "饭太硬",
       "urls": [
@@ -38,13 +29,6 @@
       ]
     },
     {
-      "id": "xiaoma",
-      "name": "小马",
-      "urls": [
-        "https://szyyds.cn/tv/x.json"
-      ]
-    },
-    {
       "id": "ouge",
       "name": "讴歌",
       "urls": [
@@ -58,33 +42,12 @@
       "urls": [
         "https://15318.kstore.space/easytv.jpg"
       ]
-    },
-    {
-      "id": "4k",
-      "name": "4K小盒子",
-      "urls": [
-        "http://xhztv.top/4k.json"
-      ]
-    },
+    },    
     {
       "id": "xiaohezi",
       "name": "小盒子单仓",
       "urls": [
         "http://xhztv.top/xhz"
-      ]
-    },
-    {
-      "id": "shiguang",
-      "name": "拾光多仓",
-      "urls": [
-        "http://xmbjm.fh4u.org/dc.txt"
-      ]
-    },
-    {
-      "id": "tinghao",
-      "name": "挺好分享多仓",
-      "urls": [
-        "http://ztha.top/TVBox/GYCK.json"
       ]
     },
     {
@@ -126,16 +89,6 @@
       "id": "fish",
       "name": "无名",
       "urls": ["https://6800.kstore.vip/fish.json"]
-    },
-    {
-      "id": "xiangyaqing",
-      "name": "香雅情",
-      "urls": ["https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json"]
-    },
-    {
-      "id": "quying",
-      "name": "趣影",
-      "urls": ["https://quying-vod.vercel.app/api/vod/tvbox"]
     },
     {
       "id": "noimank",
