@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 17:13:35",
+  "updated_at": "2026-11-26 18:51:34",
   "repo": "xuexuguang/tvbox",
   "sources": [
     {
@@ -151,20 +151,6 @@
       "error": null
     },
     {
-      "id": "gao-js",
-      "name": "高天流云·聚合JS",
-      "ok": true,
-      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json",
-      "error": null
-    },
-    {
-      "id": "gao-0821",
-      "name": "高天流云·多线",
-      "ok": true,
-      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0821.json",
-      "error": null
-    },
-    {
       "id": "noimank",
       "name": "noimank",
       "ok": true,
@@ -172,38 +158,10 @@
       "error": null
     },
     {
-      "id": "gao-fty",
-      "name": "高天流云·FTY",
-      "ok": true,
-      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0826.json",
-      "error": null
-    },
-    {
-      "id": "gao-xyq",
-      "name": "高天流云·XYQ",
-      "ok": true,
-      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json",
-      "error": null
-    },
-    {
       "id": "fongmi",
       "name": "FongMi专版",
       "ok": true,
       "used_url": "https://www.252035.xyz/z/FongMi.json",
-      "error": null
-    },
-    {
-      "id": "tushen6",
-      "name": "tushen6",
-      "ok": false,
-      "used_url": null,
-      "error": "Expecting value: line 1 column 1 (char 0)"
-    },
-    {
-      "id": "gao-fm",
-      "name": "高天流云·FM",
-      "ok": true,
-      "used_url": "https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0827.json",
       "error": null
     },
     {
