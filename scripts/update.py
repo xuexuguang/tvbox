@@ -14,7 +14,7 @@
   5. 将每个源的最新配置保存到 output/<id>.json
   6. 生成多仓订阅文件 output/多仓订阅.json（可直接填进影视仓的"订阅"或"多仓"）
   7. 生成聚合单仓 output/单仓聚合.json（所有源 sites/lives/parses 合并去重）
-  8. 生成 shields 徽章 output/shield.json，并把各源状态写回 README
+  8. 生成 shields 徽章和 README。上述产物在本地运行时写入 output-local/
 兼容：本脚本同时兼容 GitHub Actions 自动运行 与 本地手动运行。
 在 GitHub Actions 中，环境变量 GITHUB_REPOSITORY 会被自动注入（格式 owner/repo），
 用于拼出多仓订阅里指向本仓库 raw 文件的完整 URL。
@@ -34,7 +34,8 @@ import requests
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_FILE = os.path.join(ROOT, "config", "sources.json")
-OUTPUT_DIR = os.path.join(ROOT, "output")
+IS_GITHUB_ACTIONS = os.environ.get("GITHUB_ACTIONS") == "true"
+OUTPUT_DIR = os.path.join(ROOT, "output" if IS_GITHUB_ACTIONS else "output-local")
 FTY_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tsjm.py")
 
 DEFAULT_REPO = "xuexuguang/tvbox"
@@ -322,7 +323,8 @@ def update_readme(status, ok_count, total, subscriptions):
             url = source["url"].removeprefix("https://gh-proxy.org/")
             rows.append(f"| 线路 · {name} | `{url}` |")
         new_readme = "\n".join([prefix + links_start, *rows, "", links_end + suffix])
-    with open(README_PATH, "w", encoding="utf-8") as f:
+    readme_output = README_PATH if IS_GITHUB_ACTIONS else os.path.join(OUTPUT_DIR, "README.md")
+    with open(readme_output, "w", encoding="utf-8") as f:
         f.write(new_readme)
 
 

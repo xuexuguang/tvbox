@@ -85,12 +85,32 @@
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/quying.json"
     },
     {
+      "name": "高天流云·聚合JS",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/gao-js.json"
+    },
+    {
+      "name": "高天流云·多线",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/gao-0821.json"
+    },
+    {
       "name": "noimank",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/noimank.json"
     },
     {
+      "name": "高天流云·FTY",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/gao-fty.json"
+    },
+    {
+      "name": "高天流云·XYQ",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/gao-xyq.json"
+    },
+    {
       "name": "FongMi专版",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fongmi.json"
+    },
+    {
+      "name": "高天流云·FM",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/gao-fm.json"
     },
     {
       "name": "备用·tvyuan全量",

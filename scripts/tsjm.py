@@ -15,7 +15,8 @@ import requests
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_FILE = os.path.join(ROOT, "config", "sources.json")
-DEFAULT_OUT = os.path.join(ROOT, "output", "fantaiying.json")
+OUTPUT_DIR = "output" if os.environ.get("GITHUB_ACTIONS") == "true" else "output-local"
+DEFAULT_OUT = os.path.join(ROOT, OUTPUT_DIR, "fantaiying.json")
 
 DEFAULT_URLS = [
     "http://www.xn--sss604efuw.net/tv",
