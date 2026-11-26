@@ -1,0 +1,24 @@
+{
+  "name": "趣影",
+  "sites": [
+    {
+      "key": "quying",
+      "name": "趣影",
+      "type": 1,
+      "api": "https://quying-vod.vercel.app/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    }
+  ],
+  "lives": [
+    {
+      "name": "趣影直播",
+      "type": 0,
+      "url": "https://quying-vod.vercel.app/live.m3u",
+      "epg": "http://epg.51zmt.top:8000/e.xml"
+    }
+  ],
+  "parses": [],
+  "flags": []
+}
