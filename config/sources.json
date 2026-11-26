@@ -138,44 +138,14 @@
       "urls": ["https://quying-vod.vercel.app/api/vod/tvbox"]
     },
     {
-      "id": "gao-js",
-      "name": "高天流云·聚合JS",
-      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json"]
-    },
-    {
-      "id": "gao-0821",
-      "name": "高天流云·多线",
-      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0821.json"]
-    },
-    {
       "id": "noimank",
       "name": "noimank",
       "urls": ["https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json"]
     },
     {
-      "id": "gao-fty",
-      "name": "高天流云·FTY",
-      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0826.json"]
-    },
-    {
-      "id": "gao-xyq",
-      "name": "高天流云·XYQ",
-      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/XYQ.json"]
-    },
-    {
       "id": "fongmi",
       "name": "FongMi专版",
       "urls": ["https://www.252035.xyz/z/FongMi.json"]
-    },
-    {
-      "id": "tushen6",
-      "name": "tushen6",
-      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/tushen6/Tomorrow/master/tvbox.json"]
-    },
-    {
-      "id": "gao-fm",
-      "name": "高天流云·FM",
-      "urls": ["https://ghproxy.net/https://raw.githubusercontent.com/gaotianliuyun/gao/master/0827.json"]
     },
     {
       "id": "tvyuan",

@@ -4,7 +4,7 @@
 影视仓 / TVBox 配置自动更新脚本
 =================================
 功能：
-  1. 读取 config/sources.json 中的配置源列表，先按常规源依次抓取
+  1. 读取 config/sources.json 中的配置源列表，限量并发抓取常规源
   2. 对每个源依次尝试"主线 + 备用"多个地址，自动做中文域名 punycode 转换
   3. 校验返回内容是否为合法的 TVBox/影视仓 单仓配置（包含 sites/spiders/lives 等字段）
      或 多仓订阅（顶层含 urls 数组）
@@ -28,6 +28,7 @@ import subprocess
 import sys
 import time
 import urllib.parse
+from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
@@ -36,7 +37,7 @@ CONFIG_FILE = os.path.join(ROOT, "config", "sources.json")
 OUTPUT_DIR = os.path.join(ROOT, "output")
 FTY_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tsjm.py")
 
-DEFAULT_REPO = "58285474/tvbox"  # 本地运行时的占位仓库名，GitHub Actions 会自动覆盖
+DEFAULT_REPO = "xuexuguang/tvbox"
 
 # 模拟 TVBox / 影视仓 客户端请求头
 USER_AGENT = "okhttp/4.12.0"
@@ -45,7 +46,7 @@ TIMEOUT = 15  # 单个地址超时（秒）
 MAX_RETRIES = 2  # 单个地址最大尝试次数（仅对超时/连接类瞬态错误重试）
 RETRY_BACKOFF = 2  # 重试基础等待秒数
 URL_INTERVAL = 1.0  # 每个地址之间的小间隔秒数（降低被限流概率）
-SOURCE_INTERVAL = 2  # 每个源之间的间隔秒数（降低被限流概率）
+MAX_WORKERS = 4
 
 # 判定"像 TVBox 单仓配置"的顶层字段
 TVBOX_KEYS = ("sites", "spiders", "lives", "store", "exts", "parses", "flags")
@@ -281,7 +282,7 @@ STATUS_START = "<!-- STATUS_START -->"
 STATUS_END = "<!-- STATUS_END -->"
 
 
-def update_readme(status, ok_count, total):
+def update_readme(status, ok_count, total, subscriptions):
     """把各源更新状态以表格形式写回 README（在 STATUS_START/END 标记之间）。"""
     if not os.path.exists(README_PATH):
         return
@@ -310,6 +311,17 @@ def update_readme(status, ok_count, total):
     prefix = readme.split(STATUS_START, 1)[0]
     suffix = readme.split(STATUS_END, 1)[1]
     new_readme = f"{prefix}{STATUS_START}\n{block}\n{STATUS_END}{suffix}"
+    links_start = "<!-- SOURCE_LINKS_START -->"
+    links_end = "<!-- SOURCE_LINKS_END -->"
+    if links_start in new_readme and links_end in new_readme:
+        prefix, _, remainder = new_readme.partition(links_start)
+        _, _, suffix = remainder.partition(links_end)
+        rows = ["", "| 线路 | 直连地址 |", "| --- | --- |"]
+        for source in subscriptions:
+            name = source["name"].replace("|", "\\|")
+            url = source["url"].removeprefix("https://gh-proxy.org/")
+            rows.append(f"| 线路 · {name} | `{url}` |")
+        new_readme = "\n".join([prefix + links_start, *rows, "", links_end + suffix])
     with open(README_PATH, "w", encoding="utf-8") as f:
         f.write(new_readme)
 
@@ -330,6 +342,41 @@ def write_badge(ok_count, total):
     }
     with open(os.path.join(OUTPUT_DIR, "shield.json"), "w", encoding="utf-8") as f:
         json.dump(badge, f, ensure_ascii=False, indent=2)
+
+
+def update_source(source):
+    name = source.get("name", "未知")
+    sid = source.get("id", name)
+    out_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
+    entry = {"id": sid, "name": name, "ok": False, "used_url": None, "error": None}
+
+    for url in source.get("urls", []):
+        try:
+            data = fetch_config(url)
+            with open(out_path, "w", encoding="utf-8") as file:
+                json.dump(data, file, ensure_ascii=False, indent=2)
+        except Exception as error:
+            print(f"[FAIL] {name}  {url}  ->  {error}")
+            entry["error"] = str(error)
+            time.sleep(URL_INTERVAL)
+        else:
+            entry.update(ok=True, used_url=url, error=None)
+            print(f"[OK]   {name} <- {url}")
+            return entry, data
+
+    try:
+        with open(out_path, "r", encoding="utf-8") as file:
+            cached = json.load(file)
+        if is_valid_tvbox_config(cached):
+            entry.update(ok=True, cached=True, used_url="(缓存)")
+            print(f"[CACHE] {name}  使用上次缓存配置")
+            return entry, cached
+    except (OSError, ValueError):
+        pass
+
+    entry["error"] = entry["error"] or "所有地址均失败"
+    print(f"[FAIL] {name}  全部地址失败")
+    return entry, None
 
 
 def main() -> int:
@@ -354,65 +401,14 @@ def main() -> int:
     subscriptions = []
     fetched = []  # [(sid, name, data_dict), ...] 用于聚合单仓
 
-    # 1. 先按常规源遍历 config/sources.json
     sources_list = cfg.get("sources", [])
-    for src in sources_list:
-        name = src.get("name", "未知")
-        sid = src.get("id", name)
-        urls = src.get("urls", [])
-
-        entry = {"id": sid, "name": name, "ok": False, "used_url": None, "error": None}
-        saved = False
-
-        for url in urls:
-            try:
-                data = fetch_config(url)
-                out_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
-                with open(out_path, "w", encoding="utf-8") as f:
-                    json.dump(data, f, ensure_ascii=False, indent=2)
-                entry["ok"] = True
-                entry["used_url"] = url
-                entry["error"] = None
-                subscriptions.append(
-                    {"name": name, "url": f"{raw_base}/{sid}.json"}
-                )
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        for entry, data in executor.map(update_source, sources_list):
+            status["sources"].append(entry)
+            if entry["ok"]:
+                sid, name = entry["id"], entry["name"]
+                subscriptions.append({"name": name, "url": f"{raw_base}/{sid}.json"})
                 fetched.append((sid, name, data))
-                saved = True
-                print(f"[OK]   {name} <- {url}")
-                break
-            except Exception as e:  # noqa: BLE001
-                print(f"[FAIL] {name}  {url}  ->  {e}")
-                entry["error"] = str(e)
-
-            # 地址之间稍作间隔，避免被限流
-            time.sleep(URL_INTERVAL)
-
-        if not saved:
-            # 所有地址都失败：尝试使用上一次成功抓取的缓存文件
-            cache_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
-            if os.path.exists(cache_path):
-                try:
-                    with open(cache_path, "r", encoding="utf-8") as f:
-                        cached = json.load(f)
-                    if is_valid_tvbox_config(cached):
-                        subscriptions.append(
-                            {"name": name, "url": f"{raw_base}/{sid}.json"}
-                        )
-                        fetched.append((sid, name, cached))
-                        entry["ok"] = True
-                        entry["cached"] = True
-                        entry["used_url"] = "(缓存)"
-                        saved = True
-                        print(f"[CACHE] {name}  使用上次缓存配置")
-                except Exception:
-                    pass
-            if not saved:
-                entry["error"] = entry["error"] or "所有地址均失败"
-                print(f"[FAIL] {name}  全部地址失败")
-        status["sources"].append(entry)
-
-        # 源之间稍作间隔，避免集中请求被限流
-        time.sleep(SOURCE_INTERVAL)
 
     # 2. 再按特殊源处理（如饭太硬：先跑 tsjm.py，失败回退本地缓存，并覆盖常规源里的同名项，排在首位）
     fty_entry, fty_sub, fty_fetched = run_fantaiying(raw_base)
@@ -451,7 +447,7 @@ def main() -> int:
 
     # 生成 shields 徽章并更新 README 状态表
     write_badge(ok_count, total)
-    update_readme(status, ok_count, total)
+    update_readme(status, ok_count, total, subscriptions)
 
     print("\n" + "=" * 50)
     print(f"本次更新：{ok_count}/{total} 个源成功")

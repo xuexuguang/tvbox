@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-26 16:32:27",
-  "repo": "58285474/tvbox",
+  "updated_at": "2026-11-26 17:27:03",
+  "repo": "xuexuguang/tvbox",
   "sources": [
     {
       "id": "fantaiying",
@@ -42,7 +42,7 @@
       "name": "讴歌",
       "ok": true,
       "used_url": "(缓存)",
-      "error": "HTTPSConnectionPool(host='xn--dkw0c.v.nxog.top', port=443): Max retries exceeded with url: /m/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'xn--dkw0c.v.nxog.top'. (_ssl.c:1018)\")))",
+      "error": "HTTPSConnectionPool(host='xn--dkw0c.v.nxog.top', port=443): Max retries exceeded with url: /m/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'xn--dkw0c.v.nxog.top'. (_ssl.c:997)\")))",
       "cached": true
     },
     {
@@ -78,6 +78,139 @@
       "name": "挺好分享多仓",
       "ok": true,
       "used_url": "http://ztha.top/TVBox/GYCK.json",
+      "error": null
+    },
+    {
+      "id": "aowu",
+      "name": "嗷呜线路",
+      "ok": true,
+      "used_url": "https://9763.kstore.vip/aowu.json",
+      "error": null
+    },
+    {
+      "id": "hezimi",
+      "name": "🚀盒子迷",
+      "ok": true,
+      "used_url": "https://盒子迷.top/禁止贩卖",
+      "error": null
+    },
+    {
+      "id": "dxawi",
+      "name": "🚀dxawi线路",
+      "ok": true,
+      "used_url": "http://dxawi.github.io/0/0.json",
+      "error": null
+    },
+    {
+      "id": "xiaohe",
+      "name": "🙀小何线路",
+      "ok": true,
+      "used_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t.json",
+      "error": null
+    },
+    {
+      "id": "qist",
+      "name": "QIST自用",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/jsm.json",
+      "error": null
+    },
+    {
+      "id": "qist-xiaosa",
+      "name": "QIST潇洒",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json",
+      "error": null
+    },
+    {
+      "id": "dongli",
+      "name": "东篱线路",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
+      "error": null
+    },
+    {
+      "id": "fish",
+      "name": "无名",
+      "ok": true,
+      "used_url": "https://6800.kstore.vip/fish.json",
+      "error": null
+    },
+    {
+      "id": "xiangyaqing",
+      "name": "香雅情",
+      "ok": true,
+      "used_url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
+      "error": null
+    },
+    {
+      "id": "quying",
+      "name": "趣影",
+      "ok": true,
+      "used_url": "https://quying-vod.vercel.app/api/vod/tvbox",
+      "error": null
+    },
+    {
+      "id": "gao-js",
+      "name": "高天流云·聚合JS",
+      "ok": false,
+      "used_url": null,
+      "error": "HTTPSConnectionPool(host='ghproxy.net', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "id": "gao-0821",
+      "name": "高天流云·多线",
+      "ok": false,
+      "used_url": null,
+      "error": "HTTPSConnectionPool(host='ghproxy.net', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "id": "noimank",
+      "name": "noimank",
+      "ok": true,
+      "used_url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
+      "error": null
+    },
+    {
+      "id": "gao-fty",
+      "name": "高天流云·FTY",
+      "ok": false,
+      "used_url": null,
+      "error": "HTTPSConnectionPool(host='ghproxy.net', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "id": "gao-xyq",
+      "name": "高天流云·XYQ",
+      "ok": false,
+      "used_url": null,
+      "error": "HTTPSConnectionPool(host='ghproxy.net', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "id": "fongmi",
+      "name": "FongMi专版",
+      "ok": true,
+      "used_url": "https://www.252035.xyz/z/FongMi.json",
+      "error": null
+    },
+    {
+      "id": "tushen6",
+      "name": "tushen6",
+      "ok": false,
+      "used_url": null,
+      "error": "HTTPSConnectionPool(host='ghproxy.net', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "id": "gao-fm",
+      "name": "高天流云·FM",
+      "ok": false,
+      "used_url": null,
+      "error": "HTTPSConnectionPool(host='ghproxy.net', port=443): Read timed out. (read timeout=15)"
+    },
+    {
+      "id": "tvyuan",
+      "name": "备用·tvyuan全量",
+      "ok": true,
+      "used_url": "https://tv.cc0cd.cc.cd/",
       "error": null
     }
   ]

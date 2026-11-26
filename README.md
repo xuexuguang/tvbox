@@ -13,7 +13,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-26 16:32:27（北京时间） · 成功 **11/11** 个源
+> 🔄 最近更新：2026-11-26 17:27:03（北京时间） · 成功 **24/30** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
@@ -28,6 +28,25 @@
 | 小盒子单仓 | ✅ 成功 | `http://xhztv.top/xhz` |
 | 拾光多仓 | ✅ 成功 | `http://xmbjm.fh4u.org/dc.txt` |
 | 挺好分享多仓 | ✅ 成功 | `http://ztha.top/TVBox/GYCK.json` |
+| 嗷呜线路 | ✅ 成功 | `https://9763.kstore.vip/aowu.json` |
+| 🚀盒子迷 | ✅ 成功 | `https://盒子迷.top/禁止贩卖` |
+| 🚀dxawi线路 | ✅ 成功 | `http://dxawi.github.io/0/0.json` |
+| 🙀小何线路 | ✅ 成功 | `https://jihulab.com/z-blog/xh2/-/raw/main/t.json` |
+| QIST自用 | ✅ 成功 | `https://raw.githubusercontent.com/qist/tvbox/master/jsm.json` |
+| QIST潇洒 | ✅ 成功 | `https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json` |
+| 东篱线路 | ✅ 成功 | `https://raw.githubusercontent.com/chitue/dongliTV/main/api.json` |
+| 无名 | ✅ 成功 | `https://6800.kstore.vip/fish.json` |
+| 香雅情 | ✅ 成功 | `https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json` |
+| 趣影 | ✅ 成功 | `https://quying-vod.vercel.app/api/vod/tvbox` |
+| 高天流云·聚合JS | ❌ 失败 | HTTPSConnectionPool(host='ghproxy.net', port=443): Read t... |
+| 高天流云·多线 | ❌ 失败 | HTTPSConnectionPool(host='ghproxy.net', port=443): Read t... |
+| noimank | ✅ 成功 | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
+| 高天流云·FTY | ❌ 失败 | HTTPSConnectionPool(host='ghproxy.net', port=443): Read t... |
+| 高天流云·XYQ | ❌ 失败 | HTTPSConnectionPool(host='ghproxy.net', port=443): Read t... |
+| FongMi专版 | ✅ 成功 | `https://www.252035.xyz/z/FongMi.json` |
+| tushen6 | ❌ 失败 | HTTPSConnectionPool(host='ghproxy.net', port=443): Read t... |
+| 高天流云·FM | ❌ 失败 | HTTPSConnectionPool(host='ghproxy.net', port=443): Read t... |
+| 备用·tvyuan全量 | ✅ 成功 | `https://tv.cc0cd.cc.cd/` |
 <!-- STATUS_END -->
 
 ## 二、仓库结构
@@ -52,24 +71,54 @@ tvbox/
 
 ## 三、在影视仓 / TVBox 中使用
 
-部署完成后，把下面任一地址填入 App 的「设置 → 配置地址」：
+国内网络优先使用以下加速地址。多仓链接填入 App 的「多仓／订阅」，单仓链接填入「配置地址」。
+
+| 类型 | 加速地址 |
+| --- | --- |
+| **多仓订阅（推荐）** | `https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json` |
+| **单仓聚合** | `https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json` |
+
+直连 GitHub 时可使用以下地址：
 
 | 类型 | 地址 | 说明 |
 | --- | --- | --- |
-| **多仓订阅（推荐）** | `https://raw.githubusercontent.com/58285474/tvbox/main/output/多仓订阅.json` | App 内可在各源之间切换 |
-| **单仓聚合** | `https://raw.githubusercontent.com/58285474/tvbox/main/output/单仓聚合.json` | 所有源站点合并成一个，无需切换 |
-| 单仓 · 肥猫 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/feimao.json` | 单独使用某一个源 |
-| 单仓 · 饭太硬 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/fantaiying.json` | |
-| 单仓 · 王二小 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/wangerxiao.json` | |
-| 单仓 · 老刘备 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/laoliubei.json` | |
-| 单仓 · 小马 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/xiaoma.json` | |
-| 单仓 · 讴歌 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/ouge.json` | |
-| 单仓 · 4K小盒子 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/4k.json` | |
-| 单仓 · 小盒子单仓 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/xiaohezi.json` | |
-| 单仓 · 拾光多仓 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/shiguang.json` | |
-| 单仓 · 挺好分享多仓 | `https://raw.githubusercontent.com/58285474/tvbox/main/output/tinghao.json` | |
+| **多仓订阅（推荐）** | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/多仓订阅.json` | App 内可在各源之间切换 |
+| **单仓聚合** | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/单仓聚合.json` | 所有源站点合并成一个，无需切换 |
 
-> 多仓订阅与单仓文件里的地址由脚本根据 `GITHUB_REPOSITORY` 环境变量自动生成。若国内直连 raw.githubusercontent.com 慢，可套一层 `ghproxy` / `gh-proxy` 等加速前缀。
+各线路的直连地址随多仓订阅同步更新。
+
+<!-- SOURCE_LINKS_START -->
+
+| 线路 | 直连地址 |
+| --- | --- |
+| 线路 · 饭太硬 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fantaiying.json` |
+| 线路 · 肥猫 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/feimao.json` |
+| 线路 · 王二小 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/wangerxiao.json` |
+| 线路 · 老刘备 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/laoliubei.json` |
+| 线路 · 小马 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/xiaoma.json` |
+| 线路 · 讴歌 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/ouge.json` |
+| 线路 · Easy | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/easy.json` |
+| 线路 · 4K小盒子 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/4k.json` |
+| 线路 · 小盒子单仓 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/xiaohezi.json` |
+| 线路 · 拾光多仓 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/shiguang.json` |
+| 线路 · 挺好分享多仓 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/tinghao.json` |
+| 线路 · 嗷呜线路 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/aowu.json` |
+| 线路 · 🚀盒子迷 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/hezimi.json` |
+| 线路 · 🚀dxawi线路 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/dxawi.json` |
+| 线路 · 🙀小何线路 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/xiaohe.json` |
+| 线路 · QIST自用 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/qist.json` |
+| 线路 · QIST潇洒 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/qist-xiaosa.json` |
+| 线路 · 东篱线路 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/dongli.json` |
+| 线路 · 无名 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fish.json` |
+| 线路 · 香雅情 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/xiangyaqing.json` |
+| 线路 · 趣影 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/quying.json` |
+| 线路 · noimank | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/noimank.json` |
+| 线路 · FongMi专版 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fongmi.json` |
+| 线路 · 备用·tvyuan全量 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/tvyuan.json` |
+
+<!-- SOURCE_LINKS_END -->
+
+> 更新脚本根据 `GITHUB_REPOSITORY` 生成多仓订阅里的线路地址。GitHub 和第三方加速代理均可能缓存响应，更新后可等待几分钟再在 App 内刷新订阅。
 
 ## 四、自动更新机制
 
@@ -102,14 +151,15 @@ tvbox/
 ## 六、本地手动更新（可选）
 
 ```bash
-pip install -r requirements.txt
-REPO=58285474/tvbox python scripts/update.py
+python3 -m pip install -r requirements.txt
+python3 scripts/update.py
 ```
 
 ## 七、脚本特性
 
 - **中文域名自动转 punycode**：`饭太硬.com` → `xn--sss604efuw.com`，避免 DNS 解析失败。
 - **多地址回退**：每个源按顺序尝试主/备用地址，单个地址失败不影响其他源。
+- **并发抓取**：常规源最多同时抓取 4 条，订阅和状态表仍按配置顺序生成。
 - **智能重试**：仅对超时、连接错误、空响应等瞬态问题退避重试；4xx/5xx 等确定性失败直接跳过。
 - **兼容多仓订阅**：既支持单仓（含 sites 字段），也支持多仓订阅（顶层 urls 数组）格式。
 - **反爬兼容**：使用简洁 UA（部分接口对完整浏览器 UA 下发挑战页），自动剔除 JSON 内嵌的 `//` 注释，兼容未转义控制字符。
