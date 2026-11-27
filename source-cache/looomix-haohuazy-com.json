@@ -1,0 +1,16 @@
+{
+  "origin": "https://hhzyapi.com/api.php/provide/vod",
+  "data": {
+    "sites": [
+      {
+        "key": "looomix-haohuazy-com",
+        "name": "豪华",
+        "type": 3,
+        "api": "https://hhzyapi.com/api.php/provide/vod",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1
+      }
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "sites": [
+    {
+      "key": "looomix-iqiyizyapi-com",
+      "name": "爱奇艺",
+      "type": 3,
+      "api": "https://iqiyizyapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    }
+  ]
+}

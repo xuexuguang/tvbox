@@ -1,0 +1,16 @@
+{
+  "origin": "https://caiji.moduapi.cc/api.php/provide/vod",
+  "data": {
+    "sites": [
+      {
+        "key": "looomix-moduapi-cc",
+        "name": "魔都动漫",
+        "type": 3,
+        "api": "https://caiji.moduapi.cc/api.php/provide/vod",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1
+      }
+    ]
+  }
+}

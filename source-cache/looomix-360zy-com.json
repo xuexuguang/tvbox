@@ -1,0 +1,16 @@
+{
+  "origin": "https://360zyzz.com/api.php/provide/vod",
+  "data": {
+    "sites": [
+      {
+        "key": "looomix-360zy-com",
+        "name": "360",
+        "type": 3,
+        "api": "https://360zyzz.com/api.php/provide/vod",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1
+      }
+    ]
+  }
+}

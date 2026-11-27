@@ -67,6 +67,54 @@
     {
       "name": "备用·tvyuan全量",
       "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/tvyuan.json"
+    },
+    {
+      "name": "猫眼",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-maoyanzy-com.json"
+    },
+    {
+      "name": "最大",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-zuida-xyz.json"
+    },
+    {
+      "name": "红牛",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-hongniuzy-com.json"
+    },
+    {
+      "name": "U酷影视",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-ukuapi88-com.json"
+    },
+    {
+      "name": "豪华",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-haohuazy-com.json"
+    },
+    {
+      "name": "金鹰点播",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-jinyingzy-com.json"
+    },
+    {
+      "name": "优质库1080zyk",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-1080zyk-com.json"
+    },
+    {
+      "name": "爱奇艺",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-iqiyizyapi-com.json"
+    },
+    {
+      "name": "360",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-360zy-com.json"
+    },
+    {
+      "name": "魔都",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-moduzy-net.json"
+    },
+    {
+      "name": "魔都动漫",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-moduapi-cc.json"
+    },
+    {
+      "name": "百度云zy",
+      "url": "https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/looomix-bdzy1-com.json"
     }
   ]
 }

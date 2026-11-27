@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 15:18:40",
+  "updated_at": "2026-11-27 15:34:17",
   "repo": "xuexuguang/tvbox",
   "sources": [
     {
@@ -8,7 +8,7 @@
       "ok": true,
       "used_url": "http://www.xn--sss604efuw.net/tv (JPEG解包)",
       "error": null,
-      "request_ms": 1221
+      "request_ms": 658
     },
     {
       "id": "wangerxiao",
@@ -16,7 +16,7 @@
       "ok": true,
       "used_url": "https://d.kstore.dev/download/9280/wex.json",
       "error": null,
-      "request_ms": 143
+      "request_ms": 251
     },
     {
       "id": "laoliubei",
@@ -24,7 +24,7 @@
       "ok": true,
       "used_url": "https://raw.liucn.cc/box/m.json",
       "error": null,
-      "request_ms": 258
+      "request_ms": 301
     },
     {
       "id": "ouge",
@@ -40,7 +40,7 @@
       "ok": true,
       "used_url": "https://15318.kstore.space/easytv.jpg",
       "error": null,
-      "request_ms": 522
+      "request_ms": 366
     },
     {
       "id": "xiaohezi",
@@ -48,7 +48,7 @@
       "ok": true,
       "used_url": "http://xhztv.top/xhz/",
       "error": null,
-      "request_ms": 56
+      "request_ms": 259
     },
     {
       "id": "aowu",
@@ -56,7 +56,7 @@
       "ok": true,
       "used_url": "https://9763.kstore.vip/aowu.json",
       "error": null,
-      "request_ms": 454
+      "request_ms": 346
     },
     {
       "id": "hezimi",
@@ -64,7 +64,7 @@
       "ok": true,
       "used_url": "https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
       "error": null,
-      "request_ms": 278
+      "request_ms": 358
     },
     {
       "id": "dxawi",
@@ -72,7 +72,7 @@
       "ok": true,
       "used_url": "https://dxawi.github.io/0/0.json",
       "error": null,
-      "request_ms": 226
+      "request_ms": 222
     },
     {
       "id": "xiaohe",
@@ -80,7 +80,7 @@
       "ok": true,
       "used_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t.json",
       "error": null,
-      "request_ms": 611
+      "request_ms": 705
     },
     {
       "id": "qist",
@@ -88,7 +88,7 @@
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/jsm.json",
       "error": null,
-      "request_ms": 89
+      "request_ms": 103
     },
     {
       "id": "qist-xiaosa",
@@ -96,7 +96,7 @@
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json",
       "error": null,
-      "request_ms": 20
+      "request_ms": 27
     },
     {
       "id": "dongli",
@@ -104,7 +104,7 @@
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
       "error": null,
-      "request_ms": 109
+      "request_ms": 100
     },
     {
       "id": "fish",
@@ -112,7 +112,7 @@
       "ok": true,
       "used_url": "https://6800.kstore.vip/fish.json",
       "error": null,
-      "request_ms": 295
+      "request_ms": 333
     },
     {
       "id": "noimank",
@@ -120,7 +120,7 @@
       "ok": true,
       "used_url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
       "error": null,
-      "request_ms": 44
+      "request_ms": 113
     },
     {
       "id": "fongmi",
@@ -128,7 +128,7 @@
       "ok": true,
       "used_url": "https://www.252035.xyz/z/FongMi.json",
       "error": null,
-      "request_ms": 404
+      "request_ms": 974
     },
     {
       "id": "tvyuan",
@@ -136,7 +136,103 @@
       "ok": true,
       "used_url": "https://tv.cc0cd.cc.cd/",
       "error": null,
-      "request_ms": 611
+      "request_ms": 135
+    },
+    {
+      "id": "looomix-maoyanzy-com",
+      "name": "猫眼",
+      "ok": true,
+      "used_url": "https://api.maoyanapi.top/api.php/provide/vod",
+      "error": null,
+      "request_ms": 617
+    },
+    {
+      "id": "looomix-zuida-xyz",
+      "name": "最大",
+      "ok": true,
+      "used_url": "https://api.zuidapi.com/api.php/provide/vod",
+      "error": null,
+      "request_ms": 95
+    },
+    {
+      "id": "looomix-hongniuzy-com",
+      "name": "红牛",
+      "ok": true,
+      "used_url": "https://www.hongniuzy2.com/api.php/provide/vod",
+      "error": null,
+      "request_ms": 126
+    },
+    {
+      "id": "looomix-ukuapi88-com",
+      "name": "U酷影视",
+      "ok": true,
+      "used_url": "https://api.ukuapi88.com/api.php/provide/vod",
+      "error": null,
+      "request_ms": 128
+    },
+    {
+      "id": "looomix-haohuazy-com",
+      "name": "豪华",
+      "ok": true,
+      "used_url": "https://hhzyapi.com/api.php/provide/vod",
+      "error": null,
+      "request_ms": 272
+    },
+    {
+      "id": "looomix-jinyingzy-com",
+      "name": "金鹰点播",
+      "ok": true,
+      "used_url": "https://jinyingzy.com/api.php/provide/vod",
+      "error": null,
+      "request_ms": 163
+    },
+    {
+      "id": "looomix-1080zyk-com",
+      "name": "优质库1080zyk",
+      "ok": true,
+      "used_url": "https://api.yyzy-tv.vip/inc/api_mac10.php",
+      "error": null,
+      "request_ms": 550
+    },
+    {
+      "id": "looomix-iqiyizyapi-com",
+      "name": "爱奇艺",
+      "ok": true,
+      "used_url": "https://iqiyizyapi.com/api.php/provide/vod",
+      "error": null,
+      "request_ms": 2382
+    },
+    {
+      "id": "looomix-360zy-com",
+      "name": "360",
+      "ok": true,
+      "used_url": "https://360zyzz.com/api.php/provide/vod",
+      "error": null,
+      "request_ms": 243
+    },
+    {
+      "id": "looomix-moduzy-net",
+      "name": "魔都",
+      "ok": true,
+      "used_url": "https://www.mdzyapi.com/api.php/provide/vod",
+      "error": null,
+      "request_ms": 208
+    },
+    {
+      "id": "looomix-moduapi-cc",
+      "name": "魔都动漫",
+      "ok": true,
+      "used_url": "https://caiji.moduapi.cc/api.php/provide/vod",
+      "error": null,
+      "request_ms": 216
+    },
+    {
+      "id": "looomix-bdzy1-com",
+      "name": "百度云zy",
+      "ok": true,
+      "used_url": "https://api.apibdzy.com/api.php/provide/vod",
+      "error": null,
+      "request_ms": 191
     }
   ]
 }

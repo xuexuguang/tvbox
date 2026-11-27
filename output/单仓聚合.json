@@ -6,7 +6,7 @@
     "fiizvfck.top=cmcc.vvvv.ee",
     "sub.ottiptv.cc=cmcc.vvvv.ee"
   ],
-  "warningText": "本配置由 17 个公开源自动聚合（含饭太硬等），仅供学习交流，请勿商用",
+  "warningText": "本配置由 29 个公开源自动聚合（含饭太硬等），仅供学习交流，请勿商用",
   "sites": [
     {
       "key": "点我切源",
@@ -25627,6 +25627,114 @@
       "type": 3,
       "api": "csp_Nostr",
       "homePage": "https://cyber.920410.xyz"
+    },
+    {
+      "key": "looomix-maoyanzy-com",
+      "name": "猫眼",
+      "type": 3,
+      "api": "https://api.maoyanapi.top/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-zuida-xyz",
+      "name": "最大",
+      "type": 3,
+      "api": "https://api.zuidapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-hongniuzy-com",
+      "name": "红牛",
+      "type": 3,
+      "api": "https://www.hongniuzy2.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-ukuapi88-com",
+      "name": "U酷影视",
+      "type": 3,
+      "api": "https://api.ukuapi88.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-haohuazy-com",
+      "name": "豪华",
+      "type": 3,
+      "api": "https://hhzyapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-jinyingzy-com",
+      "name": "金鹰点播",
+      "type": 3,
+      "api": "https://jinyingzy.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-1080zyk-com",
+      "name": "优质库1080zyk",
+      "type": 3,
+      "api": "https://api.yyzy-tv.vip/inc/api_mac10.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-iqiyizyapi-com",
+      "name": "爱奇艺",
+      "type": 3,
+      "api": "https://iqiyizyapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-360zy-com",
+      "name": "360",
+      "type": 3,
+      "api": "https://360zyzz.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-moduzy-net",
+      "name": "魔都",
+      "type": 3,
+      "api": "https://www.mdzyapi.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-moduapi-cc",
+      "name": "魔都动漫",
+      "type": 3,
+      "api": "https://caiji.moduapi.cc/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    },
+    {
+      "key": "looomix-bdzy1-com",
+      "name": "百度云zy",
+      "type": 3,
+      "api": "https://api.apibdzy.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
     }
   ],
   "lives": [

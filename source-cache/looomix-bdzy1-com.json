@@ -1,0 +1,16 @@
+{
+  "origin": "https://api.apibdzy.com/api.php/provide/vod",
+  "data": {
+    "sites": [
+      {
+        "key": "looomix-bdzy1-com",
+        "name": "百度云zy",
+        "type": 3,
+        "api": "https://api.apibdzy.com/api.php/provide/vod",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1
+      }
+    ]
+  }
+}

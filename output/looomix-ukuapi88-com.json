@@ -1,0 +1,13 @@
+{
+  "sites": [
+    {
+      "key": "looomix-ukuapi88-com",
+      "name": "U酷影视",
+      "type": 3,
+      "api": "https://api.ukuapi88.com/api.php/provide/vod",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    }
+  ]
+}

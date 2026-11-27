@@ -1,0 +1,13 @@
+{
+  "sites": [
+    {
+      "key": "looomix-1080zyk-com",
+      "name": "优质库1080zyk",
+      "type": 3,
+      "api": "https://api.yyzy-tv.vip/inc/api_mac10.php",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1
+    }
+  ]
+}
