@@ -13,27 +13,27 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-27 11:09:36（北京时间） · 成功 **17/17** 个源
+> 🔄 最近更新：2026-11-27 11:30:59（北京时间） · 成功 **17/17** 个源
 
 | 配置源 | 状态 | 请求耗时（ms） | 使用地址 |
 | --- | --- | ---: | --- |
-| 饭太硬 | ✅ 成功 | — | `http://www.xn--sss604efuw.net/tv (JPEG解包)` |
-| 王二小 | ✅ 成功 | — | `https://d.kstore.dev/download/9280/wex.json` |
-| 老刘备 | ✅ 成功 | — | `https://raw.liucn.cc/box/m.json` |
+| 饭太硬 | ✅ 成功 | 668 | `http://www.xn--sss604efuw.net/tv (JPEG解包)` |
+| 王二小 | ✅ 成功 | 150 | `https://d.kstore.dev/download/9280/wex.json` |
+| 老刘备 | ✅ 成功 | 343 | `https://raw.liucn.cc/box/m.json` |
 | 讴歌 | 📦 缓存 | — | 上次成功配置（本次更新未抓到，沿用缓存） |
-| Easy | ✅ 成功 | — | `https://15318.kstore.space/easytv.jpg` |
-| 小盒子单仓 | ✅ 成功 | — | `http://xhztv.top/xhz` |
-| 嗷呜线路 | ✅ 成功 | — | `https://9763.kstore.vip/aowu.json` |
-| 🚀盒子迷 | ✅ 成功 | — | `https://盒子迷.top/禁止贩卖` |
-| 🚀dxawi线路 | ✅ 成功 | — | `http://dxawi.github.io/0/0.json` |
-| 🙀小何线路 | ✅ 成功 | — | `https://jihulab.com/z-blog/xh2/-/raw/main/t.json` |
-| QIST自用 | ✅ 成功 | — | `https://raw.githubusercontent.com/qist/tvbox/master/jsm.json` |
-| QIST潇洒 | ✅ 成功 | — | `https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json` |
-| 东篱线路 | ✅ 成功 | — | `https://raw.githubusercontent.com/chitue/dongliTV/main/api.json` |
-| 无名 | ✅ 成功 | — | `https://6800.kstore.vip/fish.json` |
-| noimank | ✅ 成功 | — | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
-| FongMi专版 | ✅ 成功 | — | `https://www.252035.xyz/z/FongMi.json` |
-| 备用·tvyuan全量 | ✅ 成功 | — | `https://tv.cc0cd.cc.cd/` |
+| Easy | ✅ 成功 | 348 | `https://15318.kstore.space/easytv.jpg` |
+| 小盒子单仓 | ✅ 成功 | 157 | `http://xhztv.top/xhz/` |
+| 嗷呜线路 | ✅ 成功 | 238 | `https://9763.kstore.vip/aowu.json` |
+| 🚀盒子迷 | ✅ 成功 | 259 | `https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96` |
+| 🚀dxawi线路 | ✅ 成功 | 199 | `https://dxawi.github.io/0/0.json` |
+| 🙀小何线路 | ✅ 成功 | 617 | `https://jihulab.com/z-blog/xh2/-/raw/main/t.json` |
+| QIST自用 | ✅ 成功 | 114 | `https://raw.githubusercontent.com/qist/tvbox/master/jsm.json` |
+| QIST潇洒 | ✅ 成功 | 102 | `https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json` |
+| 东篱线路 | ✅ 成功 | 108 | `https://raw.githubusercontent.com/chitue/dongliTV/main/api.json` |
+| 无名 | ✅ 成功 | 281 | `https://6800.kstore.vip/fish.json` |
+| noimank | ✅ 成功 | 133 | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
+| FongMi专版 | ✅ 成功 | 415 | `https://www.252035.xyz/z/FongMi.json` |
+| 备用·tvyuan全量 | ✅ 成功 | 140 | `https://tv.cc0cd.cc.cd/` |
 <!-- STATUS_END -->
 
 ## 二、仓库结构
@@ -65,7 +65,7 @@ tvbox/
 | 类型 | 加速地址 | 数量 |
 | --- | --- | ---: |
 | **多仓订阅（推荐）** | `https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json` | 17 条线路 |
-| **单仓聚合** | `https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json` | 2816 个站点 |
+| **单仓聚合** | `https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json` | 2291 个站点 |
 
 <!-- ACCELERATED_LINKS_END -->
 

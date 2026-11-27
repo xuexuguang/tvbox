@@ -13,17 +13,6 @@
       "filterable": 0
     },
     {
-      "key": "csp_KungFu404",
-      "name": "🔥┃设置Token",
-      "type": 3,
-      "api": "csp_KungFu404",
-      "searchable": 0,
-      "filterable": 0,
-      "changeable": 0,
-      "jar": "./libs/jar/Token.jar",
-      "ext": "http://127.0.0.1:9978/file/tvfan/token.txt"
-    },
-    {
       "key": "APP商店",
       "name": "🎰┃蜂蜜┃商店",
       "type": 3,
@@ -537,20 +526,6 @@
       "type": 3,
       "api": "./lib/drpy2.min.js",
       "ext": "./lib/短视频.js",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0
-    },
-    {
-      "key": "有声小说js",
-      "name": "🎧有声┃小说",
-      "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "ext": "./lib/有声小说吧.js",
-      "style": {
-        "type": "rect",
-        "ratio": 1
-      },
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0
@@ -1083,28 +1058,6 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
-    },
-    {
-      "key": "cc_相声",
-      "name": "📻┃相声┃合集",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/相声.json"
-    },
-    {
-      "key": "cc_评书",
-      "name": "📻┃评书┃合集",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "jar": "./libs/jar/c.jar",
-      "ext": "./libs/c/评书.json"
     },
     {
       "key": "cc_03影院",
@@ -2112,20 +2065,6 @@
       "changeable": 0
     },
     {
-      "key": "有声小说js",
-      "name": "🎧有声┃小说",
-      "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/有声小说吧.js",
-      "style": {
-        "type": "rect",
-        "ratio": 1
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0
-    },
-    {
       "key": "csp_Bili短剧",
       "name": "🎦┃短剧┃BiL",
       "api": "csp_Bili",
@@ -2279,17 +2218,6 @@
       "ext": "./libs/hccx/中医.json"
     },
     {
-      "key": "csp_Bili_xuqu1",
-      "name": "🅱️┃戏曲┃合集",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/戏曲.json"
-    },
-    {
       "key": "csp_Bili_TYjs",
       "name": "🅱️┃体育┃健身",
       "type": 3,
@@ -2299,17 +2227,6 @@
       "filterable": 1,
       "jar": "./libs/jar/HCCX.jar",
       "ext": "./libs/hccx/体育.json"
-    },
-    {
-      "key": "csp_Bili_xiangsh",
-      "name": "🅱️┃相声┃小品",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/相声.json"
     },
     {
       "key": "csp_Bili_FBqx",
@@ -2375,14 +2292,6 @@
       "quickSearch": 0,
       "filterable": 0,
       "ext": "./libs/哔哩直播.js"
-    },
-    {
-      "key": "本地",
-      "name": "本地存储",
-      "type": 3,
-      "api": "csp_Local",
-      "searchable": 0,
-      "changeable": 0
     },
     {
       "key": "AList",

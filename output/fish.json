@@ -5,22 +5,6 @@
   "danmaku": "http://127.0.0.1:5266/danmu/webhtv?name={name}&episode={episode}",
   "sites": [
     {
-      "key": "Douban",
-      "name": "🌕️┆片单┆精选",
-      "type": 3,
-      "api": "csp_PianDan",
-      "searchable": 1,
-      "indexs": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "home": {
-          "douban": "https://tc-new.z.wiki/autoupload/k2fxc/20260918/r68R/douban.json",
-          "tmdb": "https://tc-new.z.wiki/autoupload/k2fxc/20260918/yAKC/tmdb.json"
-        }
-      }
-    },
-    {
       "key": "YGP",
       "name": "🔔┆新片┆预告",
       "type": 3,
@@ -28,25 +12,6 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1
-    },
-    {
-      "key": "FishConfig",
-      "name": "🍼┆设置┆中心",
-      "type": 3,
-      "api": "csp_FishConfig"
-    },
-    {
-      "key": "Local",
-      "name": "📁┆文件┆浏览",
-      "type": 3,
-      "api": "csp_Local",
-      "searchable": 0,
-      "changeable": 0,
-      "indexs": 0,
-      "style": {
-        "type": "list"
-      },
-      "ext": "https://tc-new.z.wiki/autoupload/k2fxc/20260918/VbeD/share.json"
     },
     {
       "key": "ALLLive",
@@ -1010,42 +975,6 @@
       "searchable": 0,
       "filterable": 0,
       "changeable": 1
-    },
-    {
-      "key": "TingBook",
-      "name": "📻┆六月┆有声",
-      "type": 3,
-      "api": "csp_TingBook",
-      "searchable": 1,
-      "indexs": 0,
-      "ext": "https://app.365ting.com",
-      "style": {
-        "type": "list"
-      }
-    },
-    {
-      "key": "TingBookJinXia",
-      "name": "🎙️┆堇夏┆有声",
-      "type": 3,
-      "api": "csp_TingBookJinXia",
-      "searchable": 1,
-      "filterable": 1,
-      "indexs": 0,
-      "ext": "https://m.ting15.com",
-      "style": {
-        "type": "list"
-      }
-    },
-    {
-      "key": "TingYou",
-      "name": "🎧┆听友┆有声",
-      "type": 3,
-      "api": "csp_TingYou",
-      "searchable": 1,
-      "indexs": 0,
-      "style": {
-        "type": "list"
-      }
     },
     {
       "key": "Fishdrive",

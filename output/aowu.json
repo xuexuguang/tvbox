@@ -5,17 +5,6 @@
   "wallpaper": "http://127.0.0.1:9978/proxy?do=AowuWapper&mode=2",
   "sites": [
     {
-      "name": "🔥┃豆瓣┃主线：http://嗷呜.cc/tv",
-      "key": "Douban",
-      "type": 3,
-      "api": "csp_DoubanAmns",
-      "indexs": 1,
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "ext": "Douban"
-    },
-    {
       "name": "更新日期:【侏罗纪】",
       "key": "Y360",
       "type": 3,
@@ -639,50 +628,6 @@
         "type": "rect",
         "ratio": 1.433
       }
-    },
-    {
-      "name": "🎉┃戏曲┃哔哩",
-      "key": "BiliXiqu",
-      "type": 3,
-      "api": "csp_BiliAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "ext": {
-        "json": "https://cdn.waimaimingtang.com/file/images/bwc/20260527100913-7601517540.aowu",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      }
-    },
-    {
-      "name": "📖┃嗷嗚┃听书",
-      "key": "TSaowu",
-      "type": 3,
-      "api": "csp_TSaowuAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
-    },
-    {
-      "name": "📖┃富强┃听书",
-      "key": "TSty",
-      "type": 3,
-      "api": "csp_TStyAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
-    },
-    {
-      "name": "📖┃文明┃听书",
-      "key": "TStzg",
-      "type": 3,
-      "api": "csp_TStzgAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
     },
     {
       "name": "🎸┃蜻蜓┃电台",

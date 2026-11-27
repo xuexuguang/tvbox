@@ -46,12 +46,6 @@
       "changeable": 0
     },
     {
-      "key": "本地",
-      "name": "本地 • 视频",
-      "type": 3,
-      "api": "csp_LocalFile"
-    },
-    {
       "key": "预告",
       "name": "新片 • 预告",
       "type": 3,
@@ -1021,98 +1015,6 @@
       }
     },
     {
-      "key": "听友听书",
-      "name": "听友 • 听书",
-      "type": 3,
-      "api": "csp_TingTingyou",
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "list"
-      }
-    },
-    {
-      "key": "世界听书",
-      "name": "世界 • 听书",
-      "type": 3,
-      "api": "./py/世界听书.py",
-      "style": {
-        "type": "list"
-      }
-    },
-    {
-      "key": "堇夏听书",
-      "name": "堇夏 • 听书",
-      "type": 3,
-      "api": "csp_TingJinxia",
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": "https://m.ting15.com",
-      "style": {
-        "type": "list"
-      }
-    },
-    {
-      "key": "博看听书",
-      "name": "博看 • 听书",
-      "type": 3,
-      "api": "csp_TingBokan",
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "list"
-      }
-    },
-    {
-      "key": "戏曲多多",
-      "name": "戏曲 • 多多",
-      "type": 3,
-      "api": "csp_AppLY",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "list"
-      }
-    },
-    {
-      "key": "哔哩哔哩听书",
-      "name": "哔哩 • 听书",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "n": "哔哩听书",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
-      "key": "哔哩哔哩相声",
-      "name": "哔哩 • 相声",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "n": "哔哩相声",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
       "key": "哔哩哔哩小品",
       "name": "哔哩 • 小品",
       "type": 3,
@@ -1122,23 +1024,6 @@
       "changeable": 0,
       "ext": {
         "n": "哔哩小品",
-        "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
-      "key": "哔哩哔哩戏曲",
-      "name": "哔哩 • 戏曲",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "n": "哔哩戏曲",
         "cookie": "http://127.0.0.1:9978/file/TVBox/bili_cookie.txt"
       },
       "style": {
@@ -1616,54 +1501,6 @@
       "api": "./lib/drpy2.min.js",
       "changeable": 0,
       "ext": "./js/蜻蜓FM.js"
-    },
-    {
-      "key": "drpy_js_爱上你听书网",
-      "name": "听书 • 爱上你听书",
-      "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1
-      },
-      "ext": "./js/爱上你听书网.js"
-    },
-    {
-      "key": "drpy_js_博看听书",
-      "name": "听书 • 博看听书",
-      "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1
-      },
-      "ext": "./js/博看听书.js"
-    },
-    {
-      "key": "drpy_js_海洋听书",
-      "name": "听书 • 海洋听书",
-      "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1
-      },
-      "ext": "./js/海洋听书.js"
-    },
-    {
-      "key": "drpy_js_有声小说",
-      "name": "听书 • 有声小说",
-      "type": 3,
-      "api": "./lib/drpy2.min.js",
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1
-      },
-      "ext": "./js/有声小说吧.js"
     },
     {
       "key": "drpy_js_播客",
