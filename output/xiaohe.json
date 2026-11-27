@@ -22,15 +22,6 @@
       "ext": "./lib/Doubanrebo.js"
     },
     {
-      "key": "AliYunPan",
-      "name": "🅱️云盘登录|T签到",
-      "type": 3,
-      "api": "csp_AliYunPan",
-      "searchable": 0,
-      "filterable": 0,
-      "ext": "b4242bebe6f144d3aa6a2cd842ac65aa"
-    },
-    {
       "key": "csp_xBPQ_奇优",
       "name": "🅱️奇优影视|T追剧",
       "type": 3,
@@ -99,16 +90,6 @@
       "quickSearch": 1,
       "filterable": 0,
       "ext": "./lib/玩偶哥哥.json"
-    },
-    {
-      "key": "影巢",
-      "name": "🅱️网盘影巢|T追剧",
-      "type": 3,
-      "api": "csp_Hdhive",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "b4242bebe6f144d3aa6a2cd842ac65aa"
     },
     {
       "key": "Czspp",
@@ -475,39 +456,10 @@
       "ext": "./lib/蚂蚁磁力.json"
     },
     {
-      "key": "push_agent",
-      "name": "🅱️辅助推送|T功能",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0
-    },
-    {
       "key": "Gitcafe",
       "name": "🔍阿里|纸条搜",
       "type": 3,
       "api": "csp_Paper",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "b4242bebe6f144d3aa6a2cd842ac65aa"
-    },
-    {
-      "key": "PanSou",
-      "name": "🔍阿里|盘搜索",
-      "type": 3,
-      "api": "csp_PanSou",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "b4242bebe6f144d3aa6a2cd842ac65aa"
-    },
-    {
-      "key": "UpYun",
-      "name": "🔍阿里|优盘搜",
-      "type": 3,
-      "api": "csp_UpYun",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -593,16 +545,6 @@
       "filterable": 0
     },
     {
-      "key": "哔哩音乐",
-      "name": "🎧哔哩｜音乐",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./lib/哔哩音乐.json"
-    },
-    {
       "key": "小灯塔科学",
       "name": "🌏小灯塔科学",
       "type": 3,
@@ -641,46 +583,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "./lib/小灯塔国学.json"
-    },
-    {
-      "key": "幼儿教育",
-      "name": "🅱幼小｜衔接",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./lib/哔哩幼小.json"
-    },
-    {
-      "key": "哔哩小学",
-      "name": "🅱小学｜教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./lib/哔哩小学.json"
-    },
-    {
-      "key": "哔哩初中",
-      "name": "🅱初中｜教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./lib/哔哩初中.json"
-    },
-    {
-      "key": "哔哩高中",
-      "name": "🅱高中｜教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./lib/哔哩高中.json"
     },
     {
       "key": "兴趣健身",

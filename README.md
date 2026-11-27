@@ -13,7 +13,7 @@
 ## 一、源可用性状态
 
 <!-- STATUS_START -->
-> 🔄 最近更新：2026-11-27 06:41:07（北京时间） · 成功 **17/17** 个源
+> 🔄 最近更新：2026-11-27 11:09:36（北京时间） · 成功 **17/17** 个源
 
 | 配置源 | 状态 | 使用地址 |
 | --- | --- | --- |
@@ -22,10 +22,10 @@
 | 老刘备 | ✅ 成功 | `https://raw.liucn.cc/box/m.json` |
 | 讴歌 | 📦 缓存 | 上次成功配置（本次更新未抓到，沿用缓存） |
 | Easy | ✅ 成功 | `https://15318.kstore.space/easytv.jpg` |
-| 小盒子单仓 | ✅ 成功 | `http://xhztv.top/xhz` |
+| 小盒子单仓 | ✅ 成功 | `http://xhztv.top/xhz/` |
 | 嗷呜线路 | ✅ 成功 | `https://9763.kstore.vip/aowu.json` |
-| 🚀盒子迷 | ✅ 成功 | `https://盒子迷.top/禁止贩卖` |
-| 🚀dxawi线路 | ✅ 成功 | `http://dxawi.github.io/0/0.json` |
+| 🚀盒子迷 | ✅ 成功 | `https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96` |
+| 🚀dxawi线路 | ✅ 成功 | `https://dxawi.github.io/0/0.json` |
 | 🙀小何线路 | ✅ 成功 | `https://jihulab.com/z-blog/xh2/-/raw/main/t.json` |
 | QIST自用 | ✅ 成功 | `https://raw.githubusercontent.com/qist/tvbox/master/jsm.json` |
 | QIST潇洒 | ✅ 成功 | `https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json` |

@@ -26,43 +26,10 @@
       "ext": "https://cdn.waimaimingtang.com/file/images/bwc/20260414181247-ae51abfbfe.txt"
     },
     {
-      "key": "Wexconfig",
-      "name": "🐮配置┃中心🐮",
-      "type": 3,
-      "api": "csp_PanConfigGuard",
-      "searchable": 0,
-      "changeable": 0,
-      "indexs": 0,
-      "style": {
-        "type": "list"
-      }
-    },
-    {
-      "key": "MyPan",
-      "name": "🐮我的┃网盘🐮",
-      "type": 3,
-      "api": "csp_MyPanGuard",
-      "searchable": 0,
-      "changeable": 0,
-      "indexs": 0,
-      "style": {
-        "type": "list"
-      }
-    },
-    {
       "key": "花卷",
       "name": "💓花卷┃4K💓‍",
       "type": 3,
       "api": "csp_AiNewHuaJuanGuard",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0
-    },
-    {
-      "key": "玩偶",
-      "name": "💓‍玩偶┃4K💓‍",
-      "type": 3,
-      "api": "csp_AiNewWoggGuard",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 0
@@ -586,18 +553,6 @@
       }
     },
     {
-      "key": "MusicAiTangDou",
-      "name": "💃跳舞┃教学💃",
-      "type": 3,
-      "api": "csp_MusicAiTangDouGuard",
-      "searchable": 1,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 2
-      }
-    },
-    {
       "key": "MusicAiLiYuan",
       "name": "🎎戏曲┃秒播🎎",
       "type": 3,
@@ -608,54 +563,6 @@
         "type": "rect",
         "ratio": 2
       }
-    },
-    {
-      "key": "MusicAiQingTing",
-      "name": "🎼蜻蜓┃电台🎼",
-      "type": 3,
-      "api": "csp_MusicAiQingTingGuard",
-      "searchable": 1,
-      "changeable": 0
-    },
-    {
-      "key": "MusicAiIKtv",
-      "name": "🎼KTV┃音乐🎼",
-      "type": 3,
-      "api": "csp_MusicAiIKtvGuard",
-      "searchable": 1,
-      "changeable": 0
-    },
-    {
-      "key": "MusicAiKuWoa",
-      "name": "🎼小酷┃音乐🎼",
-      "type": 3,
-      "api": "csp_MusicAiKuWoaGuard",
-      "searchable": 1,
-      "changeable": 0
-    },
-    {
-      "key": "MusicAi163",
-      "name": "🎼易听┃音乐🎼",
-      "type": 3,
-      "api": "csp_MusicAi163Guard",
-      "searchable": 1,
-      "changeable": 0
-    },
-    {
-      "key": "MusicAiKuWo",
-      "name": "🎼酷听┃音乐🎼",
-      "type": 3,
-      "api": "csp_MusicAiKuWoGuard",
-      "searchable": 1,
-      "changeable": 0
-    },
-    {
-      "key": "MusicAiLunHui",
-      "name": "🎼轮回┃舞曲🎼",
-      "type": 3,
-      "api": "csp_MusicAiLunHuiGuard",
-      "searchable": 1,
-      "changeable": 0
     },
     {
       "key": "SportAiFeiQiu",
@@ -824,95 +731,6 @@
       }
     },
     {
-      "key": "biliych",
-      "name": " 🅱‍哔哩┃歌曲🅱‍",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      },
-      "ext": {
-        "json": "https://support-chat.rongcloud.cn/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBYkU9IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3083f43a14e6b59f4bfe248478a3a8765b34bfdd/bilisong.txt"
-      }
-    },
-    {
-      "key": "少儿教育",
-      "name": "📚少儿┃教育📚",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/3C3AB7A_773_ertong_20250828171550247newMediaImage.txt"
-      }
-    },
-    {
-      "key": "小学课堂",
-      "name": "📚小学┃课堂📚",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/4A3AA71_773_xiaoxue_20250828171535645newMediaImage.txt"
-      }
-    },
-    {
-      "key": "初中课堂",
-      "name": "📚初中┃课堂📚",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/19B1839_773_chuzhong_20250828171521929newMediaImage.txt"
-      }
-    },
-    {
-      "key": "高中教育",
-      "name": "📚高中┃课堂📚",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://storage.7x24cc.com/storage-server/presigned/ss1/a6-online-fileupload/newMediaImage/345A587_773_gaozhong_20250828171449997newMediaImage.txt"
-      }
-    },
-    {
-      "key": "SoAiHaiYin",
-      "name": "🎠盘搜┃综合🎠",
-      "type": 3,
-      "api": "csp_SoAiHaiYinGuard",
-      "searchable": 1,
-      "changeable": 0
-    },
-    {
       "key": "SoAiPanSoo",
       "name": "🎠九七┃综合🎠",
       "type": 3,
@@ -941,14 +759,6 @@
       "name": "🎠全盘┃综合🎠",
       "type": 3,
       "api": "csp_SoAiQuanPanGuard",
-      "searchable": 1,
-      "changeable": 0
-    },
-    {
-      "key": "push_agent",
-      "name": "推送",
-      "type": 3,
-      "api": "csp_PushGuard",
       "searchable": 1,
       "changeable": 0
     }

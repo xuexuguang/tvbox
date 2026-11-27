@@ -13,34 +13,6 @@
       "changeable": 0
     },
     {
-      "key": "MDrive",
-      "name": "🗂我的云盘┃配置",
-      "type": 3,
-      "api": "csp_MyDriveGuard",
-      "changeable": 0,
-      "indexs": 0,
-      "searchable": 1,
-      "style": {
-        "type": "oval"
-      },
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt"
-      }
-    },
-    {
-      "key": "玩偶",
-      "name": "👽玩偶哥哥┃4K弹幕",
-      "type": 3,
-      "api": "csp_WoGGGuard",
-      "timeout": 30,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt"
-      }
-    },
-    {
       "key": "YGP",
       "name": "🚀荐影┃预告片",
       "type": 3,
@@ -64,20 +36,6 @@
       "quickSearch": 0,
       "changeable": 0,
       "ext": "uqGL1fpJNAUN8ORQgIPD+b6l+CzC2t8="
-    },
-    {
-      "key": "MTV1",
-      "name": "🎙️易听┃音乐",
-      "type": 3,
-      "api": "csp_MusicGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1
-      },
-      "playerType": 2,
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0
     },
     {
       "key": "爱刷",
@@ -224,16 +182,6 @@
       "ext": "rfOIzPkSUkANv6AT2prC8en3+Trbx4jq3i8iepe3AAlFJlcJ8nEyo7U0Zv5Ly99uvDeRbsAQwngm4DhwCew4GZ2NpO2FWja5GbiLw/2+VyOxmwVkfRMWv4r7F0yFFcgHZdBu8XhZS17qCOz4hFXmThTNJJ6r6izqIDiy35MRVt1r5SFVFYMtnUTQrp+ZBiYW36CCI5fykR7RtA1QQQjazGJoVUFvZT57WbmPsbmEq4PL3sG/d+4AaXHujcfaLgOj2edXRYrRLyZgRDXu5rPlrch5yOPchlAyQA15/MbFhVwQeGBiKp/Ol0PSYQ0L1LYiplgqx0aqcFWB3SSrfadD1ta+PdJhQi6Ns55eNKyCrQIerEX3CWe/XK76nWvQ56ODrocvbicwZNeFBEManAuunz1sNQ2DrzHETbmz4uIhIKURTSi2DzPpheVx1xMUpM0KdwYvDStMdYpN338GiDAa0ljQjoKl4a1pZL7G+94WHpgTaMYHOYBZQWdjR4LFZ8IbYaWLmbViXGQ0Q1467upx9DPMuiXhyvxJcKCd25sXD7kQb7RxdFMuy0DUzXHYRuD9"
     },
     {
-      "key": "剧迷",
-      "name": "🍊橘猫┃多线",
-      "type": 3,
-      "api": "csp_JumiTvGuard",
-      "timeout": 10,
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
-    },
-    {
       "key": "热播",
       "name": "📺热播┃多线",
       "type": 3,
@@ -326,18 +274,6 @@
       }
     },
     {
-      "key": "多多",
-      "name": "🏀多多┃回放",
-      "type": 3,
-      "api": "csp_DoubaoGuard",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "list"
-      }
-    },
-    {
       "key": "吃瓜",
       "name": "🏐吃瓜┃看球",
       "type": 3,
@@ -347,22 +283,6 @@
       "changeable": 0,
       "style": {
         "type": "list"
-      }
-    },
-    {
-      "key": "MTV",
-      "name": "🎶明星┃MV",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/5af5fbe12a88b7c45aa1c21e6551826c.txt"
       }
     },
     {
@@ -424,22 +344,6 @@
       "changeable": 0
     },
     {
-      "key": "ZPan",
-      "name": "🎈盘搜┃四盘",
-      "type": 3,
-      "api": "csp_S_zpsGuard",
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "siteUrl": "http://107.173.211.148/"
-      },
-      "indexs": 0,
-      "style": {
-        "type": "list"
-      }
-    },
-    {
       "key": "JPan",
       "name": "🦋易搜┃四盘",
       "type": 3,
@@ -480,30 +384,6 @@
       }
     },
     {
-      "key": "抠搜",
-      "name": "🌶️抠抠┃搜搜",
-      "type": 3,
-      "api": "csp_KkSsGuard",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt"
-      }
-    },
-    {
-      "key": "UC",
-      "name": "🌈优汐┃搜搜",
-      "type": 3,
-      "api": "csp_UuSsGuard",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt"
-      }
-    },
-    {
       "key": "Bili",
       "name": "🅱哔哔合集┃弹幕",
       "type": 3,
@@ -520,22 +400,6 @@
       }
     },
     {
-      "key": "Biliych",
-      "name": "🅱哔哔演唱会┃弹幕",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/6496356286589c68f52c2f99c0c674c7.txt"
-      }
-    },
-    {
       "key": "dr_兔小贝",
       "name": "📚儿童┃启蒙",
       "type": 3,
@@ -546,90 +410,6 @@
         "ratio": 1.597
       },
       "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0
-    },
-    {
-      "key": "少儿教育",
-      "name": "📚少儿┃教育",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/89370c8ddf36b5e1beb4d71adb921bda.txt"
-      }
-    },
-    {
-      "key": "小学课堂",
-      "name": "📚小学┃课堂",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/d7a21cf34ede56f5c686ecfba5fc7e3f.txt"
-      }
-    },
-    {
-      "key": "初中课堂",
-      "name": "📚初中┃课堂",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/8f55d520f8d70056695740ef151744a7.txt"
-      }
-    },
-    {
-      "key": "高中教育",
-      "name": "📚高中┃课堂",
-      "type": 3,
-      "api": "csp_BiliGuard",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/c66a4b5356141c49fd45ec51568017b4.txt"
-      }
-    },
-    {
-      "key": "push_agent",
-      "name": "🛴手机┃推送",
-      "type": 3,
-      "api": "csp_PushGuard",
-      "searchable": 0,
-      "quickSearch": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt"
-      }
-    },
-    {
-      "key": "cc",
-      "name": "请勿信视频中任何广告",
-      "type": 3,
-      "api": "csp_XPathGuard",
-      "searchable": 1,
       "quickSearch": 0,
       "changeable": 0
     }

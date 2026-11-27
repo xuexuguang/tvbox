@@ -83,15 +83,6 @@
       "filterable": 1
     },
     {
-      "key": "csp_CandyMuj_cokemv",
-      "name": "💖Cokemv",
-      "type": 3,
-      "api": "csp_CandyMuj_cokemv",
-      "searchable": 1,
-      "quickSearch": 0,
-      "filterable": 1
-    },
-    {
       "key": "csp_WoGG",
       "name": "💖玩偶影视4K",
       "type": 3,
@@ -345,74 +336,6 @@
       "searchable": 1
     },
     {
-      "key": "csp_Bili_1",
-      "name": "💕少儿教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      },
-      "ext": {
-        "json": "./conf/bili1.json"
-      }
-    },
-    {
-      "key": "csp_Bili_2",
-      "name": "💕小学课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      },
-      "ext": {
-        "json": "./conf/bili2.json"
-      }
-    },
-    {
-      "key": "csp_Bili_3",
-      "name": "💕初中课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      },
-      "ext": {
-        "json": "./conf/bili3.json"
-      }
-    },
-    {
-      "key": "csp_Bili_4",
-      "name": "💕高中课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      },
-      "ext": {
-        "json": "./conf/bili4.json"
-      }
-    },
-    {
       "key": "csp_Bili_5",
       "name": "💕戏曲",
       "type": 3,
@@ -472,15 +395,6 @@
       "api": "csp_Local",
       "searchable": 0,
       "changeable": 0
-    },
-    {
-      "key": "csp_AList",
-      "name": "💕AList",
-      "type": 3,
-      "api": "csp_AList",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": "./conf/alist.json"
     },
     {
       "key": "csp_zhibo_douyu",
@@ -615,13 +529,6 @@
       "api": "https://www.agit.ai/fantaiying/dr_py/raw/branch/main/libs/drpy2.min.js",
       "searchable": 1,
       "ext": "https://www.agit.ai/fantaiying/dr_py/raw/branch/main/js/子子影视.js"
-    },
-    {
-      "key": "push_agent",
-      "name": "💤推送(播放页链接或磁力)",
-      "type": 3,
-      "api": "csp_PushAgent",
-      "searchable": 0
     }
   ],
   "parses": [

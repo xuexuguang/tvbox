@@ -51,20 +51,6 @@
       "quickSearch": 0
     },
     {
-      "key": "配置中心",
-      "name": "🌐配置｜中心",
-      "type": 3,
-      "api": "csp_Config",
-      "searchable": 0,
-      "changeable": 0,
-      "indexs": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      },
-      "quickSearch": 0
-    },
-    {
       "key": "剧圈",
       "name": "♨️剧圈｜4K线路",
       "type": 3,
@@ -219,113 +205,6 @@
       "quickSearch": 0
     },
     {
-      "key": "童趣",
-      "name": "📚童趣｜教育",
-      "type": 3,
-      "api": "csp_TongQu",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
-      "key": "兔小贝",
-      "name": "📚兔小贝｜教育",
-      "type": 3,
-      "api": "csp_TuXiaoBei",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
-      "key": "贝乐虎",
-      "name": "📚贝乐虎｜教育",
-      "type": 3,
-      "api": "csp_BeiLeHu",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
-      "key": "少儿教育",
-      "name": "📚少儿｜教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/少儿教育.png",
-        "cookie": "https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/blc.png"
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
-      "key": "小学课堂",
-      "name": "📚小学｜教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "json": "https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/小学课堂.png",
-        "cookie": "https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/blc.png"
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
-      "key": "初中课堂",
-      "name": "📚初中｜教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "json": "https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/初中课堂.png",
-        "cookie": "https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/blc.png"
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
-      "key": "高中课堂",
-      "name": "📚高中｜教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "ext": {
-        "json": "https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/高中课堂.png",
-        "cookie": "https://gh-proxy.com/raw.githubusercontent.com/IY-CPU/IY/main/lib/blc.png"
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.618
-      }
-    },
-    {
       "key": "养生堂",
       "name": "📚养生｜知识",
       "type": 3,
@@ -371,41 +250,6 @@
       }
     },
     {
-      "key": "二小",
-      "name": "🌐二小｜4K自扫",
-      "type": 3,
-      "api": "csp_PanWebShare",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "changeable": 1,
-      "ext": {
-        "site": [
-          "http://www.wexwp.cc",
-          "https://www.2xiaopan.one",
-          "https://www.wexwp.cc"
-        ]
-      }
-    },
-    {
-      "key": "至臻",
-      "name": "🌐至臻｜4K自扫",
-      "type": 3,
-      "api": "csp_PanWebShare",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "changeable": 1,
-      "ext": {
-        "site": [
-          "https://sp.zzzy.shop",
-          "https://www.zhizhen8.click",
-          "https://www.zhizhen1.top",
-          "https://www.mihdr.top"
-        ]
-      }
-    },
-    {
       "key": "小丑",
       "name": "🌐小丑｜4K自扫",
       "type": 3,
@@ -418,16 +262,6 @@
           "https://4kxc.com"
         ]
       }
-    },
-    {
-      "key": "push_agent",
-      "name": "🛴手机｜推送",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 0,
-      "filterable": 0,
-      "changeable": 0,
-      "quickSearch": 0
     }
   ],
   "parses": [

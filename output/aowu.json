@@ -26,15 +26,6 @@
       "ext": "Y360"
     },
     {
-      "name": "⚙️┃配置┃中心",
-      "key": "MyConfig",
-      "type": 3,
-      "api": "csp_AAConfigAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0
-    },
-    {
       "name": "📂┃资源┃中心",
       "key": "MyAll",
       "type": 3,
@@ -412,16 +403,6 @@
       "ext": "Czzy"
     },
     {
-      "name": "🛸┃LBV┃蓝光",
-      "key": "Libvio",
-      "type": 3,
-      "api": "csp_LibvioAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "ext": "Libvio"
-    },
-    {
       "name": "📽️┃嗷嗚┃短剧",
       "key": "DjHggg",
       "type": 3,
@@ -660,23 +641,6 @@
       }
     },
     {
-      "name": "🎉┃歌曲┃哔哩",
-      "key": "BiliGequ",
-      "type": 3,
-      "api": "csp_BiliAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "ext": {
-        "json": "https://cdn.waimaimingtang.com/file/images/bwc/20260527100843-9aefe070b5.aowu",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      }
-    },
-    {
       "name": "🎉┃戏曲┃哔哩",
       "key": "BiliXiqu",
       "type": 3,
@@ -686,74 +650,6 @@
       "changeable": 1,
       "ext": {
         "json": "https://cdn.waimaimingtang.com/file/images/bwc/20260527100913-7601517540.aowu",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      }
-    },
-    {
-      "name": "📚┃少儿┃教育",
-      "key": "BiliSer",
-      "type": 3,
-      "api": "csp_BiliAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "ext": {
-        "json": "https://nos.netease.com/youdata-netease/public-utilUpload-7y79ukN4TsLcdydmg5TFRj.gz",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      }
-    },
-    {
-      "name": "📚┃小学┃教育",
-      "key": "BiliXxue",
-      "type": 3,
-      "api": "csp_BiliAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "ext": {
-        "json": "https://nos.netease.com/youdata-netease/public-utilUpload-4VMpA5z1erwuRYyDVSkc9T.gz",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      }
-    },
-    {
-      "name": "📚┃初中┃教育",
-      "key": "BiliCzong",
-      "type": 3,
-      "api": "csp_BiliAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "ext": {
-        "json": "https://file.icve.com.cn/file_doc/281/941/466EB55404EAB8AD6EC37A5F73444B27.aowu",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      }
-    },
-    {
-      "name": "📚┃高中┃教育",
-      "key": "BiliGzong",
-      "type": 3,
-      "api": "csp_BiliAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 1,
-      "ext": {
-        "json": "https://nos.netease.com/youdata-netease/public-utilUpload-vsfDQmE86Ei5LCTWJ2X6Nv.gz",
         "cookie": ""
       },
       "style": {
@@ -789,35 +685,6 @@
       "changeable": 1
     },
     {
-      "name": "🎸┃橙子┃音乐",
-      "key": "Czyy",
-      "type": 3,
-      "api": "csp_CzyyAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0
-    },
-    {
-      "name": "🎸┃酷狗┃音乐",
-      "key": "KuGou",
-      "type": 3,
-      "api": "csp_KuGouAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "genre": "music"
-    },
-    {
-      "name": "🎸┃酷听┃音乐",
-      "key": "Kuwo",
-      "type": 3,
-      "api": "csp_KuwoAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1,
-      "genre": "music"
-    },
-    {
       "name": "🎸┃蜻蜓┃电台",
       "key": "QTfm",
       "type": 3,
@@ -841,33 +708,6 @@
       "key": "WPbzm",
       "type": 3,
       "api": "csp_WPbzmAmns",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0
-    },
-    {
-      "name": "🔍┃飞鱼┃盘搜",
-      "key": "PSfish",
-      "type": 3,
-      "api": "csp_PSfishAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
-    },
-    {
-      "name": "🔍┃觅寻┃盘搜",
-      "key": "PSdju",
-      "type": 3,
-      "api": "csp_PSdjuAmns",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 1
-    },
-    {
-      "name": "🛴┃推送┃播放",
-      "key": "push_agent",
-      "type": 3,
-      "api": "csp_PushAmns",
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0
