@@ -7,26 +7,27 @@ name: Auto Update TVBox Configs
     - cron: "0 3,9,19 * * *"
   # 支持在 GitHub Actions 页面手动触发
   workflow_dispatch:
-  # 修改配置或脚本后 push 时触发（仅监听 config/scripts，避免自动提交 output/ 引发死循环）
+  # 修改输入或管理页时触发，生成文件由工作流提交
   push:
     branches:
       - main
     paths:
       - "config/**"
       - "scripts/**"
+      - "manage/**"
       - "requirements.txt"
       - ".github/workflows/update.yml"
 
-# 赋予 GITHUB_TOKEN 写仓库权限，用于把更新结果提交回仓库
-permissions:
-  contents: write
+concurrency:
+  group: update-and-deploy-pages
+  cancel-in-progress: false
 
 jobs:
   update:
     runs-on: ubuntu-latest
-    concurrency:
-      group: auto-update
-      cancel-in-progress: false
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -70,3 +71,39 @@ jobs:
 
           echo "::error::重试两次后仍无法发布配置"
           exit 1
+
+      - name: Prepare Pages files
+        run: |
+          site="$RUNNER_TEMP/tvbox-pages"
+          mkdir -p "$site/manage" "$site/config" "$site/output"
+          cp manage/index.html manage/app.js manage/style.css "$site/manage/"
+          cp config/sources.json "$site/config/"
+          cp output/*.json "$site/output/"
+          cat > "$site/index.html" <<'EOF'
+          <!doctype html>
+          <html lang="zh-CN">
+          <meta charset="utf-8">
+          <meta http-equiv="refresh" content="0; url=manage/">
+          <title>TVBox 源管理</title>
+          <a href="manage/">打开 TVBox 源管理</a>
+          </html>
+          EOF
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ${{ runner.temp }}/tvbox-pages
+
+  deploy:
+    needs: update
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

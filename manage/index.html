@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TVBox 源管理</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <div><h1>TVBox 源管理</h1><p class="repo">xuexuguang / tvbox</p></div>
+      <div class="overview">
+        <span class="pill good" id="available" hidden></span>
+        <span class="pill bad" id="failed" hidden></span>
+        <span class="pill" id="updated">正在读取更新状态…</span>
+        <button class="pill" id="auth">设置 GitHub 令牌</button>
+      </div>
+    </header>
+    <section class="panel subscriptions" aria-labelledby="subscription-title">
+      <div class="panel-heading"><h2 id="subscription-title">订阅地址</h2></div>
+      <div class="subscription-list" id="subscriptions"></div>
+    </section>
+    <section class="panel" aria-labelledby="sources-title">
+      <div class="toolbar">
+        <div class="list-heading"><h2 id="sources-title">配置源</h2><span id="source-count"></span></div>
+        <input id="search" type="search" aria-label="搜索源" placeholder="搜索名称、ID 或地址">
+        <select id="filter" aria-label="按状态筛选">
+          <option value="all">全部状态</option><option>可用</option><option>缓存可用</option><option>失败</option><option>待检测</option>
+        </select>
+        <button id="add" class="primary" disabled>＋ 新增源</button>
+        <a class="control" href="https://github.com/xuexuguang/tvbox/actions/workflows/update.yml">更新记录 ↗</a>
+      </div>
+      <p id="message" role="status"></p>
+      <div class="table-wrap"><table>
+        <thead><tr><th scope="col">配置源</th><th scope="col">接口地址</th><th scope="col">状态</th><th scope="col">延迟</th><th scope="col">操作</th></tr></thead>
+        <tbody id="sources"></tbody>
+      </table></div>
+    </section>
+  </main>
+  <dialog id="editor" aria-labelledby="edit-title">
+    <form id="edit-form">
+      <h2 id="edit-title"></h2>
+      <label>名称<input name="name" required></label>
+      <label>源 ID<input name="id" required pattern="[a-z0-9][a-z0-9_\-]*"></label>
+      <label>接口地址（每行一个，按尝试顺序排列）<textarea name="urls" rows="5" required></textarea></label>
+      <p id="edit-message" role="status"></p>
+      <div class="actions"><button type="button" data-close="editor">取消</button><button class="primary" type="submit">保存到 GitHub</button></div>
+    </form>
+  </dialog>
+  <dialog id="token-dialog" aria-labelledby="token-title">
+    <form id="token-form">
+      <h2 id="token-title">GitHub 访问令牌</h2>
+      <p><a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener noreferrer">去 GitHub 创建令牌 ↗</a></p>
+      <p>仓库选择 tvbox，Contents 权限选 Read and write。</p>
+      <label>令牌<input name="token" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="粘贴 GitHub 令牌" required></label>
+      <label class="remember-token"><input name="remember" type="checkbox"> 在此浏览器记住令牌</label>
+      <div class="actions"><button type="button" id="clear-token">清除令牌</button><button type="button" data-close="token-dialog">取消</button><button class="primary" type="submit">使用令牌</button></div>
+    </form>
+  </dialog>
+</body>
+</html>

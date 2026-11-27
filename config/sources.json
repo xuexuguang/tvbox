@@ -104,6 +104,78 @@
       "id": "tvyuan",
       "name": "备用·tvyuan全量",
       "urls": ["https://tv.cc0cd.cc.cd/"]
+    },
+    {
+      "id": "looomix-maoyanzy-com",
+      "name": "猫眼",
+      "urls": ["https://api.maoyanapi.top/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-zuida-xyz",
+      "name": "最大",
+      "urls": ["https://api.zuidapi.com/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-hongniuzy-com",
+      "name": "红牛",
+      "urls": ["https://www.hongniuzy2.com/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-ukuapi88-com",
+      "name": "U酷影视",
+      "urls": ["https://api.ukuapi88.com/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-haohuazy-com",
+      "name": "豪华",
+      "urls": ["https://hhzyapi.com/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-jinyingzy-com",
+      "name": "金鹰点播",
+      "urls": ["https://jinyingzy.com/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-1080zyk-com",
+      "name": "优质库1080zyk",
+      "urls": ["https://api.yyzy-tv.vip/inc/api_mac10.php"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-iqiyizyapi-com",
+      "name": "爱奇艺",
+      "urls": ["https://iqiyizyapi.com/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-360zy-com",
+      "name": "360",
+      "urls": ["https://360zyzz.com/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-moduzy-net",
+      "name": "魔都",
+      "urls": ["https://www.mdzyapi.com/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-moduapi-cc",
+      "name": "魔都动漫",
+      "urls": ["https://caiji.moduapi.cc/api.php/provide/vod"],
+      "type": "cms"
+    },
+    {
+      "id": "looomix-bdzy1-com",
+      "name": "百度云zy",
+      "urls": ["https://api.apibdzy.com/api.php/provide/vod"],
+      "type": "cms"
     }
   ]
 }

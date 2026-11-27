@@ -14,7 +14,7 @@
   5. 将每个源的最新配置保存到 output/<id>.json
   6. 生成多仓订阅文件 output/多仓订阅.json（可直接填进影视仓的"订阅"或"多仓"）
   7. 生成聚合单仓 output/单仓聚合.json（所有源 sites/lives/parses 合并去重）
-  8. 生成 shields 徽章和 README。上述产物在本地运行时写入 outout_local/
+  8. 生成 shields 徽章。上述产物在本地运行时写入 outout_local/
 兼容：本脚本同时兼容 GitHub Actions 自动运行 与 本地手动运行。
 在 GitHub Actions 中，环境变量 GITHUB_REPOSITORY 会被自动注入（格式 owner/repo），
 用于拼出多仓订阅里指向本仓库 raw 文件的完整 URL。
@@ -30,6 +30,7 @@ import sys
 import tempfile
 import time
 import urllib.parse
+import xml.etree.ElementTree as ET
 from concurrent.futures import ThreadPoolExecutor
 
 import requests
@@ -132,7 +133,25 @@ def _should_retry(err: Exception, resp_text_len: int = -1) -> bool:
     return False
 
 
-def fetch_config(url: str) -> tuple[dict, str, int]:
+def cms_config(source, url, response):
+    try:
+        data = response.json()
+    except ValueError:
+        try:
+            entries = ET.fromstring(response.content).findall(".//video")
+        except ET.ParseError as error:
+            raise ValueError("采集接口未返回有效片单") from error
+    else:
+        entries = data.get("list") if isinstance(data, dict) else None
+    if not isinstance(entries, list) or not entries:
+        raise ValueError("采集接口未返回有效片单")
+    return {"sites": [{
+        "key": source["id"], "name": source["name"], "type": 3,
+        "api": url, "searchable": 1, "quickSearch": 1, "filterable": 1,
+    }]}
+
+
+def fetch_config(url: str, cms_source=None) -> tuple[dict, str, int]:
     """返回配置、重定向后的地址和成功请求的耗时（毫秒）。"""
     target = idn_encode(url)
     last_err = None
@@ -141,6 +160,7 @@ def fetch_config(url: str) -> tuple[dict, str, int]:
             started = time.perf_counter()
             resp = requests.get(
                 target,
+                params={"ac": "list", "pg": 1} if cms_source else None,
                 headers={
                     "User-Agent": USER_AGENT,
                     "Accept": "application/json,text/plain,*/*",
@@ -150,6 +170,8 @@ def fetch_config(url: str) -> tuple[dict, str, int]:
             )
             request_ms = round((time.perf_counter() - started) * 1000)
             resp.raise_for_status()
+            if cms_source:
+                return cms_config(cms_source, url, resp), url, request_ms
             data = parse_json_lenient(resp.text)
             if not is_valid_tvbox_config(data):
                 raise ValueError("返回内容不是 TVBox 配置（缺少 sites/spiders/lives 或 urls 字段）")
@@ -292,72 +314,6 @@ def merge_configs(fetched):
     return merged
 
 
-def readme_link(label, url):
-    destination = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%")
-    return f"[{label}](<{destination}>)"
-
-
-def readme_table_header(*labels):
-    # U+2060 keeps each label on one line without relying on inline CSS.
-    cells = ["\u2060".join(label) for label in labels]
-    return "| " + " | ".join(cells) + " |"
-
-
-def source_links_table(subscriptions):
-    rows = [
-        readme_table_header("线路", "直连地址", "站点数（过滤后）"),
-        "| --- | --- | ---: |",
-    ]
-    for source in subscriptions:
-        name = source["name"].replace("|", "\\|")
-        url = source["url"].removeprefix("https://gh-proxy.org/")
-        filename = os.path.basename(urllib.parse.urlsplit(url).path)
-        with open(os.path.join(OUTPUT_DIR, filename), encoding="utf-8") as file:
-            data = json.load(file)
-        sites = data.get("sites")
-        count = len(sites) if isinstance(sites, list) else 0
-        rows.append(f"| 线路 · {name} | {readme_link('打开直连', url)} | {count} |")
-    return "\n".join(rows)
-
-
-def update_readme(status, ok_count, total, subscriptions, site_count):
-    """将每次更新的状态和订阅列表写入独立的产物页面。"""
-    lines = ["# TVBox 更新状态", ""]
-    lines.append(f"> 🔄 最近更新：{status['updated_at']}（北京时间） · 成功 **{ok_count}/{total}** 个源")
-    lines.append("")
-    lines.append(readme_table_header("配置源", "状态", "请求耗时（ms）", "使用地址"))
-    lines.append("| --- | --- | ---: | --- |")
-    for s in status["sources"]:
-        if s.get("cached"):
-            lines.append(f"| {s['name']} | 📦 缓存 | — | 上次成功配置（本次更新未抓到，沿用缓存） |")
-        elif s["ok"]:
-            url, jpeg_suffix, _ = s["used_url"].partition(" (JPEG解包)")
-            address = readme_link("打开地址", url)
-            if jpeg_suffix:
-                address += "（JPEG解包）"
-            lines.append(f"| {s['name']} | ✅ 成功 | {s.get('request_ms', '—')} | {address} |")
-        else:
-            err = (s.get("error") or "").replace("|", "/")
-            if len(err) > 60:
-                err = err[:57] + "..."
-            lines.append(f"| {s['name']} | ❌ 失败 | — | {err} |")
-    base = f"https://gh-proxy.org/https://raw.githubusercontent.com/{status['repo']}/main/output"
-    subscription_url = f"{base}/{urllib.parse.quote('多仓订阅.json')}"
-    aggregate_url = f"{base}/{urllib.parse.quote('单仓聚合.json')}"
-    sites = f"{site_count} 个站点" if site_count is not None else "—"
-    lines.extend([
-        "", "## 加速订阅", "",
-        readme_table_header("类型", "加速地址", "数量"),
-        "| --- | --- | ---: |",
-        f"| **多仓订阅（推荐）** | {readme_link('打开加速地址', subscription_url)} | {len(subscriptions)} 条线路 |",
-        f"| **单仓聚合** | {readme_link('打开加速地址', aggregate_url)} | {sites} |",
-        "", "## 各线路直连", "",
-        source_links_table(subscriptions), "",
-    ])
-    with open(os.path.join(OUTPUT_DIR, "README.md"), "w", encoding="utf-8") as f:
-        f.write("\n".join(lines))
-
-
 def write_badge(ok_count, total):
     """生成 shields.io endpoint 徽章 JSON。"""
     if total == 0 or ok_count == 0:
@@ -470,12 +426,12 @@ def publish_config(sid, data, origin, raw_base, exclusions, ancestors=frozenset(
     return published, warehouses
 
 
-def load_source(sid, urls):
+def load_source(sid, urls, cms_source=None):
     cache_path = os.path.join(CACHE_DIR, f"{sid}.json")
     last_error = "没有配置地址"
     for url in urls:
         try:
-            data, origin, request_ms = fetch_config(url)
+            data, origin, request_ms = fetch_config(url, cms_source)
             write_config(cache_path, {"origin": origin, "data": data})
             return data, origin, request_ms
         except (OSError, ValueError, requests.RequestException) as error:
@@ -506,7 +462,8 @@ def update_source(source, raw_base, exclusions):
     sid = source.get("id", name)
     entry = {"id": sid, "name": name, "ok": False, "used_url": None, "error": None}
     try:
-        data, origin, request_ms = load_source(sid, source.get("urls", []))
+        cms_source = source if source.get("type") == "cms" else None
+        data, origin, request_ms = load_source(sid, source.get("urls", []), cms_source)
         data, warehouses = publish_config(sid, data, origin, raw_base, exclusions)
         cached = request_ms is None
         if cached:
@@ -611,10 +568,7 @@ def main() -> int:
     with open(os.path.join(OUTPUT_DIR, "status.json"), "w", encoding="utf-8") as f:
         json.dump(status, f, ensure_ascii=False, indent=2)
 
-    # 生成 shields 徽章并更新 README 状态表
     write_badge(ok_count, total)
-    site_count = len(merged["sites"]) if merged is not None else None
-    update_readme(status, ok_count, total, subscriptions, site_count)
 
     print("\n" + "=" * 50)
     print(f"本次更新：{ok_count}/{total} 个源成功")
