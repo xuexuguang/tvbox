@@ -22,26 +22,6 @@
       "ext": "https://xn--dkw0c.v.nxog.top/m/公告?b=欧歌"
     },
     {
-      "key": "config",
-      "name": "🐲歌配置｜中心",
-      "type": 3,
-      "jar": "https://ncstatic-file.clewm.net/rsrc/2026/0810/15/d4ef68f275be721a92f218de955a8328.jpg;md5;c96b69de5ace48bcf0e522147364e048",
-      "api": "csp_Config",
-      "searchable": 0
-    },
-    {
-      "key": "配置中心",
-      "name": "❤配置｜中心",
-      "type": 3,
-      "api": "csp_Config",
-      "searchable": 0,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      }
-    },
-    {
       "key": "csp_wogg1",
       "name": "🐲接口失效",
       "type": 3,
@@ -108,15 +88,6 @@
           "https://woog.nxog.eu.org"
         ]
       }
-    },
-    {
-      "key": "push_agent",
-      "name": "📢手机｜推送",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 0,
-      "filterable": 0,
-      "changeable": 0
     },
     {
       "key": "应用商店",

@@ -26,17 +26,6 @@
       }
     },
     {
-      "key": "ConfigCenter",
-      "name": "配置中心",
-      "type": 3,
-      "api": "csp_ConfigCenter",
-      "searchable": 0,
-      "changeable": 0,
-      "ext": {
-        "commonConfig": "./json/peizhi.json"
-      }
-    },
-    {
       "key": "Jpys",
       "name": "金牌影视",
       "type": 3,
@@ -96,58 +85,6 @@
       "searchable": 1,
       "changeable": 0,
       "ext": {
-        "commonConfig": "./json/peizhi.json"
-      }
-    },
-    {
-      "key": "FourKZN",
-      "name": "网盘 | 4k指南",
-      "type": 3,
-      "api": "csp_FourKZN",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": {
-        "commonConfig": "./json/peizhi.json"
-      }
-    },
-    {
-      "key": "观影",
-      "name": "网盘 | 观影",
-      "type": 3,
-      "api": "csp_GuanYing",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": {
-        "commonConfig": "./json/peizhi.json",
-        "siteUrl": "https://www.xn--wcv59z.com//",
-        "username": "",
-        "password": "",
-        "cookie": ""
-      }
-    },
-    {
-      "key": "网盘集合",
-      "name": "网盘集合 | 4K",
-      "type": 3,
-      "api": "csp_网盘集合",
-      "searchable": 1,
-      "filterable": 0,
-      "switchable": 0,
-      "ext": {
-        "commonConfig": "./json/peizhi.json",
-        "share": "./json/网盘集合.json"
-      }
-    },
-    {
-      "key": "网盘 | 片库",
-      "name": "网盘 | 片库",
-      "type": 3,
-      "api": "csp_Qiwei",
-      "searchable": 1,
-      "filterable": 0,
-      "switchable": 0,
-      "ext": {
-        "siteUrl": "https://www.qwnull.com",
         "commonConfig": "./json/peizhi.json"
       }
     },
@@ -363,19 +300,6 @@
       }
     },
     {
-      "key": "星剧社",
-      "name": "网盘 | 星剧社",
-      "type": 3,
-      "api": "csp_Star2",
-      "searchable": 1,
-      "filterable": 0,
-      "switchable": 0,
-      "ext": {
-        "siteUrl": "https://1.star2.cn/",
-        "commonConfig": "./json/peizhi.json"
-      }
-    },
-    {
       "key": "Youtube",
       "name": "Youtube",
       "type": 3,
@@ -389,19 +313,6 @@
       "ext": {
         "commonConfig": "./json/peizhi.json",
         "json": "./json/youtube.json"
-      }
-    },
-    {
-      "key": "盤搜天意",
-      "name": "网盘 | 盤搜天意",
-      "type": 3,
-      "api": "csp_PanSou",
-      "searchable": 1,
-      "filterable": 0,
-      "switchable": 0,
-      "ext": {
-        "siteUrl": "https://www.tianyiso.com",
-        "commonConfig": "./json/peizhi.json"
       }
     },
     {
@@ -456,33 +367,6 @@
       }
     },
     {
-      "key": "盘Ta",
-      "name": "网盘 | 盘Ta",
-      "type": 3,
-      "api": "csp_PanTa",
-      "searchable": 1,
-      "filterable": 0,
-      "switchable": 0,
-      "ext": {
-        "siteUrl": "https://www.91panta.cn/",
-        "commonConfig": "./json/peizhi.json"
-      }
-    },
-    {
-      "key": "小雷",
-      "name": "网盘 | 小雷",
-      "type": 3,
-      "api": "csp_PanTa",
-      "searchable": 1,
-      "filterable": 0,
-      "switchable": 0,
-      "ext": {
-        "siteUrl": "https://www.leijing1.com/",
-        "cookie": "JSESSIONID=B24E6992236274BD6A636FE8EAA2FDA; cms_token=25968d70e1c64c3fa475c5bb15946443; cms_accessToken=8c67340ebecb46b88f9c85492bfe1cf1; cms_refreshToken=0af0ab743ae243be99b29c2af5b449a",
-        "commonConfig": "./json/peizhi.json"
-      }
-    },
-    {
       "key": "易搜",
       "name": "易搜 | 4K",
       "type": 3,
@@ -496,28 +380,6 @@
       }
     },
     {
-      "key": "盤搜索",
-      "name": "网盘 | 盤搜索",
-      "type": 3,
-      "api": "csp_PanSearch",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": {
-        "commonConfig": "./json/peizhi.json"
-      }
-    },
-    {
-      "key": "紙條搜",
-      "name": "网盘 | 紙條搜",
-      "type": 3,
-      "api": "csp_XiaoZhiTiao",
-      "searchable": 1,
-      "changeable": 0,
-      "ext": {
-        "commonConfig": "./json/peizhi.json"
-      }
-    },
-    {
       "key": "AList",
       "name": "AList",
       "type": 3,
@@ -525,18 +387,6 @@
       "searchable": 1,
       "changeable": 0,
       "ext": "./json/alist.json"
-    },
-    {
-      "key": "push_agent",
-      "name": "推送",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 1,
-      "filterable": 0,
-      "switchable": 0,
-      "ext": {
-        "commonConfig": "./json/peizhi.json"
-      }
     },
     {
       "key": "360资源",

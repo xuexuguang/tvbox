@@ -67,14 +67,6 @@
       }
     },
     {
-      "key": "FishPs",
-      "name": "🐟┆鱼鱼┆盘搜",
-      "type": 3,
-      "api": "csp_FishPs",
-      "searchable": 1,
-      "filterable": 0
-    },
-    {
       "key": "Wogg",
       "name": "👽️┆玩偶┆4K",
       "type": 3,
@@ -500,22 +492,6 @@
       "api": "csp_AppUn",
       "type": 3,
       "ext": "AYdXH70UMM8plqsXPmZuN9zEJQV/2vpn2nM5OAeVwvV966SO86n0qc/65IvyNOY7I8FscuN2i4tnXSoa2eVVhCbvIzsK+OAWQcMwpKHy1zZg"
-    },
-    {
-      "key": "Libvio",
-      "name": "📺┆立播┆4K",
-      "type": 3,
-      "api": "csp_Libvio",
-      "searchable": 1,
-      "changeable": 1,
-      "ext": {
-        "site": [
-          "https://libviofabu.com",
-          "https://libvio.app",
-          "https://libfabu.com",
-          "https://libviogroup.github.io"
-        ]
-      }
     },
     {
       "key": "KZN",
@@ -950,50 +926,6 @@
       }
     },
     {
-      "key": "Buguyy",
-      "name": "🐦┆布谷┆音乐",
-      "type": 3,
-      "api": "csp_Buguyy",
-      "searchable": 1,
-      "filterable": 1,
-      "changeable": 1
-    },
-    {
-      "key": "ChuXin",
-      "name": "💕┆初心┆音乐",
-      "type": 3,
-      "api": "csp_ChuXin",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },
-    {
-      "key": "aiting",
-      "name": "🎧┆爱听┆音乐",
-      "type": 3,
-      "api": "csp_AiTingMusic",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 0
-    },
-    {
-      "key": "Music24bit",
-      "name": "🎼┆无损┆音乐",
-      "type": 3,
-      "api": "csp_Music24bit",
-      "searchable": 1,
-      "changeable": 1,
-      "ext": {
-        "categories": [
-          "周杰伦",
-          "林俊杰",
-          "陈奕迅",
-          "邓紫棋",
-          "薛之谦"
-        ]
-      }
-    },
-    {
       "key": "TuXiaoBei",
       "name": "🐰┆小兔┆少儿",
       "type": 3,
@@ -1012,70 +944,6 @@
       "filterable": 0
     },
     {
-      "key": "少儿教育",
-      "name": "🧒┆少儿┆教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/89370c8ddf36b5e1beb4d71adb921bda.txt"
-      }
-    },
-    {
-      "key": "小学课堂",
-      "name": "📚┆小学┆课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/d7a21cf34ede56f5c686ecfba5fc7e3f.txt"
-      }
-    },
-    {
-      "key": "初中课堂",
-      "name": "📐┆初中┆课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/8f55d520f8d70056695740ef151744a7.txt"
-      }
-    },
-    {
-      "key": "高中教育",
-      "name": "🎓┆高中┆课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/c66a4b5356141c49fd45ec51568017b4.txt"
-      }
-    },
-    {
       "key": "BiliHeji",
       "name": "🎉┆笔璃┆合集",
       "type": 3,
@@ -1085,22 +953,6 @@
       "changeable": 0,
       "ext": {
         "json": "https://nos.netease.com/ysf/0075389dca9afadd4614e9713765ff17.txt"
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      }
-    },
-    {
-      "name": "🎉┆笔璃┆歌曲",
-      "key": "BiliGequ",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://nos.netease.com/ysf/6496356286589c68f52c2f99c0c674c7.txt"
       },
       "style": {
         "type": "rect",
@@ -1194,47 +1046,6 @@
       "style": {
         "type": "list"
       }
-    },
-    {
-      "key": "Market",
-      "name": "🛒┆网盘┆市场",
-      "type": 3,
-      "api": "csp_Market",
-      "searchable": 0,
-      "indexs": 0,
-      "style": {
-        "type": "list"
-      },
-      "ext": {
-        "categories": [
-          {
-            "name": "潇洒资源一",
-            "url": "https://pan.quark.cn/s/969cc97687d3"
-          },
-          {
-            "name": "潇洒资源二",
-            "url": "https://drive.uc.cn/s/ba531661b3eb4"
-          },
-          {
-            "name": "奇奇更新一",
-            "url": "https://pan.quark.cn/s/ab00f85da8ea"
-          },
-          {
-            "name": "奇奇更新二",
-            "url": "https://drive.uc.cn/s/ef22fcbfdd934"
-          }
-        ]
-      }
-    },
-    {
-      "key": "push_agent",
-      "name": "💌┆推送┆接收",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 0,
-      "changeable": 0,
-      "indexs": 0,
-      "timeout": 60
     },
     {
       "key": "Fishdrive",

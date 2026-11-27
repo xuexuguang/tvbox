@@ -144,21 +144,6 @@
       "ext": "https://auete.pro/"
     },
     {
-      "key": "玩偶",
-      "name": "玩偶哥哥(网盘)",
-      "type": 3,
-      "api": "csp_WoGG",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto",
-        "siteUrl": "https://www.wogg.net/",
-        "danMu": "弹"
-      }
-    },
-    {
       "key": "暴风",
       "name": "暴风",
       "type": 1,
@@ -339,58 +324,6 @@
       "changeable": 1
     },
     {
-      "key": "米搜",
-      "name": "小米(网盘搜索)",
-      "type": 3,
-      "api": "csp_MIPanSo",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "抠搜",
-      "name": "抠抠(网盘搜索)",
-      "type": 3,
-      "api": "csp_KkSs",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "UC",
-      "name": "优汐(网盘搜索)",
-      "type": 3,
-      "api": "csp_UuSs",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "抠搜",
-      "name": "抠抠(网盘搜索)",
-      "type": 3,
-      "api": "csp_KkSs",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
       "key": "haiwaikan",
       "name": "海外看(墙外)",
       "type": 1,
@@ -442,71 +375,6 @@
       "filterable": 1
     },
     {
-      "key": "夸搜",
-      "name": "夸搜(网盘搜索)",
-      "type": 3,
-      "api": "csp_PanSearch",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "pan": "quark",
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "YiSo",
-      "name": "易搜(网盘搜索)",
-      "type": 3,
-      "api": "csp_YiSo",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "PanSou",
-      "name": "盘搜(网盘搜索)",
-      "type": 3,
-      "api": "csp_PanSou",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "PanSearch",
-      "name": "盘Se(网盘搜索)",
-      "type": 3,
-      "api": "csp_PanSearch",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "push_agent",
-      "name": "手机推送",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 0,
-      "quickSearch": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
       "key": "cntv",
       "name": "央视[cat]",
       "type": 3,
@@ -553,22 +421,6 @@
       }
     },
     {
-      "key": "Biliych",
-      "name": "哔哔演唱会┃弹幕",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://ghp.ci/raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/biliych.json"
-      }
-    },
-    {
       "key": "dr_兔小贝",
       "name": "儿童┃启蒙",
       "type": 3,
@@ -581,70 +433,6 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0
-    },
-    {
-      "key": "少儿教育",
-      "name": "少儿┃教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://ghp.ci/raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/少儿教育.json"
-      }
-    },
-    {
-      "key": "小学课堂",
-      "name": "小学┃课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://ghp.ci/raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/小学课堂.json"
-      }
-    },
-    {
-      "key": "初中课堂",
-      "name": "初中┃课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://ghp.ci/raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/初中课堂.json"
-      }
-    },
-    {
-      "key": "高中教育",
-      "name": "高中┃课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": {
-        "json": "https://ghp.ci/raw.githubusercontent.com/fantaiying7/EXT/refs/heads/main/高中课堂.json"
-      }
     }
   ]
 }

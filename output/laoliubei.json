@@ -75,21 +75,6 @@
       "changeable": 0
     },
     {
-      "key": "玩偶",
-      "name": "👽玩偶哥哥┃4K弹幕",
-      "type": 3,
-      "api": "csp_WoGG",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto",
-        "siteUrl": "https://www.wogg.net/",
-        "danMu": "弹"
-      }
-    },
-    {
       "key": "YGP",
       "name": "🚀┃叨观┃新片",
       "type": 3,
@@ -107,32 +92,6 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0
-    },
-    {
-      "key": "米搜",
-      "name": "🦋┃米盘┃搜搜",
-      "type": 3,
-      "api": "csp_MIPanSo",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "抠搜",
-      "name": "🍄┃抠抠┃搜搜",
-      "type": 3,
-      "api": "csp_KkSs",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
     },
     {
       "key": "Lib",
@@ -462,16 +421,6 @@
       "ext": "./libs/hccx/兄弟.json"
     },
     {
-      "key": "csp_Duopan",
-      "name": "🖍︎┃蜡笔┃云盘",
-      "type": 3,
-      "api": "csp_Duopan",
-      "playerType": 2,
-      "filterable": 1,
-      "jar": "./libs/jar/Panda.jar",
-      "ext": "https://duopan.fun/"
-    },
-    {
       "key": "荐片",
       "name": "🎬┃荐片┃影视",
       "api": "csp_Jianpian",
@@ -617,97 +566,6 @@
       "style": {
         "type": "rect",
         "ratio": 3.8
-      }
-    },
-    {
-      "key": "米搜",
-      "name": "🦋米搜┃搜索",
-      "type": 3,
-      "api": "csp_MIPanSo",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "夸搜",
-      "name": "🐌夸搜┃搜索",
-      "type": 3,
-      "api": "csp_PanSearch",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "pan": "quark",
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "YiSo",
-      "name": "🎯易搜┃搜索",
-      "type": 3,
-      "api": "csp_YiSo",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "PanSou",
-      "name": "📀盘搜┃搜索",
-      "type": 3,
-      "api": "csp_PanSou",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "UpYun",
-      "name": "🌤️Up搜┃搜索",
-      "type": 3,
-      "api": "csp_UpYun",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "PanSearch",
-      "name": "🏵️盘Se┃搜索",
-      "type": 3,
-      "api": "csp_PanSearch",
-      "searchable": 1,
-      "quickSearch": 1,
-      "changeable": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
-      }
-    },
-    {
-      "key": "push_agent",
-      "name": "🛴手机┃推送",
-      "type": 3,
-      "api": "csp_Push",
-      "searchable": 0,
-      "quickSearch": 0,
-      "ext": {
-        "Cloud-drive": "tvfan/Cloud-drive.txt",
-        "from": "4k|auto"
       }
     },
     {
@@ -2091,16 +1949,6 @@
       "filterable": 1
     },
     {
-      "key": "csp_Xunlei8",
-      "name": "🧲迅雷吧",
-      "type": 3,
-      "api": "csp_Xunlei8",
-      "searchable": 1,
-      "quickSearch": 1,
-      "jar": "./libs/jar/xyq.jar",
-      "filterable": 1
-    },
-    {
       "key": "mtv_xp_维奇动漫",
       "name": "🐼维奇丨动漫",
       "type": 3,
@@ -2178,18 +2026,6 @@
       "ext": "./libs/cctv.py"
     },
     {
-      "key": "MV_vod",
-      "name": "🎶明星┃MV",
-      "type": 1,
-      "api": "https://mv.wogg.link/mv/vod",
-      "style": {
-        "type": "oval"
-      },
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0
-    },
-    {
       "key": "csp_Yj1211",
       "name": "📽️网红┃直播",
       "type": 3,
@@ -2197,17 +2033,6 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1
-    },
-    {
-      "key": "csp_酷奇",
-      "name": "🎤┃酷奇┃音乐",
-      "type": 3,
-      "api": "csp_XBPQ",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/酷奇MV.json"
     },
     {
       "key": "88js",
@@ -2255,21 +2080,6 @@
       "changeable": 0
     },
     {
-      "key": "酷奇js",
-      "name": "🎤酷奇┃MV",
-      "playerType": 1,
-      "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "ext": "./libs/js/酷奇MV.js",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0
-    },
-    {
       "key": "js_武享吧",
       "name": "🥎┃格斗┃直播",
       "playerType": 1,
@@ -2279,17 +2089,6 @@
       "quickSearch": 1,
       "filterable": 0,
       "ext": "./libs/js/武享吧.js"
-    },
-    {
-      "key": "js_a8音乐",
-      "name": "🎸┃奥迪┃音乐",
-      "playerType": 1,
-      "type": 3,
-      "api": "./libs/js/drpy2.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./libs/js/a8音乐.js"
     },
     {
       "key": "csp_短剧",
@@ -2378,20 +2177,6 @@
       "ext": "./libs/bilibili.json"
     },
     {
-      "key": "Biliych",
-      "name": "🅱哔哔┃歌曲",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 1,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": "./libs/biliych.json"
-    },
-    {
       "key": "Aid",
       "name": "🚑急救┃教学",
       "type": 3,
@@ -2427,62 +2212,6 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0
-    },
-    {
-      "key": "少儿教育",
-      "name": "📚少儿┃教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": "./libs/少儿教育.json"
-    },
-    {
-      "key": "小学课堂",
-      "name": "📚小学┃课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": "./libs/小学课堂.json"
-    },
-    {
-      "key": "初中课堂",
-      "name": "📚初中┃课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": "./libs/初中课堂.json"
-    },
-    {
-      "key": "高中教育",
-      "name": "📚高中┃课堂",
-      "type": 3,
-      "api": "csp_Bili",
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      },
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0,
-      "ext": "./libs/高中课堂.json"
     },
     {
       "key": "csp_Bili",
@@ -2537,50 +2266,6 @@
       "filterable": 1,
       "jar": "./libs/jar/HCCX.jar",
       "ext": "./libs/hccx/美食合集.json"
-    },
-    {
-      "key": "csp_Bili_youer",
-      "name": "🅱️┃幼儿┃教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/幼儿.json"
-    },
-    {
-      "key": "csp_Bili_xiaoxue",
-      "name": "🅱️┃小学┃教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/小学.json"
-    },
-    {
-      "key": "csp_Bili_czxx",
-      "name": "🅱️┃初中┃教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/初中.json"
-    },
-    {
-      "key": "csp_Bili_gaozxx",
-      "name": "🅱️┃高中┃教育",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/高中.json"
     },
     {
       "key": "csp_Bili_zyy",
@@ -2671,26 +2356,6 @@
       "ext": "./libs/hccx/女团.json"
     },
     {
-      "key": "MV_vod",
-      "name": "🎹┃MTV┃合集",
-      "type": 1,
-      "api": "https://mv.wogg.link/mv/vod",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1
-    },
-    {
-      "key": "csp_Bili_MTV",
-      "name": "🅱️┃歌曲┃演唱",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "jar": "./libs/jar/HCCX.jar",
-      "ext": "./libs/hccx/歌曲.json"
-    },
-    {
       "key": "csp_Bili_Yinl2",
       "name": "🅱️┃音悦┃合集",
       "type": 3,
@@ -2710,13 +2375,6 @@
       "quickSearch": 0,
       "filterable": 0,
       "ext": "./libs/哔哩直播.js"
-    },
-    {
-      "key": "drpy_js_Alist",
-      "name": "网盘 | Alist[js]",
-      "type": 3,
-      "api": "./libs/js/alist.min.js",
-      "ext": "./libs/js/alist.json"
     },
     {
       "key": "本地",
@@ -2743,53 +2401,6 @@
       "searchable": 1,
       "changeable": 0,
       "ext": "./libs/js/webdav.json"
-    },
-    {
-      "key": "csp_AList",
-      "name": "小雅｜云盘",
-      "type": 3,
-      "playerType": 1,
-      "api": "csp_AList",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": {
-        "vodPic": "https://up.mediy.cn/033_喜欢_adf390021f221477b26a94f5eaf02643.png",
-        "drives": [
-          {
-            "name": "Ecve",
-            "server": "https://pan.ecve.cn/"
-          },
-          {
-            "name": "小鸭",
-            "server": "https://pan.mediy.cn/"
-          },
-          {
-            "name": "秋雨",
-            "server": "https://share.qiuyu.org/"
-          },
-          {
-            "name": "小雅",
-            "server": "http://alist.xiaoya.pro/"
-          },
-          {
-            "name": "七米蓝",
-            "server": "https://al.chirmyram.com/"
-          },
-          {
-            "name": "蓼茶",
-            "server": "http://175.178.16.226:62494/"
-          },
-          {
-            "name": "柯南",
-            "server": "https://alist.523.monster/"
-          },
-          {
-            "name": "老谭",
-            "server": "https://pan.cqtjy.cn/ali"
-          }
-        ]
-      }
     },
     {
       "key": "短视频",

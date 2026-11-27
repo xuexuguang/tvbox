@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 06:41:07",
+  "updated_at": "2026-11-27 11:09:36",
   "repo": "xuexuguang/tvbox",
   "sources": [
     {
@@ -28,7 +28,7 @@
       "name": "讴歌",
       "ok": true,
       "used_url": "(缓存)",
-      "error": "HTTPSConnectionPool(host='xn--dkw0c.v.nxog.top', port=443): Max retries exceeded with url: /m/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'xn--dkw0c.v.nxog.top'. (_ssl.c:1018)\")))",
+      "error": null,
       "cached": true
     },
     {
@@ -42,7 +42,7 @@
       "id": "xiaohezi",
       "name": "小盒子单仓",
       "ok": true,
-      "used_url": "http://xhztv.top/xhz",
+      "used_url": "http://xhztv.top/xhz/",
       "error": null
     },
     {
@@ -56,14 +56,14 @@
       "id": "hezimi",
       "name": "🚀盒子迷",
       "ok": true,
-      "used_url": "https://盒子迷.top/禁止贩卖",
+      "used_url": "https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
       "error": null
     },
     {
       "id": "dxawi",
       "name": "🚀dxawi线路",
       "ok": true,
-      "used_url": "http://dxawi.github.io/0/0.json",
+      "used_url": "https://dxawi.github.io/0/0.json",
       "error": null
     },
     {
