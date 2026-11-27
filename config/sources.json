@@ -42,7 +42,7 @@
       "urls": [
         "https://15318.kstore.space/easytv.jpg"
       ]
-    },    
+    },
     {
       "id": "xiaohezi",
       "name": "小盒子单仓",
@@ -53,57 +53,79 @@
     {
       "id": "aowu",
       "name": "嗷呜线路",
-      "urls": ["https://9763.kstore.vip/aowu.json"]
+      "urls": [
+        "https://9763.kstore.vip/aowu.json"
+      ]
     },
     {
       "id": "hezimi",
       "name": "🚀盒子迷",
-      "urls": ["https://盒子迷.top/禁止贩卖"]
+      "urls": [
+        "https://盒子迷.top/禁止贩卖"
+      ]
     },
     {
       "id": "dxawi",
       "name": "🚀dxawi线路",
-      "urls": ["http://dxawi.github.io/0/0.json"]
+      "urls": [
+        "http://dxawi.github.io/0/0.json"
+      ]
     },
     {
       "id": "xiaohe",
       "name": "🙀小何线路",
-      "urls": ["https://jihulab.com/z-blog/xh2/-/raw/main/t.json"]
+      "urls": [
+        "https://jihulab.com/z-blog/xh2/-/raw/main/t.json"
+      ]
     },
     {
       "id": "qist",
       "name": "QIST自用",
-      "urls": ["https://raw.githubusercontent.com/qist/tvbox/master/jsm.json"]
+      "urls": [
+        "https://raw.githubusercontent.com/qist/tvbox/master/jsm.json"
+      ]
     },
     {
       "id": "qist-xiaosa",
       "name": "QIST潇洒",
-      "urls": ["https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json"]
+      "urls": [
+        "https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json"
+      ]
     },
     {
       "id": "dongli",
       "name": "东篱线路",
-      "urls": ["https://raw.githubusercontent.com/chitue/dongliTV/main/api.json"]
+      "urls": [
+        "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json"
+      ]
     },
     {
       "id": "fish",
-      "name": "无名",
-      "urls": ["https://6800.kstore.vip/fish.json"]
+      "name": "无名1",
+      "urls": [
+        "https://6800.kstore.vip/fish.json"
+      ]
     },
     {
       "id": "noimank",
       "name": "noimank",
-      "urls": ["https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json"]
+      "urls": [
+        "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json"
+      ]
     },
     {
       "id": "fongmi",
       "name": "FongMi专版",
-      "urls": ["https://www.252035.xyz/z/FongMi.json"]
+      "urls": [
+        "https://www.252035.xyz/z/FongMi.json"
+      ]
     },
     {
       "id": "tvyuan",
       "name": "备用·tvyuan全量",
-      "urls": ["https://tv.cc0cd.cc.cd/"]
+      "urls": [
+        "https://tv.cc0cd.cc.cd/"
+      ]
     }
   ]
 }
