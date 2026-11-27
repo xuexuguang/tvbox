@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-26 19:20:25",
+  "updated_at": "2026-11-27 06:41:07",
   "repo": "xuexuguang/tvbox",
   "sources": [
     {
@@ -7,13 +7,6 @@
       "name": "饭太硬",
       "ok": true,
       "used_url": "http://www.xn--sss604efuw.net/tv (JPEG解包)",
-      "error": null
-    },
-    {
-      "id": "feimao",
-      "name": "肥猫",
-      "ok": true,
-      "used_url": "https://6296.kstore.vip/facat.json",
       "error": null
     },
     {
@@ -28,13 +21,6 @@
       "name": "老刘备",
       "ok": true,
       "used_url": "https://raw.liucn.cc/box/m.json",
-      "error": null
-    },
-    {
-      "id": "xiaoma",
-      "name": "小马",
-      "ok": true,
-      "used_url": "https://szyyds.cn/tv/x.json",
       "error": null
     },
     {
@@ -53,31 +39,10 @@
       "error": null
     },
     {
-      "id": "4k",
-      "name": "4K小盒子",
-      "ok": true,
-      "used_url": "http://xhztv.top/4k.json",
-      "error": null
-    },
-    {
       "id": "xiaohezi",
       "name": "小盒子单仓",
       "ok": true,
       "used_url": "http://xhztv.top/xhz",
-      "error": null
-    },
-    {
-      "id": "shiguang",
-      "name": "拾光多仓",
-      "ok": true,
-      "used_url": "http://xmbjm.fh4u.org/dc.txt",
-      "error": null
-    },
-    {
-      "id": "tinghao",
-      "name": "挺好分享多仓",
-      "ok": true,
-      "used_url": "http://ztha.top/TVBox/GYCK.json",
       "error": null
     },
     {
@@ -134,20 +99,6 @@
       "name": "无名",
       "ok": true,
       "used_url": "https://6800.kstore.vip/fish.json",
-      "error": null
-    },
-    {
-      "id": "xiangyaqing",
-      "name": "香雅情",
-      "ok": true,
-      "used_url": "https://raw.githubusercontent.com/xyq254245/xyqonlinerule/main/XYQTVBox.json",
-      "error": null
-    },
-    {
-      "id": "quying",
-      "name": "趣影",
-      "ok": true,
-      "used_url": "https://quying-vod.vercel.app/api/vod/tvbox",
       "error": null
     },
     {
