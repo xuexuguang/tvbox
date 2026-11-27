@@ -9,6 +9,7 @@ import json
 import os
 import re
 import sys
+import time
 import urllib.parse
 
 import requests
@@ -17,7 +18,7 @@ from source_config import load_source_config
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_FILE = os.path.join(ROOT, "config", "sources.json")
-OUTPUT_DIR = "output" if os.environ.get("GITHUB_ACTIONS") == "true" else "output-local"
+OUTPUT_DIR = "output" if os.environ.get("GITHUB_ACTIONS") == "true" else "outout_local"
 DEFAULT_OUT = os.environ.get("TVBOX_FTY_OUTPUT") or os.path.join(ROOT, OUTPUT_DIR, "fantaiying.json")
 
 DEFAULT_URLS = [
@@ -102,11 +103,13 @@ def decode_fty_bytes(data: bytes) -> dict:
     return obj
 
 
-def fetch_one(url: str, timeout: int = 15) -> dict:
+def fetch_one(url: str, timeout: int = 15) -> tuple[dict, str, int]:
     target = idn_encode(url)
+    started = time.perf_counter()
     resp = requests.get(target, headers=HEADERS, timeout=timeout, allow_redirects=True)
+    request_ms = round((time.perf_counter() - started) * 1000)
     resp.raise_for_status()
-    return decode_fty_bytes(resp.content)
+    return decode_fty_bytes(resp.content), resp.url, request_ms
 
 
 def main() -> int:
@@ -114,13 +117,14 @@ def main() -> int:
     last_err = None
     for u in urls:
         try:
-            data = fetch_one(u)
+            data, origin, request_ms = fetch_one(u)
             os.makedirs(os.path.dirname(DEFAULT_OUT), exist_ok=True)
             with open(DEFAULT_OUT, "w", encoding="utf-8") as f:
                 json.dump(data, f, ensure_ascii=False, indent=2)
             print(
-                f"[OK] {u} -> {DEFAULT_OUT} "
-                f"(sites={len(data.get('sites', []))}, lives={len(data.get('lives', []))})"
+                f"[OK] {origin} -> {DEFAULT_OUT} "
+                f"(sites={len(data.get('sites', []))}, lives={len(data.get('lives', []))}) "
+                f"request_ms={request_ms}"
             )
             return 0
         except Exception as e:  # noqa: BLE001

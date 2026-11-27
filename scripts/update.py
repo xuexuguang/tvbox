@@ -14,7 +14,7 @@
   5. 将每个源的最新配置保存到 output/<id>.json
   6. 生成多仓订阅文件 output/多仓订阅.json（可直接填进影视仓的"订阅"或"多仓"）
   7. 生成聚合单仓 output/单仓聚合.json（所有源 sites/lives/parses 合并去重）
-  8. 生成 shields 徽章和 README。上述产物在本地运行时写入 output-local/
+  8. 生成 shields 徽章和 README。上述产物在本地运行时写入 outout_local/
 兼容：本脚本同时兼容 GitHub Actions 自动运行 与 本地手动运行。
 在 GitHub Actions 中，环境变量 GITHUB_REPOSITORY 会被自动注入（格式 owner/repo），
 用于拼出多仓订阅里指向本仓库 raw 文件的完整 URL。
@@ -39,8 +39,8 @@ from source_config import load_source_config
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_FILE = os.path.join(ROOT, "config", "sources.json")
 IS_GITHUB_ACTIONS = os.environ.get("GITHUB_ACTIONS") == "true"
-OUTPUT_DIR = os.path.join(ROOT, "output" if IS_GITHUB_ACTIONS else "output-local")
-CACHE_DIR = os.path.join(ROOT, "source-cache" if IS_GITHUB_ACTIONS else "source-cache-local")
+OUTPUT_DIR = os.path.join(ROOT, "output" if IS_GITHUB_ACTIONS else "outout_local")
+CACHE_DIR = os.path.join(ROOT if IS_GITHUB_ACTIONS else OUTPUT_DIR, "source-cache")
 FTY_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tsjm.py")
 
 DEFAULT_REPO = "xuexuguang/tvbox"
@@ -132,12 +132,13 @@ def _should_retry(err: Exception, resp_text_len: int = -1) -> bool:
     return False
 
 
-def fetch_config(url: str) -> tuple[dict, str]:
-    """抓取配置并返回解析结果及重定向后的地址。"""
+def fetch_config(url: str) -> tuple[dict, str, int]:
+    """返回配置、重定向后的地址和成功请求的耗时（毫秒）。"""
     target = idn_encode(url)
     last_err = None
     for attempt in range(1, MAX_RETRIES + 1):
         try:
+            started = time.perf_counter()
             resp = requests.get(
                 target,
                 headers={
@@ -147,11 +148,12 @@ def fetch_config(url: str) -> tuple[dict, str]:
                 timeout=TIMEOUT,
                 allow_redirects=True,
             )
+            request_ms = round((time.perf_counter() - started) * 1000)
             resp.raise_for_status()
             data = parse_json_lenient(resp.text)
             if not is_valid_tvbox_config(data):
                 raise ValueError("返回内容不是 TVBox 配置（缺少 sites/spiders/lives 或 urls 字段）")
-            return data, resp.url
+            return data, resp.url, request_ms
         except Exception as e:  # noqa: BLE001
             last_err = e
             text_len = len(getattr(resp, "text", "") or "") if "resp" in locals() else -1
@@ -207,7 +209,10 @@ def run_fantaiying(raw_base: str):
             if is_valid_tvbox_config(data):
                 entry["ok"] = True
                 if fetched_ok:
-                    entry["used_url"] = "http://www.xn--sss604efuw.net/tv (JPEG解包)"
+                    summary = res.stdout.strip().splitlines()[-1]
+                    origin = summary.removeprefix("[OK] ").partition(" -> ")[0]
+                    entry["used_url"] = f"{origin} (JPEG解包)"
+                    entry["request_ms"] = int(summary.rpartition("request_ms=")[2])
                 else:
                     entry["cached"] = True
                     entry["used_url"] = "(缓存)"
@@ -292,7 +297,21 @@ STATUS_START = "<!-- STATUS_START -->"
 STATUS_END = "<!-- STATUS_END -->"
 
 
-def update_readme(status, ok_count, total, subscriptions):
+def source_links_table(subscriptions):
+    rows = ["| 线路 | 直连地址 | 站点数（过滤后） |", "| --- | --- | ---: |"]
+    for source in subscriptions:
+        name = source["name"].replace("|", "\\|")
+        url = source["url"].removeprefix("https://gh-proxy.org/")
+        filename = os.path.basename(urllib.parse.urlsplit(url).path)
+        with open(os.path.join(OUTPUT_DIR, filename), encoding="utf-8") as file:
+            data = json.load(file)
+        sites = data.get("sites")
+        count = len(sites) if isinstance(sites, list) else 0
+        rows.append(f"| 线路 · {name} | `{url}` | {count} |")
+    return "\n".join(rows)
+
+
+def update_readme(status, ok_count, total, subscriptions, site_count):
     """把各源更新状态以表格形式写回 README（在 STATUS_START/END 标记之间）。"""
     if not os.path.exists(README_PATH):
         return
@@ -304,34 +323,48 @@ def update_readme(status, ok_count, total, subscriptions):
     lines = []
     lines.append(f"> 🔄 最近更新：{status['updated_at']}（北京时间） · 成功 **{ok_count}/{total}** 个源")
     lines.append("")
-    lines.append("| 配置源 | 状态 | 使用地址 |")
-    lines.append("| --- | --- | --- |")
+    lines.append("| 配置源 | 状态 | 请求耗时（ms） | 使用地址 |")
+    lines.append("| --- | --- | ---: | --- |")
     for s in status["sources"]:
         if s.get("cached"):
-            lines.append(f"| {s['name']} | 📦 缓存 | 上次成功配置（本次更新未抓到，沿用缓存） |")
+            lines.append(f"| {s['name']} | 📦 缓存 | — | 上次成功配置（本次更新未抓到，沿用缓存） |")
         elif s["ok"]:
-            lines.append(f"| {s['name']} | ✅ 成功 | `{s['used_url']}` |")
+            lines.append(f"| {s['name']} | ✅ 成功 | {s.get('request_ms', '—')} | `{s['used_url']}` |")
         else:
             err = (s.get("error") or "").replace("|", "/")
             if len(err) > 60:
                 err = err[:57] + "..."
-            lines.append(f"| {s['name']} | ❌ 失败 | {err} |")
+            lines.append(f"| {s['name']} | ❌ 失败 | — | {err} |")
     block = "\n".join(lines)
 
     prefix = readme.split(STATUS_START, 1)[0]
     suffix = readme.split(STATUS_END, 1)[1]
     new_readme = f"{prefix}{STATUS_START}\n{block}\n{STATUS_END}{suffix}"
+    accelerated_start = "<!-- ACCELERATED_LINKS_START -->"
+    accelerated_end = "<!-- ACCELERATED_LINKS_END -->"
+    if accelerated_start in new_readme and accelerated_end in new_readme:
+        prefix, _, remainder = new_readme.partition(accelerated_start)
+        _, _, suffix = remainder.partition(accelerated_end)
+        base = f"https://gh-proxy.org/https://raw.githubusercontent.com/{status['repo']}/main/output"
+        subscription_url = f"{base}/{urllib.parse.quote('多仓订阅.json')}"
+        aggregate_url = f"{base}/{urllib.parse.quote('单仓聚合.json')}"
+        sites = f"{site_count} 个站点" if site_count is not None else "—"
+        rows = [
+            "| 类型 | 加速地址 | 数量 |",
+            "| --- | --- | ---: |",
+            f"| **多仓订阅（推荐）** | `{subscription_url}` | {len(subscriptions)} 条线路 |",
+            f"| **单仓聚合** | `{aggregate_url}` | {sites} |",
+        ]
+        table = "\n".join(rows)
+        new_readme = f"{prefix}{accelerated_start}\n\n{table}\n\n{accelerated_end}{suffix}"
+
     links_start = "<!-- SOURCE_LINKS_START -->"
     links_end = "<!-- SOURCE_LINKS_END -->"
     if links_start in new_readme and links_end in new_readme:
         prefix, _, remainder = new_readme.partition(links_start)
         _, _, suffix = remainder.partition(links_end)
-        rows = ["", "| 线路 | 直连地址 |", "| --- | --- |"]
-        for source in subscriptions:
-            name = source["name"].replace("|", "\\|")
-            url = source["url"].removeprefix("https://gh-proxy.org/")
-            rows.append(f"| 线路 · {name} | `{url}` |")
-        new_readme = "\n".join([prefix + links_start, *rows, "", links_end + suffix])
+        table = source_links_table(subscriptions)
+        new_readme = f"{prefix}{links_start}\n\n{table}\n\n{links_end}{suffix}"
     readme_output = README_PATH if IS_GITHUB_ACTIONS else os.path.join(OUTPUT_DIR, "README.md")
     with open(readme_output, "w", encoding="utf-8") as f:
         f.write(new_readme)
@@ -454,9 +487,9 @@ def load_source(sid, urls):
     last_error = "没有配置地址"
     for url in urls:
         try:
-            data, origin = fetch_config(url)
+            data, origin, request_ms = fetch_config(url)
             write_config(cache_path, {"origin": origin, "data": data})
-            return data, origin, False
+            return data, origin, request_ms
         except (OSError, ValueError, requests.RequestException) as error:
             print(f"[FAIL] {sid}  {url}  ->  {error}")
             last_error = str(error)
@@ -466,7 +499,7 @@ def load_source(sid, urls):
         with open(cache_path, encoding="utf-8") as file:
             cached = json.load(file)
         if is_valid_tvbox_config(cached["data"]):
-            return cached["data"], cached["origin"], True
+            return cached["data"], cached["origin"], None
     except (OSError, ValueError, KeyError, TypeError):
         pass
 
@@ -474,7 +507,7 @@ def load_source(sid, urls):
         with open(os.path.join(OUTPUT_DIR, f"{sid}.json"), encoding="utf-8") as file:
             cached = json.load(file)
         if is_valid_tvbox_config(cached):
-            return cached, next(iter(urls), ""), True
+            return cached, next(iter(urls), ""), None
     except (OSError, ValueError):
         pass
     raise ValueError(last_error)
@@ -485,10 +518,13 @@ def update_source(source, raw_base, exclusions):
     sid = source.get("id", name)
     entry = {"id": sid, "name": name, "ok": False, "used_url": None, "error": None}
     try:
-        data, origin, cached = load_source(sid, source.get("urls", []))
+        data, origin, request_ms = load_source(sid, source.get("urls", []))
         data, warehouses = publish_config(sid, data, origin, raw_base, exclusions)
+        cached = request_ms is None
         if cached:
             entry["cached"] = True
+        else:
+            entry["request_ms"] = request_ms
         entry.update(ok=True, used_url="(缓存)" if cached else origin)
         print(f"[{'CACHE' if cached else 'OK'}] {name} <- {entry['used_url']}")
         return entry, data, warehouses
@@ -521,8 +557,6 @@ def main() -> int:
         or DEFAULT_REPO
     )
     raw_base = f"https://gh-proxy.org/https://raw.githubusercontent.com/{repo}/main/output"
-    if not IS_GITHUB_ACTIONS:
-        raw_base = os.environ.get("TVBOX_LOCAL_BASE_URL", raw_base).rstrip("/")
 
     status = {"updated_at": now_str, "repo": repo, "sources": []}
     subscriptions = []
@@ -591,7 +625,8 @@ def main() -> int:
 
     # 生成 shields 徽章并更新 README 状态表
     write_badge(ok_count, total)
-    update_readme(status, ok_count, total, subscriptions)
+    site_count = len(merged["sites"]) if merged is not None else None
+    update_readme(status, ok_count, total, subscriptions, site_count)
 
     print("\n" + "=" * 50)
     print(f"本次更新：{ok_count}/{total} 个源成功")

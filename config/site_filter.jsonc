@@ -1,5 +1,14 @@
 {
   "exclude_keys": [
+    "csp_wogg1", // 🐲接口失效
+    "csp_woog2", // 🐲关注公众号
+    "豆瓣1", // 📢公告停更
+    "豆瓣2", // 📢龙马精神、金戈铁马、骏马迎春、马行千里！
+    "豆瓣4", // 📢长期维护切勿贩卖
+    "Douban", // 🐮【免费分享】🐮
+    "qist_cc", // 请勿相信视频中任何广告
+    "tvyuan_cc", // [152ms|vv] 请勿相信视频中任何广告
+
     "MDrive", // 🗂我的云盘┃配置
     "剧迷", // 🍊橘猫┃多线
     "小学课堂", // 📚小学┃课堂
@@ -56,6 +65,135 @@
     "bb", // 配置接口完全免费
     "配置", // ⚔️｜配置｜中心
     "ConfigCenter", // 配置中心
+    // 戏曲与曲艺
+    "MusicAiLiYuan", // 🎎戏曲┃秒播🎎
+    "bilixiqu", // 🅱‍哔哩┃戏曲🅱‍
+    "cc_相声", // 📻┃相声┃合集
+    "csp_Bili_xuqu1", // 🅱️┃戏曲┃合集
+    "csp_Bili_xiangsh", // 🅱️┃相声┃小品
+    "戏曲多多", // 梨园 | 戏曲
+    "哔哩哔哩相声", // BB小电视 | 相声
+    "哔哩哔哩戏曲", // BB小电视 | 戏曲
+    "相声小品", // 🅱️相声小品
+    "戏曲", // 🅱️戏曲
+    "BiliXiqu", // 🎉┃戏曲┃哔哩
+    "xiaohe_相声小品", // 🅱相声｜小品
+    "戏曲杂苑", // 🅱戏曲｜杂苑
+    "qist_戏曲多多", // 戏曲 • 多多
+    "qist_哔哩哔哩相声", // 哔哩 • 相声
+    "qist_哔哩哔哩戏曲", // 哔哩 • 戏曲
+    "qist-xiaosa_戏曲多多", // 戏曲 • 多多
+    "qist-xiaosa_哔哩哔哩相声", // 哔哩 • 相声
+    "qist-xiaosa_哔哩哔哩戏曲", // 哔哩 • 戏曲
+    "xiqu", // ♦｜戏曲┃大全
+    "dongli_哔哩哔哩相声", // 🌈｜哔哩｜相声
+    "dongli_哔哩哔哩戏曲", // 🌈｜哔哩｜戏曲
+    "csp_Bili_5", // 💕戏曲
+    "tvyuan_戏曲多多", // 戏曲 • 多多
+    "tvyuan_哔哩哔哩相声", // 哔哩 • 相声
+    "tvyuan_哔哩哔哩戏曲", // 哔哩 • 戏曲
+    "tvyuan_csp_Bili_5", // 💕戏曲
+    "T4-Blixs", // B站-相声(T4)
+    "tvyuan_BiliXiqu", // 🎉┃戏曲┃哔哩
+    "tvyuan_MusicAiLiYuan", // 🎎戏曲┃秒播🎎
+    "tvyuan_bilixiqu", // 🅱‍哔哩┃戏曲🅱‍
+    "tvyuan_相声小品", // 🏮相声┃小品
+    "戏 曲", // 🎈国粹┃戏曲
+    "相声", // 相声┃大全
+    // 听书与有声内容
+    "有声小说", // 🎧有声┃小说
+    "BookHongGuo", // 🎃‍小红┃听书🎃
+    "BookHeMa", // 🎃‍小马┃听书🎃
+    "BookAiYueTing", // 🎃‍悦庭┃听书🎃
+    "BookAi23TingShu", // 🎃‍爱上┃听书🎃
+    "有声小说js", // 🎧有声┃小说
+    "cc_评书", // 📻┃评书┃合集
+    "laoliubei_有声小说js", // 🎧有声┃小说
+    "听友听书", // 听众 | 听书
+    "世界听书", // 寰宇 | 听书
+    "堇夏听书", // 紫夏 | 听书
+    "博看听书", // 广览 | 听书
+    "哔哩哔哩听书", // BB小电视 | 听书
+    "drpy_js_有声小说吧", // 有声小说吧
+    "TSaowu", // 📖┃嗷嗚┃听书
+    "TSty", // 📖┃富强┃听书
+    "TStzg", // 📖┃文明┃听书
+    "qist_听友听书", // 听友 • 听书
+    "qist_世界听书", // 世界 • 听书
+    "qist_堇夏听书", // 堇夏 • 听书
+    "qist_博看听书", // 博看 • 听书
+    "qist_哔哩哔哩听书", // 哔哩 • 听书
+    "drpy_js_爱上你听书网", // 听书 • 爱上你听书
+    "drpy_js_博看听书", // 听书 • 博看听书
+    "drpy_js_海洋听书", // 听书 • 海洋听书
+    "drpy_js_有声小说", // 听书 • 有声小说
+    "qist-xiaosa_听友听书", // 听友 • 听书
+    "qist-xiaosa_世界听书", // 世界 • 听书
+    "qist-xiaosa_堇夏听书", // 堇夏 • 听书
+    "qist-xiaosa_博看听书", // 博看 • 听书
+    "qist-xiaosa_哔哩哔哩听书", // 哔哩 • 听书
+    "tingchina", // 📚｜海盗｜听书
+    "dongli_哔哩哔哩听书", // 🌈｜哔哩｜听书
+    "TingBook", // 📻┆六月┆有声
+    "TingBookJinXia", // 🎙️┆堇夏┆有声
+    "TingYou", // 🎧┆听友┆有声
+    "drpy_js_有声绘本网", // 💥有声绘本(少儿)
+    "tvyuan_听友听书", // 听友 • 听书
+    "tvyuan_世界听书", // 世界 • 听书
+    "tvyuan_堇夏听书", // 堇夏 • 听书
+    "tvyuan_博看听书", // 博看 • 听书
+    "tvyuan_哔哩哔哩听书", // 哔哩 • 听书
+    "tvyuan_drpy_js_爱上你听书网", // 听书 • 爱上你听书
+    "tvyuan_drpy_js_博看听书", // 听书 • 博看听书
+    "tvyuan_drpy_js_海洋听书", // 听书 • 海洋听书
+    "tvyuan_drpy_js_有声小说", // 听书 • 有声小说
+    "tvyuan_drpy_js_有声绘本网", // 💥有声绘本(少儿)
+    "tvyuan_有声小说", // 🎧有声┃小说
+    "tingshijie", // 🎧听书┃有声
+    "drpy_js_i275听书", // ⛳听书┃i275听书[js]
+    "tvyuan_有声小说js", // 🎏听书┃有声小说[js]
+    "drpy_js_评书随身听", // 🎄评书┃评书随身听[js]
+    "tvyuan_TSaowu", // 📖┃嗷嗚┃听书
+    "tvyuan_TSty", // 📖┃富强┃听书
+    "tvyuan_TStzg", // 📖┃文明┃听书
+    "tvyuan_BookHongGuo", // 🎃‍小红┃听书🎃
+    "tvyuan_BookHeMa", // 🎃‍小马┃听书🎃
+    "tvyuan_BookAiYueTing", // 🎃‍悦庭┃听书🎃
+    "tvyuan_BookAi23TingShu", // 🎃‍爱上┃听书🎃
+    "tvyuan_TingBook", // 📻┆六月┆有声
+    "tvyuan_TingBookJinXia", // 🎙️┆堇夏┆有声
+    "tvyuan_TingYou", // 🎧┆听友┆有声
+    "csp_TingBook", // 听书┃娱乐
+    "100听书", // 100听书|秒播
+    "六月有声", // 六月┃有声
+    "评书", // 评书┃大全
+    // 设置与配置中心
+    "csp_KungFu404", // 🔥┃设置Token
+    "easy_配置中心", // 配置中心 | 本接口免费
+    "hezimi_配置中心", // 🌐配置｜中心
+    "qist_配置中心", // 配置 • 中心
+    "qist-xiaosa_配置中心", // 配置 • 中心
+    "FishConfig", // 🍼┆设置┆中心
+    "tvyuan_csp_KungFu404", // 阿里｜设置token
+    "tvyuan_配置中心", // 阿里｜配置中心
+    "tvyuan_bb", // 配置接口完全免费
+    "tvyuan_MDrive", // 🗂我的云盘┃配置
+    "tvyuan_MyConfig", // ⚙️┃配置┃中心
+    "tvyuan_Wexconfig", // 🐮配置┃中心🐮
+    "tvyuan_FishConfig", // 🍼┆设置┆中心
+    "Introduce", // Cookie设置
+    // 本地文件浏览
+    "本地", // 本地存储
+    "easy_本地", // 本机影库 | 11.25-1
+    "qist_本地", // 本地 • 视频
+    "qist-xiaosa_本地", // 本地 • 视频
+    "本地文件", // 🗂️｜本地｜文件
+    "Local", // 📁┆文件┆浏览
+    "csp_Local", // 💕本地
+    "tvyuan_本地", // 本地存储
+    "tvyuan_csp_Local", // 💕本地
+    "tvyuan_Local", // 📁┆文件┆浏览
+    "local", // Local
     // 网盘
     "ZPan", // 🎈盘搜┃四盘
     "米搜", // 🌖┃米搜┃网盘

@@ -3,5 +3,5 @@ __pycache__/
 *.py[cod]
 .venv/
 venv/
-/output-local/
+/outout_local/
 /source-cache-local/
