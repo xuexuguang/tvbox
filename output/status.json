@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 14:50:37",
+  "updated_at": "2026-11-27 15:14:26",
   "repo": "xuexuguang/tvbox",
   "sources": [
     {
@@ -8,7 +8,7 @@
       "ok": true,
       "used_url": "http://www.xn--sss604efuw.net/tv (JPEG解包)",
       "error": null,
-      "request_ms": 871
+      "request_ms": 682
     },
     {
       "id": "wangerxiao",
@@ -16,7 +16,7 @@
       "ok": true,
       "used_url": "https://d.kstore.dev/download/9280/wex.json",
       "error": null,
-      "request_ms": 245
+      "request_ms": 280
     },
     {
       "id": "laoliubei",
@@ -24,7 +24,7 @@
       "ok": true,
       "used_url": "https://raw.liucn.cc/box/m.json",
       "error": null,
-      "request_ms": 268
+      "request_ms": 233
     },
     {
       "id": "ouge",
@@ -40,7 +40,7 @@
       "ok": true,
       "used_url": "https://15318.kstore.space/easytv.jpg",
       "error": null,
-      "request_ms": 621
+      "request_ms": 388
     },
     {
       "id": "xiaohezi",
@@ -48,7 +48,7 @@
       "ok": true,
       "used_url": "http://xhztv.top/xhz/",
       "error": null,
-      "request_ms": 336
+      "request_ms": 305
     },
     {
       "id": "aowu",
@@ -56,7 +56,7 @@
       "ok": true,
       "used_url": "https://9763.kstore.vip/aowu.json",
       "error": null,
-      "request_ms": 709
+      "request_ms": 687
     },
     {
       "id": "hezimi",
@@ -64,7 +64,7 @@
       "ok": true,
       "used_url": "https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
       "error": null,
-      "request_ms": 423
+      "request_ms": 773
     },
     {
       "id": "dxawi",
@@ -72,7 +72,7 @@
       "ok": true,
       "used_url": "https://dxawi.github.io/0/0.json",
       "error": null,
-      "request_ms": 144
+      "request_ms": 121
     },
     {
       "id": "xiaohe",
@@ -80,7 +80,7 @@
       "ok": true,
       "used_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t.json",
       "error": null,
-      "request_ms": 848
+      "request_ms": 740
     },
     {
       "id": "qist",
@@ -88,7 +88,7 @@
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/jsm.json",
       "error": null,
-      "request_ms": 122
+      "request_ms": 85
     },
     {
       "id": "qist-xiaosa",
@@ -96,7 +96,7 @@
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json",
       "error": null,
-      "request_ms": 154
+      "request_ms": 69
     },
     {
       "id": "dongli",
@@ -104,7 +104,7 @@
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
       "error": null,
-      "request_ms": 109
+      "request_ms": 78
     },
     {
       "id": "fish",
@@ -112,7 +112,7 @@
       "ok": true,
       "used_url": "https://6800.kstore.vip/fish.json",
       "error": null,
-      "request_ms": 429
+      "request_ms": 693
     },
     {
       "id": "noimank",
@@ -120,7 +120,7 @@
       "ok": true,
       "used_url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
       "error": null,
-      "request_ms": 299
+      "request_ms": 120
     },
     {
       "id": "fongmi",
@@ -128,7 +128,7 @@
       "ok": true,
       "used_url": "https://www.252035.xyz/z/FongMi.json",
       "error": null,
-      "request_ms": 501
+      "request_ms": 624
     },
     {
       "id": "tvyuan",
@@ -136,7 +136,7 @@
       "ok": true,
       "used_url": "https://tv.cc0cd.cc.cd/",
       "error": null,
-      "request_ms": 1080
+      "request_ms": 706
     }
   ]
 }
