@@ -26,15 +26,23 @@
       <div class="toolbar">
         <div class="list-heading"><h2 id="sources-title">配置源</h2><span id="source-count"></span></div>
         <input id="search" type="search" aria-label="搜索源" placeholder="搜索名称、ID 或地址">
-        <select id="filter" aria-label="按状态筛选">
-          <option value="all">全部状态</option><option>可用</option><option>缓存可用</option><option>失败</option><option>待检测</option>
-        </select>
+        <details class="status-filter" id="filter">
+          <summary aria-label="按状态筛选"><span id="filter-label">全部状态</span></summary>
+          <div class="status-options" role="group" aria-label="状态选项">
+            <button type="button" data-filter="all" aria-pressed="true">全部状态</button>
+            <button type="button" data-filter="可用" aria-pressed="false">可用</button>
+            <button type="button" data-filter="缓存可用" aria-pressed="false">缓存可用</button>
+            <button type="button" data-filter="失败" aria-pressed="false">失败</button>
+            <button type="button" data-filter="待检测" aria-pressed="false">待检测</button>
+          </div>
+        </details>
+        <button type="button" class="mobile-latency-sort" data-latency-sort aria-label="按延迟升序排序">延迟 ↕</button>
         <button id="add" class="primary" disabled>＋ 新增源</button>
         <a class="control" href="https://github.com/xuexuguang/tvbox/actions/workflows/update.yml">更新记录 ↗</a>
       </div>
       <p id="message" role="status"></p>
       <div class="table-wrap"><table>
-        <thead><tr><th scope="col">配置源</th><th scope="col">接口地址</th><th scope="col">状态</th><th scope="col">延迟</th><th scope="col">操作</th></tr></thead>
+        <thead><tr><th scope="col">配置源</th><th scope="col">接口地址</th><th scope="col">状态</th><th scope="col" id="latency-heading" aria-sort="none"><button type="button" data-latency-sort aria-label="按延迟升序排序">延迟 ↕</button></th><th scope="col">操作</th></tr></thead>
         <tbody id="sources"></tbody>
       </table></div>
     </section>

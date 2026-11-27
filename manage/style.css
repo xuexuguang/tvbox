@@ -23,8 +23,15 @@ p { margin: 6px 0; }
 nav { padding: 16px 0 24px; }
 a { color: var(--accent); }
 button, input, select, textarea { font: inherit; color: inherit; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); padding: 7px 10px; }
-button { cursor: pointer; }
-button:hover:not(:disabled) { border-color: var(--accent); }
+button { border-radius: 999px; cursor: pointer; }
+button:hover:not(:disabled), .control:hover {
+  border-color: #bac5d3;
+  background: #f8f9fb;
+}
+button.primary:hover:not(:disabled) {
+  background: #194cb9;
+  border-color: #194cb9;
+}
 button:disabled { opacity: .55; cursor: default; }
 .primary { color: white; background: var(--accent); border-color: var(--accent); }
 #search { flex: 1 1 200px; }
@@ -81,14 +88,77 @@ dialog h2 { font-size: 20px; }
 .toolbar { gap: 8px; margin-bottom: 10px; }
 .list-heading { margin-right: auto; }
 #source-count { font-size: 12px; color: var(--muted); }
-#search { flex: 0 1 205px; min-width: 140px; }
-.control { padding: 7px 10px; border: 1px solid var(--line); border-radius: 6px; color: inherit; text-decoration: none; }
-.control:hover { border-color: var(--accent); }
+#search {
+  flex: 0 1 205px;
+  min-width: 140px;
+  padding-inline: 13px;
+  border-radius: 999px;
+}
+#search:hover { border-color: #bac5d3; }
+.status-filter { position: relative; flex: none; margin: 0; }
+.status-filter summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-inline-size: 116px;
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  list-style: none;
+}
+.status-filter summary::-webkit-details-marker { display: none; }
+.status-filter summary::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border: solid var(--muted);
+  border-width: 0 1.5px 1.5px 0;
+  transform: translateY(-2px) rotate(45deg);
+}
+.status-filter summary:hover { border-color: #bac5d3; }
+.status-filter[open] summary, .status-filter summary:focus-visible,
+#search:focus, button:focus-visible, .control:focus-visible {
+  border-color: #8aaff1;
+  outline: 2px solid #b8d1ff;
+  outline-offset: 1px;
+}
+.status-filter[open] summary::after { transform: translateY(2px) rotate(225deg); }
+.status-options {
+  position: absolute;
+  inset-inline: 4px;
+  top: calc(100% + 6px);
+  z-index: 2;
+  display: grid;
+  gap: 2px;
+  padding: 5px;
+  border: 1px solid var(--line);
+  border-radius: 13px;
+  background: var(--surface);
+  box-shadow: 0 8px 24px #2029381a;
+}
+.status-options button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;
+  border: 0;
+  border-radius: 8px;
+  text-align: start;
+}
+.status-options button:hover:not(:disabled) { background: #f1f4f8; }
+.status-options button[aria-pressed="true"] { background: #eef0f3; }
+.control { padding: 7px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: inherit; text-decoration: none; }
 #message { min-height: 0; overflow-wrap: anywhere; }
 #message:empty { display: none; }
 .table-wrap { border: 0; border-radius: 0; }
 th { background: #f8f9fb; color: var(--muted); font-size: 12px; font-weight: 600; }
 th, td { padding: 9px 10px; }
+#latency-heading button { padding: 0; border: 0; background: transparent; }
+#latency-heading button:hover { color: var(--accent); }
+.mobile-latency-sort { display: none; }
 tbody tr:hover { background: #fafbfe; }
 td:nth-child(4) { white-space: nowrap; font-variant-numeric: tabular-nums; }
 th:last-child, td:last-child { text-align: right; }
@@ -100,6 +170,8 @@ th:last-child, td:last-child { text-align: right; }
   .panel { padding: 12px; }
   .list-heading { flex-basis: 100%; }
   #search { flex: 1 1 145px; }
+  .mobile-latency-sort { display: inline-block; }
+  #latency-heading button { display: none; }
   thead { position: absolute; clip-path: inset(50%); width: 1px; height: 1px; overflow: hidden; }
   tbody, table { display: block; }
   tbody tr { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; padding: 10px 2px; border-top: 1px solid var(--line); gap: 5px 10px; }

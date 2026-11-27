@@ -14,6 +14,7 @@ let sha;
 let token = '';
 let editingId;
 let writing = false;
+let latencySort = 'none';
 
 async function readJson(url, options = {}) {
   const response = await fetch(url, { cache: 'no-store', ...options });
@@ -56,11 +57,21 @@ function button(text, action, disabled = false) {
 function render() {
   if (!config) return;
   const query = $('search').value.trim().toLowerCase();
-  const filter = $('filter').value;
+  const filter = $('filter').querySelector('[aria-pressed="true"]').dataset.filter;
   const visible = config.sources.filter(source => {
     const searchable = [source.name, source.id, ...source.urls].join(' ').toLowerCase();
     return searchable.includes(query) && (filter === 'all' || stateOf(source) === filter);
   });
+  if (latencySort !== 'none') {
+    const direction = latencySort === 'ascending' ? 1 : -1;
+    visible.sort((left, right) => {
+      const leftMs = statusById.get(left.id)?.request_ms;
+      const rightMs = statusById.get(right.id)?.request_ms;
+      if (leftMs == null) return rightMs == null ? 0 : 1;
+      if (rightMs == null) return -1;
+      return direction * (leftMs - rightMs);
+    });
+  }
   $('source-count').textContent = `共 ${config.sources.length} 条 · 显示 ${visible.length} 条`;
   for (const [id, label] of [['available', '可用'], ['failed', '失败']]) {
     const badge = $(id);
@@ -313,7 +324,43 @@ for (const [label, filename, accelerated] of [
   $('subscriptions').append(row);
 }
 $('search').addEventListener('input', render);
-$('filter').addEventListener('change', render);
+const statusFilter = $('filter');
+const statusTrigger = statusFilter.querySelector('summary');
+
+statusFilter.addEventListener('click', event => {
+  const option = event.target.closest('[data-filter]');
+  if (!option) return;
+  statusFilter.querySelector('[aria-pressed="true"]').setAttribute('aria-pressed', 'false');
+  option.setAttribute('aria-pressed', 'true');
+  $('filter-label').textContent = option.textContent;
+  statusFilter.open = false;
+  statusTrigger.focus();
+  render();
+});
+
+statusFilter.addEventListener('keydown', event => {
+  if (event.key !== 'Escape' || !statusFilter.open) return;
+  event.preventDefault();
+  statusFilter.open = false;
+  statusTrigger.focus();
+});
+
+document.addEventListener('click', event => {
+  if (!statusFilter.contains(event.target)) statusFilter.open = false;
+});
+const latencySortButtons = document.querySelectorAll('[data-latency-sort]');
+for (const control of latencySortButtons) {
+  control.addEventListener('click', () => {
+    const descending = latencySort === 'ascending';
+    latencySort = descending ? 'descending' : 'ascending';
+    $('latency-heading').setAttribute('aria-sort', latencySort);
+    for (const sortButton of latencySortButtons) {
+      sortButton.textContent = descending ? '延迟 ↓' : '延迟 ↑';
+      sortButton.setAttribute('aria-label', descending ? '延迟降序，点击切换升序' : '延迟升序，点击切换降序');
+    }
+    render();
+  });
+}
 $('add').addEventListener('click', () => openEditor());
 
 function showUpdated(timestamp) {
