@@ -22,20 +22,25 @@
   python scripts/update.py
 """
 import datetime
+import hashlib
 import json
 import os
 import subprocess
 import sys
+import tempfile
 import time
 import urllib.parse
 from concurrent.futures import ThreadPoolExecutor
 
 import requests
 
+from source_config import load_source_config
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_FILE = os.path.join(ROOT, "config", "sources.json")
 IS_GITHUB_ACTIONS = os.environ.get("GITHUB_ACTIONS") == "true"
 OUTPUT_DIR = os.path.join(ROOT, "output" if IS_GITHUB_ACTIONS else "output-local")
+CACHE_DIR = os.path.join(ROOT, "source-cache" if IS_GITHUB_ACTIONS else "source-cache-local")
 FTY_SCRIPT = os.path.join(os.path.dirname(os.path.abspath(__file__)), "tsjm.py")
 
 DEFAULT_REPO = "xuexuguang/tvbox"
@@ -127,8 +132,8 @@ def _should_retry(err: Exception, resp_text_len: int = -1) -> bool:
     return False
 
 
-def fetch_config(url: str) -> dict:
-    """抓取单个地址并解析为 JSON dict；失败时抛出异常。"""
+def fetch_config(url: str) -> tuple[dict, str]:
+    """抓取配置并返回解析结果及重定向后的地址。"""
     target = idn_encode(url)
     last_err = None
     for attempt in range(1, MAX_RETRIES + 1):
@@ -146,7 +151,7 @@ def fetch_config(url: str) -> dict:
             data = parse_json_lenient(resp.text)
             if not is_valid_tvbox_config(data):
                 raise ValueError("返回内容不是 TVBox 配置（缺少 sites/spiders/lives 或 urls 字段）")
-            return data
+            return data, resp.url
         except Exception as e:  # noqa: BLE001
             last_err = e
             text_len = len(getattr(resp, "text", "") or "") if "resp" in locals() else -1
@@ -177,6 +182,7 @@ def run_fantaiying(raw_base: str):
                 capture_output=True,
                 text=True,
                 timeout=30,
+                env={**os.environ, "TVBOX_FTY_OUTPUT": os.path.join(CACHE_DIR, "fantaiying-jpeg.json")},
             )
             if res.returncode == 0:
                 fetched_ok = True
@@ -191,6 +197,9 @@ def run_fantaiying(raw_base: str):
     else:
         err_msg = "未找到 scripts/tsjm.py"
 
+    cached_path = os.path.join(CACHE_DIR, "fantaiying-jpeg.json")
+    if os.path.exists(cached_path):
+        out_path = cached_path
     if os.path.exists(out_path):
         try:
             with open(out_path, "r", encoding="utf-8") as f:
@@ -243,7 +252,7 @@ def merge_configs(fetched):
         return None
     _base_sid, base_name, base = fetched[0]
     merged = {}
-    skip = {"sites", "lives", "parses", "doh", "rules", "flags", "exts", "ads"}
+    skip = {"sites", "lives", "parses", "doh", "rules", "flags", "exts", "ads", "urls"}
     for k, v in base.items():
         if k not in skip:
             merged[k] = v
@@ -346,45 +355,159 @@ def write_badge(ok_count, total):
         json.dump(badge, f, ensure_ascii=False, indent=2)
 
 
-def update_source(source):
-    name = source.get("name", "未知")
-    sid = source.get("id", name)
-    out_path = os.path.join(OUTPUT_DIR, f"{sid}.json")
-    entry = {"id": sid, "name": name, "ok": False, "used_url": None, "error": None}
-
-    for url in source.get("urls", []):
+def write_config(path, data):
+    with tempfile.NamedTemporaryFile(
+        mode="w", encoding="utf-8", dir=os.path.dirname(path), delete=False
+    ) as file:
         try:
-            data = fetch_config(url)
-            with open(out_path, "w", encoding="utf-8") as file:
-                json.dump(data, file, ensure_ascii=False, indent=2)
-        except Exception as error:
-            print(f"[FAIL] {name}  {url}  ->  {error}")
-            entry["error"] = str(error)
+            json.dump(data, file, ensure_ascii=False, indent=2)
+            file.close()
+            os.replace(file.name, path)
+        finally:
+            if os.path.exists(file.name):
+                os.unlink(file.name)
+
+
+def load_site_filter(config):
+    path = os.path.join(os.path.dirname(CONFIG_FILE), "site_filter.jsonc")
+    try:
+        rules = load_source_config(path)
+    except FileNotFoundError:
+        rules = config.get("site_filter", {})
+    except (OSError, ValueError) as error:
+        raise ValueError(f"无法读取 {path}：{error}") from error
+    if not isinstance(rules, dict) or rules.keys() - {"exclude_keys", "exclude_names"}:
+        raise ValueError("site_filter 只支持 exclude_keys 和 exclude_names")
+    exclusions = {}
+    for field in ("key", "name"):
+        values = rules.get(f"exclude_{field}s", [])
+        if not isinstance(values, list) or any(not isinstance(value, str) for value in values):
+            raise ValueError(f"site_filter.exclude_{field}s 必须是字符串数组")
+        exclusions[field] = set(values)
+    return exclusions
+
+
+def publish_config(sid, data, origin, raw_base, exclusions, ancestors=frozenset()):
+    published = dict(data)
+    if isinstance(data.get("sites"), list):
+        published["sites"] = [
+            site for site in data["sites"]
+            if not isinstance(site, dict) or not any(
+                isinstance(site.get(field), str) and site[field] in blocked
+                for field, blocked in exclusions.items()
+            )
+        ]
+
+    if ancestors:
+        resource_fields = {"api", "ext", "spider", "url", "wallpaper", "logo", "jar"}
+
+        def resolve_resources(value):
+            if isinstance(value, list):
+                return [resolve_resources(item) for item in value]
+            if isinstance(value, dict):
+                return {
+                    key: urllib.parse.urljoin(origin, item)
+                    if key in resource_fields and isinstance(item, str)
+                    and item.startswith(("./", "../", "/"))
+                    else resolve_resources(item)
+                    for key, item in value.items()
+                }
+            return value
+
+        published = resolve_resources(published)
+
+    warehouses = []
+    if any(exclusions.values()) and isinstance(data.get("urls"), list):
+        published["urls"] = []
+        ancestors = ancestors | {origin}
+        for entry in data["urls"]:
+            if not isinstance(entry, dict) or not isinstance(entry.get("url"), str):
+                continue
+            url = urllib.parse.urljoin(origin, entry["url"])
+            if urllib.parse.urlsplit(url).scheme not in {"http", "https"} or url in ancestors:
+                continue
+            child_id = "warehouse-" + hashlib.sha256(url.encode()).hexdigest()
+            try:
+                child, child_origin, _ = load_source(child_id, [url])
+                if child_origin in ancestors:
+                    continue
+                name = entry.get("name") or url
+                _, leaves = publish_config(child_id, child, child_origin, raw_base, exclusions, ancestors)
+                if leaves:
+                    published["urls"].extend(leaves)
+                    warehouses.extend(leaves)
+                elif any(field in child for field in TVBOX_KEYS):
+                    link = {"name": name, "url": f"{raw_base}/{child_id}.json"}
+                    published["urls"].append(link)
+                    warehouses.append(link)
+            except (OSError, ValueError, requests.RequestException) as error:
+                print(f"[WARN] 子仓 {url} -> {error}")
+        if not warehouses and not any(field in data for field in TVBOX_KEYS):
+            raise ValueError("没有可发布的子仓")
+
+    write_config(os.path.join(OUTPUT_DIR, f"{sid}.json"), published)
+    return published, warehouses
+
+
+def load_source(sid, urls):
+    cache_path = os.path.join(CACHE_DIR, f"{sid}.json")
+    last_error = "没有配置地址"
+    for url in urls:
+        try:
+            data, origin = fetch_config(url)
+            write_config(cache_path, {"origin": origin, "data": data})
+            return data, origin, False
+        except (OSError, ValueError, requests.RequestException) as error:
+            print(f"[FAIL] {sid}  {url}  ->  {error}")
+            last_error = str(error)
             time.sleep(URL_INTERVAL)
-        else:
-            entry.update(ok=True, used_url=url, error=None)
-            print(f"[OK]   {name} <- {url}")
-            return entry, data
 
     try:
-        with open(out_path, "r", encoding="utf-8") as file:
+        with open(cache_path, encoding="utf-8") as file:
             cached = json.load(file)
-        if is_valid_tvbox_config(cached):
-            entry.update(ok=True, cached=True, used_url="(缓存)")
-            print(f"[CACHE] {name}  使用上次缓存配置")
-            return entry, cached
-    except (OSError, ValueError):
+        if is_valid_tvbox_config(cached["data"]):
+            return cached["data"], cached["origin"], True
+    except (OSError, ValueError, KeyError, TypeError):
         pass
 
-    entry["error"] = entry["error"] or "所有地址均失败"
-    print(f"[FAIL] {name}  全部地址失败")
-    return entry, None
+    try:
+        with open(os.path.join(OUTPUT_DIR, f"{sid}.json"), encoding="utf-8") as file:
+            cached = json.load(file)
+        if is_valid_tvbox_config(cached):
+            return cached, next(iter(urls), ""), True
+    except (OSError, ValueError):
+        pass
+    raise ValueError(last_error)
+
+
+def update_source(source, raw_base, exclusions):
+    name = source.get("name", "未知")
+    sid = source.get("id", name)
+    entry = {"id": sid, "name": name, "ok": False, "used_url": None, "error": None}
+    try:
+        data, origin, cached = load_source(sid, source.get("urls", []))
+        data, warehouses = publish_config(sid, data, origin, raw_base, exclusions)
+        if cached:
+            entry["cached"] = True
+        entry.update(ok=True, used_url="(缓存)" if cached else origin)
+        print(f"[{'CACHE' if cached else 'OK'}] {name} <- {entry['used_url']}")
+        return entry, data, warehouses
+    except (ValueError, OSError) as error:
+        entry["error"] = str(error)
+        print(f"[FAIL] {name}  {error}")
+        return entry, None, []
 
 
 def main() -> int:
-    with open(CONFIG_FILE, "r", encoding="utf-8") as f:
-        cfg = json.load(f)
+    cfg = load_source_config(CONFIG_FILE)
 
+    try:
+        exclusions = load_site_filter(cfg)
+    except ValueError as error:
+        print(f"[FAIL] {error}", file=sys.stderr)
+        return 1
+
+    os.makedirs(CACHE_DIR, exist_ok=True)
     os.makedirs(OUTPUT_DIR, exist_ok=True)
 
     # 东八区时间，便于阅读
@@ -406,16 +529,31 @@ def main() -> int:
     fetched = []  # [(sid, name, data_dict), ...] 用于聚合单仓
 
     sources_list = cfg.get("sources", [])
+    regular_sources = [source for source in sources_list if source.get("id") != "fantaiying"]
     with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-        for entry, data in executor.map(update_source, sources_list):
+        for entry, data, warehouses in executor.map(
+            lambda source: update_source(source, raw_base, exclusions), regular_sources
+        ):
             status["sources"].append(entry)
             if entry["ok"]:
                 sid, name = entry["id"], entry["name"]
-                subscriptions.append({"name": name, "url": f"{raw_base}/{sid}.json"})
+                if not warehouses or any(field in data for field in TVBOX_KEYS):
+                    subscriptions.append({"name": name, "url": f"{raw_base}/{sid}.json"})
+                subscriptions.extend(warehouses)
                 fetched.append((sid, name, data))
 
     # 2. 再按特殊源处理（如饭太硬：先跑 tsjm.py，失败回退本地缓存，并覆盖常规源里的同名项，排在首位）
     fty_entry, fty_sub, fty_fetched = run_fantaiying(raw_base)
+    fty_warehouses = []
+    if fty_entry["ok"]:
+        sid, name, data = fty_fetched
+        fty_source = next((source for source in sources_list if source.get("id") == sid), {})
+        origin = next(iter(fty_source.get("urls", [])), "")
+        try:
+            data, fty_warehouses = publish_config(sid, data, origin, raw_base, exclusions)
+            fty_fetched = sid, name, data
+        except (OSError, ValueError) as error:
+            fty_entry.update(ok=False, error=str(error))
     status["sources"] = [
         s for s in status["sources"]
         if s.get("id") != fty_entry["id"] and s.get("name") != fty_entry["name"]
@@ -425,7 +563,9 @@ def main() -> int:
     subscriptions = [u for u in subscriptions if u.get("name") != fty_entry["name"]]
     fetched = [item for item in fetched if item[0] != fty_entry["id"]]
     if fty_entry["ok"]:
-        subscriptions.insert(0, fty_sub)
+        if not fty_warehouses or any(field in fty_fetched[2] for field in TVBOX_KEYS):
+            fty_warehouses.insert(0, fty_sub)
+        subscriptions[:0] = fty_warehouses
         fetched.insert(0, fty_fetched)
 
     ok_count = sum(1 for s in status["sources"] if s.get("ok"))

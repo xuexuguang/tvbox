@@ -13,10 +13,12 @@ import urllib.parse
 
 import requests
 
+from source_config import load_source_config
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CONFIG_FILE = os.path.join(ROOT, "config", "sources.json")
 OUTPUT_DIR = "output" if os.environ.get("GITHUB_ACTIONS") == "true" else "output-local"
-DEFAULT_OUT = os.path.join(ROOT, OUTPUT_DIR, "fantaiying.json")
+DEFAULT_OUT = os.environ.get("TVBOX_FTY_OUTPUT") or os.path.join(ROOT, OUTPUT_DIR, "fantaiying.json")
 
 DEFAULT_URLS = [
     "http://www.xn--sss604efuw.net/tv",
@@ -49,8 +51,7 @@ def load_fty_urls_from_config() -> list[str]:
     if not os.path.exists(CONFIG_FILE):
         return []
     try:
-        with open(CONFIG_FILE, "r", encoding="utf-8") as f:
-            cfg = json.load(f)
+        cfg = load_source_config(CONFIG_FILE)
         for src in cfg.get("sources", []) or []:
             if not isinstance(src, dict):
                 continue
