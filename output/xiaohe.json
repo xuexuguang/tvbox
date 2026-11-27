@@ -595,16 +595,6 @@
       "ext": "./lib/哔哩健身.json"
     },
     {
-      "key": "相声小品",
-      "name": "🅱相声｜小品",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./lib/哔哩相声.json"
-    },
-    {
       "key": "天下美食",
       "name": "🅱天下｜美食",
       "type": 3,
@@ -613,16 +603,6 @@
       "quickSearch": 1,
       "filterable": 1,
       "ext": "./lib/哔哩美食.json"
-    },
-    {
-      "key": "戏曲杂苑",
-      "name": "🅱戏曲｜杂苑",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "./lib/哔哩戏曲.json"
     }
   ],
   "parses": [

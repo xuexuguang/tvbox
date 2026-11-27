@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-27 11:09:36",
+  "updated_at": "2026-11-27 11:30:59",
   "repo": "xuexuguang/tvbox",
   "sources": [
     {
@@ -7,21 +7,24 @@
       "name": "饭太硬",
       "ok": true,
       "used_url": "http://www.xn--sss604efuw.net/tv (JPEG解包)",
-      "error": null
+      "error": null,
+      "request_ms": 668
     },
     {
       "id": "wangerxiao",
       "name": "王二小",
       "ok": true,
       "used_url": "https://d.kstore.dev/download/9280/wex.json",
-      "error": null
+      "error": null,
+      "request_ms": 150
     },
     {
       "id": "laoliubei",
       "name": "老刘备",
       "ok": true,
       "used_url": "https://raw.liucn.cc/box/m.json",
-      "error": null
+      "error": null,
+      "request_ms": 343
     },
     {
       "id": "ouge",
@@ -36,91 +39,104 @@
       "name": "Easy",
       "ok": true,
       "used_url": "https://15318.kstore.space/easytv.jpg",
-      "error": null
+      "error": null,
+      "request_ms": 348
     },
     {
       "id": "xiaohezi",
       "name": "小盒子单仓",
       "ok": true,
       "used_url": "http://xhztv.top/xhz/",
-      "error": null
+      "error": null,
+      "request_ms": 157
     },
     {
       "id": "aowu",
       "name": "嗷呜线路",
       "ok": true,
       "used_url": "https://9763.kstore.vip/aowu.json",
-      "error": null
+      "error": null,
+      "request_ms": 238
     },
     {
       "id": "hezimi",
       "name": "🚀盒子迷",
       "ok": true,
       "used_url": "https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96",
-      "error": null
+      "error": null,
+      "request_ms": 259
     },
     {
       "id": "dxawi",
       "name": "🚀dxawi线路",
       "ok": true,
       "used_url": "https://dxawi.github.io/0/0.json",
-      "error": null
+      "error": null,
+      "request_ms": 199
     },
     {
       "id": "xiaohe",
       "name": "🙀小何线路",
       "ok": true,
       "used_url": "https://jihulab.com/z-blog/xh2/-/raw/main/t.json",
-      "error": null
+      "error": null,
+      "request_ms": 617
     },
     {
       "id": "qist",
       "name": "QIST自用",
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/jsm.json",
-      "error": null
+      "error": null,
+      "request_ms": 114
     },
     {
       "id": "qist-xiaosa",
       "name": "QIST潇洒",
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json",
-      "error": null
+      "error": null,
+      "request_ms": 102
     },
     {
       "id": "dongli",
       "name": "东篱线路",
       "ok": true,
       "used_url": "https://raw.githubusercontent.com/chitue/dongliTV/main/api.json",
-      "error": null
+      "error": null,
+      "request_ms": 108
     },
     {
       "id": "fish",
       "name": "无名",
       "ok": true,
       "used_url": "https://6800.kstore.vip/fish.json",
-      "error": null
+      "error": null,
+      "request_ms": 281
     },
     {
       "id": "noimank",
       "name": "noimank",
       "ok": true,
       "used_url": "https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json",
-      "error": null
+      "error": null,
+      "request_ms": 133
     },
     {
       "id": "fongmi",
       "name": "FongMi专版",
       "ok": true,
       "used_url": "https://www.252035.xyz/z/FongMi.json",
-      "error": null
+      "error": null,
+      "request_ms": 415
     },
     {
       "id": "tvyuan",
       "name": "备用·tvyuan全量",
       "ok": true,
       "used_url": "https://tv.cc0cd.cc.cd/",
-      "error": null
+      "error": null,
+      "request_ms": 140
     }
   ]
 }

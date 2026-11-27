@@ -336,23 +336,6 @@
       "searchable": 1
     },
     {
-      "key": "csp_Bili_5",
-      "name": "💕戏曲",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 1,
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1.433
-      },
-      "ext": {
-        "json": "./conf/bili5.json"
-      }
-    },
-    {
       "key": "drpy_js_童趣",
       "name": "💥童趣(少儿)",
       "type": 3,
@@ -375,26 +358,6 @@
       },
       "changeable": 0,
       "ext": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js/兔小贝.js"
-    },
-    {
-      "key": "drpy_js_有声绘本网",
-      "name": "💥有声绘本(少儿)",
-      "type": 3,
-      "api": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/lib/drpy2.min.js",
-      "changeable": 0,
-      "style": {
-        "type": "rect",
-        "ratio": 1
-      },
-      "ext": "https://gh-proxy.com/raw.githubusercontent.com/gaotianliuyun/gao/master/js/有声绘本网.js"
-    },
-    {
-      "key": "csp_Local",
-      "name": "💕本地",
-      "type": 3,
-      "api": "csp_Local",
-      "searchable": 0,
-      "changeable": 0
     },
     {
       "key": "csp_zhibo_douyu",

@@ -5,14 +5,6 @@
   "spider": "./jar/dongli-spider.jar",
   "sites": [
     {
-      "key": "Douban",
-      "name": "🌀｜剑澜｜青萍",
-      "type": 3,
-      "api": "csp_Douban",
-      "searchable": 0,
-      "filterable": 1
-    },
-    {
       "key": "金牌影视",
       "name": "💥｜金牌｜影视",
       "type": 3,
@@ -399,13 +391,6 @@
       "genre": "shortdrama"
     },
     {
-      "key": "xiqu",
-      "name": "♦｜戏曲┃大全",
-      "type": 3,
-      "api": "csp_Xiqu",
-      "ext": ""
-    },
-    {
       "key": "CNTV",
       "name": "♦｜央视｜综合",
       "type": 3,
@@ -424,14 +409,6 @@
       "ext": ""
     },
     {
-      "key": "tingchina",
-      "name": "📚｜海盗｜听书",
-      "type": 3,
-      "api": "csp_TingChina",
-      "changeable": 0,
-      "filterable": 1
-    },
-    {
       "key": "bilibili",
       "name": "🌈｜哔哩｜合集",
       "type": 3,
@@ -448,40 +425,6 @@
       }
     },
     {
-      "key": "哔哩哔哩听书",
-      "name": "🌈｜哔哩｜听书",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0,
-      "ext": {
-        "json": "./config/blts.json",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      }
-    },
-    {
-      "key": "哔哩哔哩相声",
-      "name": "🌈｜哔哩｜相声",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0,
-      "ext": {
-        "json": "./config/blxs.json",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      }
-    },
-    {
       "key": "哔哩哔哩小品",
       "name": "🌈｜哔哩｜小品",
       "type": 3,
@@ -491,23 +434,6 @@
       "filterable": 0,
       "ext": {
         "json": "./config/blxp.json",
-        "cookie": ""
-      },
-      "style": {
-        "type": "rect",
-        "ratio": 1.597
-      }
-    },
-    {
-      "key": "哔哩哔哩戏曲",
-      "name": "🌈｜哔哩｜戏曲",
-      "type": 3,
-      "api": "csp_Bili",
-      "searchable": 0,
-      "quickSearch": 0,
-      "filterable": 0,
-      "ext": {
-        "json": "./config/blxq.json",
         "cookie": ""
       },
       "style": {
@@ -660,14 +586,6 @@
         "ratio": 3.8
       },
       "gridview": "0-0-4.1"
-    },
-    {
-      "key": "本地文件",
-      "name": "🗂️｜本地｜文件",
-      "type": 3,
-      "searchable": 0,
-      "changeable": 0,
-      "api": "csp_Local"
     },
     {
       "key": "WebDAV",
