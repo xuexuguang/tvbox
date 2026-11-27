@@ -297,8 +297,22 @@ STATUS_START = "<!-- STATUS_START -->"
 STATUS_END = "<!-- STATUS_END -->"
 
 
+def readme_link(label, url):
+    destination = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%")
+    return f"[{label}](<{destination}>)"
+
+
+def readme_table_header(*labels):
+    # U+2060 keeps each label on one line without relying on inline CSS.
+    cells = ["\u2060".join(label) for label in labels]
+    return "| " + " | ".join(cells) + " |"
+
+
 def source_links_table(subscriptions):
-    rows = ["| 线路 | 直连地址 | 站点数（过滤后） |", "| --- | --- | ---: |"]
+    rows = [
+        readme_table_header("线路", "直连地址", "站点数（过滤后）"),
+        "| --- | --- | ---: |",
+    ]
     for source in subscriptions:
         name = source["name"].replace("|", "\\|")
         url = source["url"].removeprefix("https://gh-proxy.org/")
@@ -307,7 +321,7 @@ def source_links_table(subscriptions):
             data = json.load(file)
         sites = data.get("sites")
         count = len(sites) if isinstance(sites, list) else 0
-        rows.append(f"| 线路 · {name} | `{url}` | {count} |")
+        rows.append(f"| 线路 · {name} | {readme_link('打开直连', url)} | {count} |")
     return "\n".join(rows)
 
 
@@ -323,13 +337,17 @@ def update_readme(status, ok_count, total, subscriptions, site_count):
     lines = []
     lines.append(f"> 🔄 最近更新：{status['updated_at']}（北京时间） · 成功 **{ok_count}/{total}** 个源")
     lines.append("")
-    lines.append("| 配置源 | 状态 | 请求耗时（ms） | 使用地址 |")
+    lines.append(readme_table_header("配置源", "状态", "请求耗时（ms）", "使用地址"))
     lines.append("| --- | --- | ---: | --- |")
     for s in status["sources"]:
         if s.get("cached"):
             lines.append(f"| {s['name']} | 📦 缓存 | — | 上次成功配置（本次更新未抓到，沿用缓存） |")
         elif s["ok"]:
-            lines.append(f"| {s['name']} | ✅ 成功 | {s.get('request_ms', '—')} | `{s['used_url']}` |")
+            url, jpeg_suffix, _ = s["used_url"].partition(" (JPEG解包)")
+            address = readme_link("打开地址", url)
+            if jpeg_suffix:
+                address += "（JPEG解包）"
+            lines.append(f"| {s['name']} | ✅ 成功 | {s.get('request_ms', '—')} | {address} |")
         else:
             err = (s.get("error") or "").replace("|", "/")
             if len(err) > 60:
@@ -350,10 +368,10 @@ def update_readme(status, ok_count, total, subscriptions, site_count):
         aggregate_url = f"{base}/{urllib.parse.quote('单仓聚合.json')}"
         sites = f"{site_count} 个站点" if site_count is not None else "—"
         rows = [
-            "| 类型 | 加速地址 | 数量 |",
+            readme_table_header("类型", "加速地址", "数量"),
             "| --- | --- | ---: |",
-            f"| **多仓订阅（推荐）** | `{subscription_url}` | {len(subscriptions)} 条线路 |",
-            f"| **单仓聚合** | `{aggregate_url}` | {sites} |",
+            f"| **多仓订阅（推荐）** | {readme_link('打开加速地址', subscription_url)} | {len(subscriptions)} 条线路 |",
+            f"| **单仓聚合** | {readme_link('打开加速地址', aggregate_url)} | {sites} |",
         ]
         table = "\n".join(rows)
         new_readme = f"{prefix}{accelerated_start}\n\n{table}\n\n{accelerated_end}{suffix}"

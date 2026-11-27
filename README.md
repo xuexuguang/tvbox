@@ -2,7 +2,7 @@
 ※ 部分配置纯自用，擅自拉取后果自负！
 
 ![配置状态](https://img.shields.io/endpoint?url=https%3A%2F%2Fraw.githubusercontent.com%2F58285474%2Ftvbox%2Fmain%2Foutput%2Fshield.json)
-![更新频率](https://img.shields.io/badge/%E6%9B%B4%E6%96%B0-%E6%AF%8F%E5%A4%A9%202%20%E6%AC%A1-blue)
+![更新频率](https://img.shields.io/badge/%E6%9B%B4%E6%96%B0-%E6%AF%8F%E5%A4%A9%203%20%E6%AC%A1-blue)
 
 聚合 **肥猫、饭太硬、王二小、老刘备、小马、讴歌（欧歌）、4K小盒子、小盒子单仓、拾光多仓、挺好分享多仓** 等多个影视仓 / TVBox 单仓配置，通过 **GitHub Actions 定时自动更新**，并把结果直接提交回本仓库，供影视仓、TVBox、OK影视等软件随时拉取最新接口。
 
@@ -15,25 +15,25 @@
 <!-- STATUS_START -->
 > 🔄 最近更新：2026-11-27 11:09:36（北京时间） · 成功 **17/17** 个源
 
-| 配置源 | 状态 | 请求耗时（ms） | 使用地址 |
+| 配⁠置⁠源 | 状⁠态 | 请⁠求⁠耗⁠时⁠（⁠m⁠s⁠） | 使⁠用⁠地⁠址 |
 | --- | --- | ---: | --- |
-| 饭太硬 | ✅ 成功 | — | `http://www.xn--sss604efuw.net/tv (JPEG解包)` |
-| 王二小 | ✅ 成功 | — | `https://d.kstore.dev/download/9280/wex.json` |
-| 老刘备 | ✅ 成功 | — | `https://raw.liucn.cc/box/m.json` |
+| 饭太硬 | ✅ 成功 | — | [打开地址](<http://www.xn--sss604efuw.net/tv>)（JPEG解包） |
+| 王二小 | ✅ 成功 | — | [打开地址](<https://d.kstore.dev/download/9280/wex.json>) |
+| 老刘备 | ✅ 成功 | — | [打开地址](<https://raw.liucn.cc/box/m.json>) |
 | 讴歌 | 📦 缓存 | — | 上次成功配置（本次更新未抓到，沿用缓存） |
-| Easy | ✅ 成功 | — | `https://15318.kstore.space/easytv.jpg` |
-| 小盒子单仓 | ✅ 成功 | — | `http://xhztv.top/xhz` |
-| 嗷呜线路 | ✅ 成功 | — | `https://9763.kstore.vip/aowu.json` |
-| 🚀盒子迷 | ✅ 成功 | — | `https://盒子迷.top/禁止贩卖` |
-| 🚀dxawi线路 | ✅ 成功 | — | `http://dxawi.github.io/0/0.json` |
-| 🙀小何线路 | ✅ 成功 | — | `https://jihulab.com/z-blog/xh2/-/raw/main/t.json` |
-| QIST自用 | ✅ 成功 | — | `https://raw.githubusercontent.com/qist/tvbox/master/jsm.json` |
-| QIST潇洒 | ✅ 成功 | — | `https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json` |
-| 东篱线路 | ✅ 成功 | — | `https://raw.githubusercontent.com/chitue/dongliTV/main/api.json` |
-| 无名 | ✅ 成功 | — | `https://6800.kstore.vip/fish.json` |
-| noimank | ✅ 成功 | — | `https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json` |
-| FongMi专版 | ✅ 成功 | — | `https://www.252035.xyz/z/FongMi.json` |
-| 备用·tvyuan全量 | ✅ 成功 | — | `https://tv.cc0cd.cc.cd/` |
+| Easy | ✅ 成功 | — | [打开地址](<https://15318.kstore.space/easytv.jpg>) |
+| 小盒子单仓 | ✅ 成功 | — | [打开地址](<http://xhztv.top/xhz/>) |
+| 嗷呜线路 | ✅ 成功 | — | [打开地址](<https://9763.kstore.vip/aowu.json>) |
+| 🚀盒子迷 | ✅ 成功 | — | [打开地址](<https://xn--i8sz35d1yr.top/%E7%A6%81%E6%AD%A2%E8%B4%A9%E5%8D%96>) |
+| 🚀dxawi线路 | ✅ 成功 | — | [打开地址](<https://dxawi.github.io/0/0.json>) |
+| 🙀小何线路 | ✅ 成功 | — | [打开地址](<https://jihulab.com/z-blog/xh2/-/raw/main/t.json>) |
+| QIST自用 | ✅ 成功 | — | [打开地址](<https://raw.githubusercontent.com/qist/tvbox/master/jsm.json>) |
+| QIST潇洒 | ✅ 成功 | — | [打开地址](<https://raw.githubusercontent.com/qist/tvbox/master/xiaosa/api.json>) |
+| 东篱线路 | ✅ 成功 | — | [打开地址](<https://raw.githubusercontent.com/chitue/dongliTV/main/api.json>) |
+| 无名 | ✅ 成功 | — | [打开地址](<https://6800.kstore.vip/fish.json>) |
+| noimank | ✅ 成功 | — | [打开地址](<https://gitlab.com/noimank/tvbox/-/raw/main/tvbox1.json>) |
+| FongMi专版 | ✅ 成功 | — | [打开地址](<https://www.252035.xyz/z/FongMi.json>) |
+| 备用·tvyuan全量 | ✅ 成功 | — | [打开地址](<https://tv.cc0cd.cc.cd/>) |
 <!-- STATUS_END -->
 
 ## 二、仓库结构
@@ -62,43 +62,43 @@ tvbox/
 
 <!-- ACCELERATED_LINKS_START -->
 
-| 类型 | 加速地址 | 数量 |
+| 类⁠型 | 加⁠速⁠地⁠址 | 数⁠量 |
 | --- | --- | ---: |
-| **多仓订阅（推荐）** | `https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json` | 17 条线路 |
-| **单仓聚合** | `https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json` | 2816 个站点 |
+| **多仓订阅（推荐）** | [打开加速地址](<https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json>) | 17 条线路 |
+| **单仓聚合** | [打开加速地址](<https://gh-proxy.org/https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json>) | 2816 个站点 |
 
 <!-- ACCELERATED_LINKS_END -->
 
 直连 GitHub 时可使用以下地址：
 
-| 类型 | 地址 | 说明 |
+| 类⁠型 | 地⁠址 | 说⁠明 |
 | --- | --- | --- |
-| **多仓订阅（推荐）** | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/多仓订阅.json` | App 内可在各源之间切换 |
-| **单仓聚合** | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/单仓聚合.json` | 所有源站点合并成一个，无需切换 |
+| **多仓订阅（推荐）** | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%A4%9A%E4%BB%93%E8%AE%A2%E9%98%85.json>) | App 内可在各源之间切换 |
+| **单仓聚合** | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/%E5%8D%95%E4%BB%93%E8%81%9A%E5%90%88.json>) | 所有源站点合并成一个，无需切换 |
 
 各线路的直连地址随多仓订阅同步更新。
 
 <!-- SOURCE_LINKS_START -->
 
-| 线路 | 直连地址 | 站点数（过滤后） |
+| 线⁠路 | 直⁠连⁠地⁠址 | 站⁠点⁠数⁠（⁠过⁠滤⁠后⁠） |
 | --- | --- | ---: |
-| 线路 · 饭太硬 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fantaiying.json` | 33 |
-| 线路 · 王二小 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/wangerxiao.json` | 71 |
-| 线路 · 老刘备 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/laoliubei.json` | 197 |
-| 线路 · 讴歌 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/ouge.json` | 4 |
-| 线路 · Easy | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/easy.json` | 99 |
-| 线路 · 小盒子单仓 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/xiaohezi.json` | 42 |
-| 线路 · 嗷呜线路 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/aowu.json` | 66 |
-| 线路 · 🚀盒子迷 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/hezimi.json` | 18 |
-| 线路 · 🚀dxawi线路 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/dxawi.json` | 33 |
-| 线路 · 🙀小何线路 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/xiaohe.json` | 60 |
-| 线路 · QIST自用 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/qist.json` | 119 |
-| 线路 · QIST潇洒 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/qist-xiaosa.json` | 81 |
-| 线路 · 东篱线路 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/dongli.json` | 53 |
-| 线路 · 无名 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fish.json` | 92 |
-| 线路 · noimank | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/noimank.json` | 54 |
-| 线路 · FongMi专版 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fongmi.json` | 31 |
-| 线路 · 备用·tvyuan全量 | `https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/tvyuan.json` | 1239 |
+| 线路 · 饭太硬 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fantaiying.json>) | 33 |
+| 线路 · 王二小 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/wangerxiao.json>) | 71 |
+| 线路 · 老刘备 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/laoliubei.json>) | 197 |
+| 线路 · 讴歌 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/ouge.json>) | 4 |
+| 线路 · Easy | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/easy.json>) | 99 |
+| 线路 · 小盒子单仓 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/xiaohezi.json>) | 42 |
+| 线路 · 嗷呜线路 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/aowu.json>) | 66 |
+| 线路 · 🚀盒子迷 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/hezimi.json>) | 18 |
+| 线路 · 🚀dxawi线路 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/dxawi.json>) | 33 |
+| 线路 · 🙀小何线路 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/xiaohe.json>) | 60 |
+| 线路 · QIST自用 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/qist.json>) | 119 |
+| 线路 · QIST潇洒 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/qist-xiaosa.json>) | 81 |
+| 线路 · 东篱线路 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/dongli.json>) | 53 |
+| 线路 · 无名 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fish.json>) | 92 |
+| 线路 · noimank | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/noimank.json>) | 54 |
+| 线路 · FongMi专版 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/fongmi.json>) | 31 |
+| 线路 · 备用·tvyuan全量 | [打开直连](<https://raw.githubusercontent.com/xuexuguang/tvbox/main/output/tvyuan.json>) | 1239 |
 
 <!-- SOURCE_LINKS_END -->
 
