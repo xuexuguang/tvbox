@@ -292,11 +292,6 @@ def merge_configs(fetched):
     return merged
 
 
-README_PATH = os.path.join(ROOT, "README.md")
-STATUS_START = "<!-- STATUS_START -->"
-STATUS_END = "<!-- STATUS_END -->"
-
-
 def readme_link(label, url):
     destination = urllib.parse.quote(url, safe=":/?#[]@!$&'()*+,;=%")
     return f"[{label}](<{destination}>)"
@@ -326,15 +321,8 @@ def source_links_table(subscriptions):
 
 
 def update_readme(status, ok_count, total, subscriptions, site_count):
-    """把各源更新状态以表格形式写回 README（在 STATUS_START/END 标记之间）。"""
-    if not os.path.exists(README_PATH):
-        return
-    with open(README_PATH, "r", encoding="utf-8") as f:
-        readme = f.read()
-    if STATUS_START not in readme or STATUS_END not in readme:
-        return  # 未放置标记则不改动
-
-    lines = []
+    """将每次更新的状态和订阅列表写入独立的产物页面。"""
+    lines = ["# TVBox 更新状态", ""]
     lines.append(f"> 🔄 最近更新：{status['updated_at']}（北京时间） · 成功 **{ok_count}/{total}** 个源")
     lines.append("")
     lines.append(readme_table_header("配置源", "状态", "请求耗时（ms）", "使用地址"))
@@ -353,39 +341,21 @@ def update_readme(status, ok_count, total, subscriptions, site_count):
             if len(err) > 60:
                 err = err[:57] + "..."
             lines.append(f"| {s['name']} | ❌ 失败 | — | {err} |")
-    block = "\n".join(lines)
-
-    prefix = readme.split(STATUS_START, 1)[0]
-    suffix = readme.split(STATUS_END, 1)[1]
-    new_readme = f"{prefix}{STATUS_START}\n{block}\n{STATUS_END}{suffix}"
-    accelerated_start = "<!-- ACCELERATED_LINKS_START -->"
-    accelerated_end = "<!-- ACCELERATED_LINKS_END -->"
-    if accelerated_start in new_readme and accelerated_end in new_readme:
-        prefix, _, remainder = new_readme.partition(accelerated_start)
-        _, _, suffix = remainder.partition(accelerated_end)
-        base = f"https://gh-proxy.org/https://raw.githubusercontent.com/{status['repo']}/main/output"
-        subscription_url = f"{base}/{urllib.parse.quote('多仓订阅.json')}"
-        aggregate_url = f"{base}/{urllib.parse.quote('单仓聚合.json')}"
-        sites = f"{site_count} 个站点" if site_count is not None else "—"
-        rows = [
-            readme_table_header("类型", "加速地址", "数量"),
-            "| --- | --- | ---: |",
-            f"| **多仓订阅（推荐）** | {readme_link('打开加速地址', subscription_url)} | {len(subscriptions)} 条线路 |",
-            f"| **单仓聚合** | {readme_link('打开加速地址', aggregate_url)} | {sites} |",
-        ]
-        table = "\n".join(rows)
-        new_readme = f"{prefix}{accelerated_start}\n\n{table}\n\n{accelerated_end}{suffix}"
-
-    links_start = "<!-- SOURCE_LINKS_START -->"
-    links_end = "<!-- SOURCE_LINKS_END -->"
-    if links_start in new_readme and links_end in new_readme:
-        prefix, _, remainder = new_readme.partition(links_start)
-        _, _, suffix = remainder.partition(links_end)
-        table = source_links_table(subscriptions)
-        new_readme = f"{prefix}{links_start}\n\n{table}\n\n{links_end}{suffix}"
-    readme_output = README_PATH if IS_GITHUB_ACTIONS else os.path.join(OUTPUT_DIR, "README.md")
-    with open(readme_output, "w", encoding="utf-8") as f:
-        f.write(new_readme)
+    base = f"https://gh-proxy.org/https://raw.githubusercontent.com/{status['repo']}/main/output"
+    subscription_url = f"{base}/{urllib.parse.quote('多仓订阅.json')}"
+    aggregate_url = f"{base}/{urllib.parse.quote('单仓聚合.json')}"
+    sites = f"{site_count} 个站点" if site_count is not None else "—"
+    lines.extend([
+        "", "## 加速订阅", "",
+        readme_table_header("类型", "加速地址", "数量"),
+        "| --- | --- | ---: |",
+        f"| **多仓订阅（推荐）** | {readme_link('打开加速地址', subscription_url)} | {len(subscriptions)} 条线路 |",
+        f"| **单仓聚合** | {readme_link('打开加速地址', aggregate_url)} | {sites} |",
+        "", "## 各线路直连", "",
+        source_links_table(subscriptions), "",
+    ])
+    with open(os.path.join(OUTPUT_DIR, "README.md"), "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
 
 
 def write_badge(ok_count, total):
